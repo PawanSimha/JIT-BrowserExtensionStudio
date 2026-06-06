@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refreshner — Smart Refresh &amp; Page Monitor</title>
+  <link rel="icon" href="icons/Refreshner.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ FLOATING NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="icons/Refreshner.png" alt="Refreshner logo" />
+        <span>Refreshner</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about-logo">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">Chrome Extension</div>
+      <h1 class="hero-title">Refresh.<br />Monitor.<span>Automate.</span></h1>
+      <p class="hero-sub">
+        Take control of your browsing — set smart auto-refresh intervals and
+        get instant alerts when keywords appear or disappear on any page.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary">
+          <span class="btn-icon">&#43;</span> Add to Chrome
+        </a>
+        <a href="#features" class="btn btn-outline">Explore Features</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">2.4k</span><span class="stat-label">Downloads</span></div>
+        <div class="stat"><span class="stat-num">4.9</span><span class="stat-label">Rating</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Free</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="section" id="features">
+    <div class="section-label">Features</div>
+    <h2 class="section-title">Built for <span>precision</span> and <span>speed</span></h2>
+    <p class="section-desc">
+      Everything you need to keep pages fresh and never miss what matters.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card glass" data-delay="0">
+        <div class="feature-icon" style="--ic:#8CA21B">&#x21bb;</div>
+        <h3>Smart Refresh Engine</h3>
+        <p>Quick presets, custom HH:MM:SS, or random intervals that feel human. Hard refresh with cache bypass included.</p>
+      </div>
+      <div class="feature-card glass" data-delay="0.15">
+        <div class="feature-icon" style="--ic:#B16344">&#x1F50D;</div>
+        <h3>Keyword Page Monitor</h3>
+        <p>Track any keyword in real time. Get notified the moment text appears or disappears — never miss a restock or error.</p>
+      </div>
+      <div class="feature-card glass" data-delay="0.3">
+        <div class="feature-icon" style="--ic:#8CA21B">&#x23F1;</div>
+        <h3>Live Countdown Timer</h3>
+        <p>Visual countdown ring and progress bar in the popup so you always know exactly when the next refresh hits.</p>
+      </div>
+      <div class="feature-card glass" data-delay="0.45">
+        <div class="feature-icon" style="--ic:#B16344">&#x1F514;</div>
+        <h3>Audio &amp; Browser Alerts</h3>
+        <p>Dual-tone beep sounds and native Chrome notifications fire the moment a keyword match is detected.</p>
+      </div>
+      <div class="feature-card glass" data-delay="0.6">
+        <div class="feature-icon" style="--ic:#8CA21B">&#x1F4BE;</div>
+        <h3>State Persistence</h3>
+        <p>Timers and monitoring survive page reloads and browser restarts. Your workflow never resets.</p>
+      </div>
+      <div class="feature-card glass" data-delay="0.75">
+        <div class="feature-icon" style="--ic:#B16344">&#x26A1;</div>
+        <h3>Shadow DOM Support</h3>
+        <p>Monitors dynamically rendered content inside web components and shadow roots — works on SPAs too.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT THE LOGO ============ -->
+  <section class="section section-alt" id="about-logo">
+    <div class="about-logo-inner">
+      <div class="about-logo-visual">
+        <div class="logo-glow"></div>
+        <img src="icons/Refreshner.png" alt="Refreshner Logo" class="about-logo-img" />
+      </div>
+      <div class="about-logo-text">
+        <div class="section-label">The Mark</div>
+        <h2 class="section-title">What our <span>logo</span> means</h2>
+        <p>
+          The <strong>Refreshner</strong> mark is built around two core ideas:
+          <em>cycle</em> and <em>awareness</em>.
+        </p>
+        <ul class="logo-meanings">
+          <li>
+            <span class="lm-icon">&#x25CF;</span>
+            <div><strong>The Ring</strong> — A continuous loop representing the auto-refresh engine. Never-ending, reliable, always watching.</div>
+          </li>
+          <li>
+            <span class="lm-icon" style="color:#B16344">&#x25D7;</span>
+            <div><strong>The Cutaway</strong> — A window that opens, revealing what's underneath. Symbolises the page monitor peering into content and reporting back.</div>
+          </li>
+          <li>
+            <span class="lm-icon" style="color:#8CA21B">&#x2726;</span>
+            <div><strong>The Gradient</strong> — A seamless blend of earth and energy (&#35;8CA21B &#8594; &#35;B16344), grounding the tool in calm reliability while keeping it alert.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Got <span>questions</span>?</h2>
+    <p class="section-desc">We have answers. Here are the most common ones.</p>
+
+    <div class="faq-list">
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span>Is Refreshner free?</span>
+          <span class="faq-arrow">&#x2193;</span>
+        </button>
+        <div class="faq-a"><p>Yes — 100% free, no ads, no data collection. Open-source and always will be.</p></div>
+      </div>
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span>Does it work on all websites?</span>
+          <span class="faq-arrow">&#x2193;</span>
+        </button>
+        <div class="faq-a"><p>It works on every standard webpage. Chrome internal pages (&#99;hrome://) and the PDF viewer are excluded by browser policy.</p></div>
+      </div>
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span>Can I use multiple keywords?</span>
+          <span class="faq-arrow">&#x2193;</span>
+        </button>
+        <div class="faq-a"><p>Absolutely. Add as many keywords as you like — the monitor scans for all of them in real time and triggers on the first match.</p></div>
+      </div>
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span>What happens when a keyword is found?</span>
+          <span class="faq-arrow">&#x2193;</span>
+        </button>
+        <div class="faq-a"><p>The auto-refresh stops immediately, you hear a dual-tone alert sound, and a Chrome notification appears with the matched keyword and page title.</p></div>
+      </div>
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span>Does it collect my data?</span>
+          <span class="faq-arrow">&#x2193;</span>
+        </button>
+        <div class="faq-a"><p>Never. Everything runs locally in your browser. No analytics, no trackers, no servers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-alt" id="contact">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Get in <span>touch</span></h2>
+    <p class="section-desc">Feedback, ideas, or just saying hello — we'd love to hear from you.</p>
+
+    <form class="contact-form glass" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Tell us what's on your mind..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="icons/Refreshner.png" alt="Refreshner" />
+        <span>Refreshner</span>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about-logo">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Refreshner. Built with patience &amp; purpose.</p>
+    </div>
+  </footer>
+
+  <!-- ============ SCROLL TOP ============ -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#x2191;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

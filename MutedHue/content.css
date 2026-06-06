@@ -1,0 +1,19 @@
+::selection {
+    background-color: rgba(211, 211, 211, 0.2) !important;
+    color: inherit !important;
+}
+
+::-moz-selection {
+    background-color: rgba(211, 211, 211, 0.2) !important;
+    color: inherit !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    ::selection {
+        background-color: rgba(211, 211, 211, 0.12) !important;
+    }
+
+    ::-moz-selection {
+        background-color: rgba(211, 211, 211, 0.12) !important;
+    }
+}

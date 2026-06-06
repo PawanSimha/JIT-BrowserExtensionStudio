@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JIT — Browser Extension Studio</title>
+  <meta name="description" content="JIT builds clean, focused browser extensions. Meet MutedHue and Refreshner." />
+  <link rel="icon" href="Logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER (GOOGLE STYLE) ============ -->
+  <header class="header" id="header">
+    <div class="header-wrap">
+      <div class="header-inner">
+        <a href="#top" class="header-brand">
+          <img src="Logo.png" alt="JIT" class="header-logo" />
+          <span class="header-brand-text">JIT</span>
+        </a>
+
+        <nav class="header-nav" id="headerNav">
+          <a href="#extensions" class="nav-item">
+            Extensions
+            <span class="nav-badge">New</span>
+          </a>
+          <a href="#about" class="nav-item">About</a>
+          <a href="#faq" class="nav-item">FAQ</a>
+          <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+
+        <a href="#contact" class="header-pill">Sign up</a>
+
+        <button class="header-toggle" id="headerToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <h1 class="hero-title">
+        Power your everyday with a<br />
+        <span class="hero-blue">JIT</span> plan
+      </h1>
+      <p class="hero-sub">
+        Clean, focused tools that make your browser feel like it was built for you.
+        No bloat, no trackers, no noise.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-blue">
+          Sign up for a JIT plan
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXTENSIONS ============ -->
+  <section class="extensions" id="extensions">
+    <div class="container">
+      <p class="eyebrow">Extensions</p>
+      <h2 class="section-title">Tools from the <span class="text-gradient">workshop</span></h2>
+      <p class="section-sub">Every JIT extension is built with privacy, performance, and purpose in mind.</p>
+
+      <div class="ext-grid">
+        <article class="ext-card">
+          <div class="ext-art ext-art-1">
+            <div class="art-shape shape-1"></div>
+            <div class="art-shape shape-2"></div>
+            <div class="art-shape shape-3"></div>
+          </div>
+          <div class="ext-body">
+            <div class="ext-head">
+              <h3>MutedHue</h3>
+              <span class="ext-status ext-live">Published</span>
+            </div>
+            <p>Replaces harsh blue text selection with a subtle, adaptive grey highlight on every website. Gentle on the eyes, beautiful on every theme.</p>
+            <a href="#" class="ext-link">Learn more &rsaquo;</a>
+          </div>
+        </article>
+
+        <article class="ext-card">
+          <div class="ext-art ext-art-2">
+            <div class="art-ring"></div>
+            <div class="art-tick t1"></div>
+            <div class="art-tick t2"></div>
+            <div class="art-tick t3"></div>
+            <div class="art-center">↻</div>
+          </div>
+          <div class="ext-body">
+            <div class="ext-head">
+              <h3>Refreshner</h3>
+              <span class="ext-status ext-live">Published</span>
+            </div>
+            <p>Smart auto-refresh with customizable intervals, keyword page monitoring, live countdown timer, and audio alerts when matches are found.</p>
+            <a href="#" class="ext-link">Learn more &rsaquo;</a>
+          </div>
+        </article>
+
+        <article class="ext-card ext-soon">
+          <div class="ext-art ext-art-3">
+            <div class="art-dots">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="ext-body">
+            <div class="ext-head">
+              <h3>Next Tool</h3>
+              <span class="ext-status ext-soon-tag">Coming soon</span>
+            </div>
+            <p>Something new is brewing in the JIT workshop. Stay tuned.</p>
+            <a href="#contact" class="ext-link">Get notified &rsaquo;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="eyebrow">About</p>
+        <h2 class="section-title section-title-left">What <span class="text-gradient">JIT</span> stands for</h2>
+        <p class="about-lead">
+          JIT is a small studio that builds clean, focused browser extensions. Every tool we ship is
+          crafted with the same principles: do one thing well, respect the user, and stay out of the way.
+        </p>
+        <ul class="about-feats">
+          <li>
+            <span class="about-icon">◎</span>
+            <div>
+              <strong>Privacy first.</strong>
+              <p>Zero data leaves your browser. No analytics, no trackers, no servers.</p>
+            </div>
+          </li>
+          <li>
+            <span class="about-icon">◇</span>
+            <div>
+              <strong>Open source.</strong>
+              <p>Every extension is transparent, auditable, and free forever.</p>
+            </div>
+          </li>
+          <li>
+            <span class="about-icon">◈</span>
+            <div>
+              <strong>Quietly powerful.</strong>
+              <p>Small tools that fit naturally into how you already work.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="about-art">
+        <div class="about-orb"></div>
+        <div class="about-orb about-orb-2"></div>
+        <div class="about-mark">JIT</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title">Got <span class="text-gradient">questions</span>?</h2>
+      <p class="section-sub">We have answers. Here are the most common ones.</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">
+            <span>What is JIT?</span>
+            <span class="faq-arrow"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>A small studio where we build clean, focused browser extensions. No bloat, no trackers — just tools that do one thing well.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span>Are the extensions free?</span>
+            <span class="faq-arrow"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Yes. Every JIT extension is 100% free, open-source, and will always remain so.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span>Do these extensions collect data?</span>
+            <span class="faq-arrow"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Never. Zero data leaves your browser. No analytics, no trackers, no servers. Privacy is non-negotiable.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span>How do I install an extension?</span>
+            <span class="faq-arrow"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Each extension is published on the Chrome Web Store. Click "Add to Chrome" from the store page and it installs in one click.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span>Will there be more extensions?</span>
+            <span class="faq-arrow"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Absolutely. New tools are always in progress. The JIT workshop is always growing.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span>Can I contribute or request a feature?</span>
+            <span class="faq-arrow"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Yes! JIT is open source. You can submit feature requests, report bugs, or contribute code on our GitHub. We welcome community input.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span>Do I need an account to use JIT extensions?</span>
+            <span class="faq-arrow"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>No account needed. Every JIT extension works right after installation — no sign-up, no login, no account required.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            <span>What browsers are supported?</span>
+            <span class="faq-arrow"></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner"><p>Currently JIT extensions are built for Chromium-based browsers — Chrome, Edge, Brave, and Opera. Firefox support is in the works.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Get in <span class="text-gradient">touch</span></h2>
+        <p class="section-sub">Feedback, ideas, or just saying hello — we'd love to hear from you.</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-blue">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="Logo.png" alt="JIT" class="footer-logo-img" />
+        <span class="footer-logo">JIT</span>
+        <p>Clean, focused browser extensions built with privacy and purpose. Every tool does one thing well and respects your data.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="Email">Email</a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#extensions">Extensions</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Support</a>
+          <a href="#contact">Careers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 JIT. Built in the workshop.</span>
+      <span>Made with care. No trackers. No noise.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
