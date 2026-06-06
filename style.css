@@ -195,20 +195,6 @@ ul { list-style: none; }
   background: rgba(255, 255, 255, 0.06);
 }
 .header-nav .nav-item.active { color: var(--text-1); }
-.nav-badge {
-  display: inline-flex;
-  align-items: center;
-  height: 18px;
-  padding: 0 8px;
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-}
 
 .header-pill {
   display: inline-flex;
