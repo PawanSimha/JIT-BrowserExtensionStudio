@@ -13,7 +13,30 @@
 </head>
 <body>
 
-  <div id="header-placeholder"></div>
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header-wrap">
+      <div class="header-inner">
+        <a href="index.html" class="header-brand">
+          <img src="Logo.png" alt="JIT" class="header-logo" />
+          <span class="header-brand-text">JIT</span>
+        </a>
+        <nav class="header-nav" id="headerNav">
+          <a href="extension.html" class="nav-item">
+            Extensions
+            <span class="nav-badge">New</span>
+          </a>
+          <a href="index.html#about" class="nav-item">About</a>
+          <a href="index.html#faq" class="nav-item">FAQ</a>
+          <a href="index.html#contact" class="nav-item">Contact</a>
+        </nav>
+        <a href="index.html#contact" class="header-pill">Sign up</a>
+        <button class="header-toggle" id="headerToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
@@ -238,9 +261,46 @@
     </div>
   </section>
 
-  <div id="footer-placeholder"></div>
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="Logo.png" alt="JIT" class="footer-logo-img" />
+        <span class="footer-logo">JIT</span>
+        <p>Clean, focused browser extensions built with privacy and purpose. Every tool does one thing well and respects your data.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="Email">Email</a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="extension.html">Extensions</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#contact">Contact</a>
+          <a href="index.html#contact">Support</a>
+          <a href="index.html#contact">Careers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 JIT. Built in the workshop.</span>
+      <span>Made with care. No trackers. No noise.</span>
+    </div>
+  </footer>
 
-  <script src="include.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
