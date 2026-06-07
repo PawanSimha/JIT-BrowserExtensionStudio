@@ -64,7 +64,7 @@ Browser extensions are often bloated, privacy-invasive, or visually jarring. JIT
 └──────────────────────────────────────────────────┘
 ```
 
-> ![Screenshot](Logo.png) — Placeholder for landing page screenshot.
+> ![Screenshot](Logo.webp) — Placeholder for landing page screenshot.
 
 ---
 
@@ -91,7 +91,7 @@ JIT/
 ├── style.css                  # Full design system (~800 lines)
 ├── script.js                  # FAQ accordion, scroll reveal, mobile menu, contact
 ├── fonts.css                  # Google Sans @font-face declarations
-├── Logo.png                   # Brand logo (nav, favicon, about section)
+├── Logo.webp                  # Brand logo (nav, favicon, about section)
 │
 ├── MutedHue/                  # Chrome Extension — MutedHue
 │   ├── manifest.json
