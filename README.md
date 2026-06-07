@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="Logo.webp" alt="JIT - Browser Extension Studio" width="800" style="border-radius: 12px;" />
+  <img src="Hero JIT.webp" alt="JIT - Browser Extension Studio" width="800" style="border-radius: 12px;" />
 </p>
 
 ---
