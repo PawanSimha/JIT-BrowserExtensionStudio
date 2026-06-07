@@ -73,8 +73,6 @@ Browser extensions are often bloated, privacy-invasive, or visually jarring. JIT
 └──────────────────────────────────────────────────┘
 ```
 
-> ![Screenshot](Logo.webp) — Placeholder for landing page screenshot.
-
 ---
 
 ## 🛠️ Tech Stack
