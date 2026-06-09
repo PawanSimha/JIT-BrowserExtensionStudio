@@ -18,7 +18,7 @@
   --primary-glow:rgba(0,70,255,0.2);
   --accent:rgb(255,128,64);
   --accent-glow:rgba(255,128,64,0.25);
-  --text:#1a1a2e;
+  --text:#000000;
   --text-2:#6b7280;
   --text-3:#9ca3af;
   --green:#22C55E;
@@ -98,7 +98,7 @@ header h1{
 #countdownText{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
   font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;
-  font-family:var(--mono);color:var(--primary-dark);
+  font-family:var(--mono);color:var(--text);
 }
 #statusLabel{font-size:10px;color:var(--text-3);font-weight:500}
 
