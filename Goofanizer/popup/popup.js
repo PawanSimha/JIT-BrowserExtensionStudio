@@ -8,8 +8,9 @@
   let activeCardId = null;
 
   async function getActiveTab() {
-    const windows = await chrome.windows.getAll({ windowTypes: ['normal'] });
+    const windows = await chrome.windows.getAll();
     for (const w of windows) {
+      if (w.type !== 'normal') continue;
       const [tab] = await chrome.tabs.query({ active: true, windowId: w.id });
       if (tab) return tab;
     }
@@ -292,14 +293,22 @@
     window.addEventListener('pagehide', handleResetOnClose);
 
     // Auto-size popup height to fit content
-    requestAnimationFrame(async () => {
-      const win = await chrome.windows.getCurrent();
-      const contentH = document.body.scrollHeight;
+    (async () => {
+      await document.fonts.ready;
+      await new Promise(r => setTimeout(r, 200));
+      const contentH = document.documentElement.scrollHeight;
       const chromeH = window.outerHeight - window.innerHeight;
       const totalH = contentH + chromeH;
-      if (win && win.height !== totalH && totalH > 50) {
-        await chrome.windows.update(win.id, { height: totalH });
-      }
-    });
+      if (totalH < 50) return;
+      try {
+        const wins = await chrome.windows.getAll({ populate: true });
+        for (const w of wins) {
+          if (w.type === 'popup') {
+            await chrome.windows.update(w.id, { height: totalH });
+            break;
+          }
+        }
+      } catch {}
+    })();
   });
 })();

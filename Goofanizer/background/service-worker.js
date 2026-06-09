@@ -428,7 +428,7 @@ async function openPopupWindow() {
     url: 'popup/popup.html',
     type: 'popup',
     width: bounds ? bounds.width : 320,
-    height: 100,
+    height: 400,
     left: bounds ? bounds.left : undefined,
     top: bounds ? bounds.top : undefined
   });
