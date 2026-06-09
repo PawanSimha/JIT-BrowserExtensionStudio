@@ -15,68 +15,70 @@
       <span class="badge" id="tabDomain">loading...</span>
     </header>
 
-    <section id="statusSection">
-      <div id="countdownDisplay">
-        <div id="countdownCircle">
-          <svg viewBox="0 0 60 60">
-            <circle class="bg" cx="30" cy="30" r="26" />
-            <circle class="fg" id="progressRing" cx="30" cy="30" r="26" />
-          </svg>
-          <div id="countdownText">--:--</div>
+    <div class="content">
+      <section id="statusSection">
+        <div id="countdownDisplay">
+          <div id="countdownCircle">
+            <svg viewBox="0 0 60 60">
+              <circle class="bg" cx="30" cy="30" r="26" />
+              <circle class="fg" id="progressRing" cx="30" cy="30" r="26" />
+            </svg>
+            <div id="countdownText">--:--</div>
+          </div>
+          <div id="statusLabel">Idle</div>
         </div>
-        <div id="statusLabel">Idle</div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section">
-      <div class="section-title">Quick Intervals</div>
-      <div class="chip-group" id="quickIntervals">
-        <button class="chip" data-seconds="5">5s</button>
-        <button class="chip" data-seconds="10">10s</button>
-        <button class="chip" data-seconds="30">30s</button>
-        <button class="chip" data-seconds="60">1m</button>
-        <button class="chip" data-seconds="300">5m</button>
-      </div>
-    </section>
+      <section class="section">
+        <div class="section-title">Quick Intervals</div>
+        <div class="chip-group" id="quickIntervals">
+          <button class="chip" data-seconds="5">5s</button>
+          <button class="chip" data-seconds="10">10s</button>
+          <button class="chip" data-seconds="30">30s</button>
+          <button class="chip" data-seconds="60">1m</button>
+          <button class="chip" data-seconds="300">5m</button>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="section-title">Custom Interval</div>
-      <div class="row">
-        <label class="field"><span>HH</span><input type="number" id="customH" min="0" max="23" value="0" /></label>
-        <label class="field"><span>MM</span><input type="number" id="customM" min="0" max="59" value="0" /></label>
-        <label class="field"><span>SS</span><input type="number" id="customS" min="0" max="59" value="30" /></label>
-      </div>
-    </section>
+      <section class="section">
+        <div class="section-title">Custom Interval</div>
+        <div class="row">
+          <label class="field"><span>HH</span><input type="number" id="customH" min="0" max="23" value="0" /></label>
+          <label class="field"><span>MM</span><input type="number" id="customM" min="0" max="59" value="0" /></label>
+          <label class="field"><span>SS</span><input type="number" id="customS" min="0" max="59" value="30" /></label>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="section-title">Random Interval</div>
-      <div class="row">
-        <label class="field"><span>Min (s)</span><input type="number" id="randomMin" min="1" value="5" /></label>
-        <label class="field"><span>Max (s)</span><input type="number" id="randomMax" min="1" value="15" /></label>
-      </div>
-    </section>
+      <section class="section">
+        <div class="section-title">Random Interval</div>
+        <div class="row">
+          <label class="field"><span>Min (s)</span><input type="number" id="randomMin" min="1" value="5" /></label>
+          <label class="field"><span>Max (s)</span><input type="number" id="randomMax" min="1" value="15" /></label>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="section-title">Options</div>
-      <label class="toggle-row">
-        <input type="checkbox" id="hardRefresh" />
-        <span class="toggle-track"><span class="toggle-knob"></span></span>
-        <span>Hard Refresh <span class="note">(bypass cache)</span></span>
-      </label>
-    </section>
+      <section class="section">
+        <div class="section-title">Options</div>
+        <label class="toggle-row">
+          <input type="checkbox" id="hardRefresh" />
+          <span class="toggle-track"><span class="toggle-knob"></span></span>
+          <span>Hard Refresh <span class="note">(bypass cache)</span></span>
+        </label>
+      </section>
 
-    <section class="section">
-      <div class="section-title">Page Monitor</div>
-      <div class="row" style="gap:4px">
-        <input type="text" id="keywordInput" placeholder="Add keyword..." />
-        <button class="btn-sm" id="addKeywordBtn">+</button>
-      </div>
-      <div class="tag-list" id="tagList"></div>
-      <div class="radio-row">
-        <label><input type="radio" name="kwMode" value="appear" checked /> Appears</label>
-        <label><input type="radio" name="kwMode" value="disappear" /> Disappears</label>
-      </div>
-    </section>
+      <section class="section">
+        <div class="section-title">Page Monitor</div>
+        <div class="row" style="gap:4px">
+          <input type="text" id="keywordInput" placeholder="Add keyword..." />
+          <button class="btn-sm" id="addKeywordBtn">+</button>
+        </div>
+        <div class="tag-list" id="tagList"></div>
+        <div class="radio-row">
+          <label><input type="radio" name="kwMode" value="appear" checked /> Appears</label>
+          <label><input type="radio" name="kwMode" value="disappear" /> Disappears</label>
+        </div>
+      </section>
+    </div>
 
     <div class="actions">
       <button class="btn btn-primary" id="startBtn">&#9654; Start Refresh</button>
