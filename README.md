@@ -33,6 +33,7 @@ JIT is a small studio that builds thoughtfully designed browser extensions -- to
 - **MutedHue** replaces harsh blue text selection with a subtle, adaptive grey across every website. Light and dark mode aware. Zero permissions required.
 - **Refreshner** provides smart auto-refresh with customizable intervals, keyword page monitoring, live countdown timer, and audio alerts.
 - **Goofanizer** instantly emulates mobile and tablet viewports with one click. Switch between 4 device presets, rotate, capture screenshots, and batch export.
+- **Imageination** scans any webpage for images, video and audio. Download individually or batch as ZIP. PNG, JPEG, WebP, SVG, GIF, AVIF, MP4, MP3 and more.
 
 ### Design Philosophy - Google-Inspired Dark UI
 
@@ -40,7 +41,7 @@ A pitch-black background (`#000`) with Google Sans typography, glassmorphism flo
 
 ### GEO-First Architecture
 
-Every section heading is followed by a concise, descriptive subtitle, optimized for both human readers and AI crawlers. JSON-LD `@graph` (Organization + Person + 3x SoftwareApplication), per-page canonical URLs, Open Graph and Twitter Card meta tags, an AI-friendly `robots.txt`, and a complete `_headers` security policy complete the Generative Engine Optimization layer.
+Every section heading is followed by a concise, descriptive subtitle, optimized for both human readers and AI crawlers. JSON-LD `@graph` (Organization + Person + 4x SoftwareApplication), per-page canonical URLs, Open Graph and Twitter Card meta tags, an AI-friendly `robots.txt`, and a complete `_headers` security policy complete the Generative Engine Optimization layer.
 
 ---
 
@@ -53,6 +54,7 @@ Every section heading is followed by a concise, descriptive subtitle, optimized 
 | **MutedHue** | Replaces bright blue text selection with a subtle, adaptive grey highlight. Light and dark mode aware. Shadow DOM support included. | 1.0.0 | 12 KB |
 | **Refreshner** | Smart auto-refresh with quick presets, custom HH:MM:SS intervals, random intervals, keyword page monitoring, live countdown ring, and audio alerts on match. | 2.0 | 28 KB |
 | **Goofanizer** | Emulate mobile and tablet viewports instantly. 4 device presets, rotate, screenshot, batch export, and search filter. Uses Chrome Debugger API. | 1.0.0 | 50 KB |
+| **Imageination** | Scans any webpage for images, video and audio. Download PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more individually or batch as ZIP. | 1.0.0 | 16 KB |
 
 ### Website
 
@@ -72,10 +74,10 @@ Every section heading is followed by a concise, descriptive subtitle, optimized 
 
 | Capability | Details |
 |---|---|
-| **JSON-LD Structured Data** | 5-node @graph (Organization + Person + 3 SoftwareApplication) for rich search results |
+| **JSON-LD Structured Data** | 6-node @graph (Organization + Person + 4 SoftwareApplication) for rich search results |
 | **Open Graph / Twitter Cards** | Pre-configured meta tags for social link previews with Logo.webp |
 | **AI Crawler Strategy** | robots.txt allows Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User, Claude-Web, PerplexityBot; blocks training scrapers |
-| **Sitemap** | sitemap.xml covering 5 URLs (/, /extension.html, 3 description pages) |
+| **Sitemap** | sitemap.xml covering 6 URLs (/, /extension.html, 4 description pages) |
 | **Per-Page Canonicals** | Every page exports canonical URL pointing to github.io sub-path |
 | **Security Headers** | CSP, HSTS, X-Frame-Options, Permissions-Policy via `_headers` (GitHub Pages) |
 
@@ -101,9 +103,9 @@ Every section heading is followed by a concise, descriptive subtitle, optimized 
 |  "Power your everyday with a JIT plan"                              |
 |  [Download extensions]                                              |
 +--------------------------------------------------------------------+
-|  About  |  Extensions (3 cards)  |  FAQ (8 Qs)  |  Developer      |
+|  About  |  Extensions (4 cards)  |  FAQ (8 Qs)  |  Developer      |
 |  (2-col |  MutedHue, Refreshner, | single-open  |  7-link grid    |
-|   grid) |  Goofanizer            | accordion    |  + full Portfolio|
+|   grid) |  Goofanizer, Imageination | accordion  |  + full Portfolio|
 +--------------------------------------------------------------------+
 |  Contact Form (FormSubmit.io - serverless POST)                     |
 +--------------------------------------------------------------------+
@@ -118,12 +120,13 @@ Every section heading is followed by a concise, descriptive subtitle, optimized 
 ### Extension Detail Flow
 
 ```
-index.html  ──[Learn More]──>  descriptions/MutedHue.html     (full details + download)
-                                descriptions/Refreshner.html   (full details + download)
-                                descriptions/Goofanizer.html  (full details + download)
+index.html  ──[Learn More]──>  descriptions/MutedHue.html       (full details + download)
+                                descriptions/Refreshner.html     (full details + download)
+                                descriptions/Goofanizer.html    (full details + download)
+                                descriptions/Imageination.html  (full details + download)
 
 extension.html ──[Add to Chrome]──>  ZIP download + Install Modal (step-by-step guide)
-                ──[Learn More]──>  descriptions/MutedHue.html / Refreshner.html / Goofanizer.html
+                ──[Learn More]──>  descriptions/MutedHue.html / Refreshner.html / Goofanizer.html / Imageination.html
 ```
 
 ---
@@ -179,14 +182,26 @@ JIT/
 │   ├── utils/                  #   devices.js - 4 device presets
 │   └── assets/                 #   Icon.png, os SVGs
 │
+├── Imageination/               # Chrome Extension MV3 - media scanner + downloader
+│   ├── manifest.json           #   activeTab, downloads, host_permissions all_urls
+│   ├── background.js           #   Minimal — routes downloadImage messages
+│   ├── content.js              #   Full page scan: img, picture, svg, icon, bg, video, audio
+│   ├── popup.html              #   Sidebar + grid layout, 520x540px
+│   ├── popup.js                #   ZipWriter, batch download, 21-type categorization
+│   ├── popup.css               #   Dark theme, 2-column grid, custom scrollbar
+│   ├── icons/icon.png          #   Extension icon (300x300, 32-bit ARGB)
+│   └── test-media.html         #   Test fixture for content script scanning
+│
 ├── descriptions/              # Extension detail pages with full info + download
 │   ├── MutedHue.html          #   MutedHue features, how-it-works, privacy, install guide
 │   ├── Refreshner.html        #   Refreshner features, how-it-works, privacy, install guide
-│   └── Goofanizer.html        #   Goofanizer features, how-it-works, privacy, install guide
+│   ├── Goofanizer.html        #   Goofanizer features, how-it-works, privacy, install guide
+│   └── Imageination.html      #   Imageination features, how-it-works, privacy, install guide
 │
 ├── MutedHue.zip               # Packaged MutedHue extension for download
 ├── Refreshner.zip             # Packaged Refreshner extension for download
 ├── Goofanizer.zip             # Packaged Goofanizer extension for download
+├── Imageination.zip           # Packaged Imageination extension for download
 │
 ├── robots.txt                 # AI crawler directives (search allowed, training scrapers blocked)
 ├── sitemap.xml                # SEO sitemap (5 URLs with priority + lastmod)
@@ -221,7 +236,7 @@ xdg-open index.html      # Linux
 1. Open `chrome://extensions`
 2. Enable **Developer mode** (top right)
 3. Click **Load unpacked**
-4. Select the `MutedHue/`, `Refreshner/`, or `Goofanizer/` folder
+ 4. Select the `MutedHue/`, `Refreshner/`, `Goofanizer/`, or `Imageination/` folder
 
 Or download the ZIP from the website and follow the install guide:
 
@@ -233,7 +248,7 @@ Or download the ZIP from the website and follow the install guide:
 
 ## Product Roadmap
 
-- [ ] **Chrome Web Store publishing** -- Submit MutedHue, Refreshner, and Goofanizer officially
+- [ ] **Chrome Web Store publishing** -- Submit MutedHue, Refreshner, Goofanizer, and Imageination officially
 - [ ] **Firefox port** -- Rewrite extensions for WebExtension API compatibility (Goofanizer excluded -- uses Chrome-specific debugger API)
 - [ ] **Privacy Policy / ToS pages** -- Convert PRIVACY.md to dedicated HTML pages
 - [ ] **FormSubmit thank-you redirect** -- Custom redirect page after form submission
@@ -250,6 +265,7 @@ Or download the ZIP from the website and follow the install guide:
 | `open descriptions/MutedHue.html` | View MutedHue detail page |
 | `open descriptions/Refreshner.html` | View Refreshner detail page |
 | `open descriptions/Goofanizer.html` | View Goofanizer detail page |
+| `open descriptions/Imageination.html` | View Imageination detail page |
 | Load unpacked in Chrome | Test extensions locally |
 
 ### Contribution
