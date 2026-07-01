@@ -1,0 +1,33 @@
+{
+  "id": "jquery",
+  "name": "jQuery",
+  "category": "Frontend",
+  "developer": "John Resig",
+  "releaseYear": 2006,
+  "latestVersion": "3.7",
+  "description": "A fast, small, and feature-rich JavaScript library that simplifies HTML document traversal, event handling, animation, and Ajax interactions. jQuery has been foundational in modern web development.",
+  "advantages": [
+    "Simple syntax for DOM manipulation",
+    "Cross-browser compatibility",
+    "Extensive plugin ecosystem",
+    "Chaining methods for concise code",
+    "Easy Ajax integration",
+    "Large community and abundant resources"
+  ],
+  "disadvantages": [
+    "Vanilla JS has caught up for most tasks",
+    "Encourages imperative rather than declarative code",
+    "Performance overhead compared to modern frameworks",
+    "Large bundle size for simple use cases"
+  ],
+  "alternatives": ["Alpine.js", "htmx", "React", "Vue.js", "Vanilla JavaScript"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Selectors", "DOM manipulation", "Event handling", "Effects and animations", "CSS methods"] },
+    { "step": "Intermediate", "topics": ["Ajax and API calls", "Traversing", "Plugins", "Utilities", "Deferred and promises"] },
+    { "step": "Advanced", "topics": ["Plugin development", "Performance optimization", "Custom events", "jQuery UI", "Integration with frameworks"] }
+  ],
+  "officialDocs": "https://jquery.com",
+  "github": "https://github.com/jquery/jquery",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Legacy website maintenance", "Simple interactivity", "DOM manipulation", "Ajax requests", "Plugin-based websites"]
+}

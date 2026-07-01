@@ -1,0 +1,17 @@
+{
+  "officialDocs": "https://woocommerce.com",
+  "advantages": [],
+  "latestVersion": "9.8.0",
+  "difficulty": "Intermediate",
+  "releaseYear": 2011,
+  "learningRoadmap": [],
+  "commonUseCases": [],
+  "name": "WooCommerce",
+  "alternatives": [],
+  "disadvantages": [],
+  "github": "",
+  "category": "E-commerce",
+  "description": "An open-source e-commerce plugin for WordPress that powers millions of online stores worldwide.",
+  "developer": "Automattic",
+  "id": "woocommerce"
+}

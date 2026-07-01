@@ -1,0 +1,33 @@
+{
+  "id": "wordpress",
+  "name": "WordPress",
+  "category": "CMS",
+  "developer": "WordPress Foundation",
+  "releaseYear": 2003,
+  "latestVersion": "6.6",
+  "description": "The world's most popular content management system, powering over 40% of all websites. WordPress provides a user-friendly interface for creating and managing websites with extensive customization through themes and plugins.",
+  "advantages": [
+    "User-friendly admin interface",
+    "Massive plugin and theme ecosystem",
+    "SEO-friendly out of the box",
+    "Large community and resources",
+    "Regular security updates",
+    "Flexible content management"
+  ],
+  "disadvantages": [
+    "Security vulnerabilities from plugins",
+    "Performance can suffer with many plugins",
+    "Block editor learning curve",
+    "Can be overkill for simple sites"
+  ],
+  "alternatives": ["Shopify", "Webflow", "Drupal", "Joomla", "Ghost"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Installation and setup", "Posts and pages", "Media management", "Themes", "Plugins"] },
+    { "step": "Intermediate", "topics": ["Custom post types", "Taxonomies", "Theme development", "Child themes", "Page builders"] },
+    { "step": "Advanced", "topics": ["Plugin development", "REST API", "Performance optimization", "Security hardening", "Multisite networks"] }
+  ],
+  "officialDocs": "https://wordpress.org/documentation",
+  "github": "https://github.com/WordPress/WordPress",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Blogs", "Business websites", "E-commerce (WooCommerce)", "News and magazines", "Membership sites"]
+}

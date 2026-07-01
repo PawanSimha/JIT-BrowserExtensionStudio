@@ -1,0 +1,33 @@
+{
+  "id": "cloudflare",
+  "name": "Cloudflare",
+  "category": "Hosting",
+  "developer": "Cloudflare Inc.",
+  "releaseYear": 2010,
+  "latestVersion": "2024",
+  "description": "A global cloud network providing content delivery network (CDN), DDoS protection, internet security, and distributed domain name server services. Cloudflare accelerates and protects millions of websites.",
+  "advantages": [
+    "Global CDN improves page load times",
+    "DDoS protection and web application firewall",
+    "Free tier for basic protection",
+    "SSL/TLS encryption",
+    "Optimized routing and caching",
+    "Analytics and performance insights"
+  ],
+  "disadvantages": [
+    "Can introduce latency for some configurations",
+    "Limited control over caching rules on free tier",
+    "Complex configuration for advanced use cases",
+    "DNS propagation delays"
+  ],
+  "alternatives": ["Akamai", "Fastly", "CloudFront", "KeyCDN", "StackPath"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["DNS management", "CDN configuration", "SSL/TLS settings", "Page rules", "Caching"] },
+    { "step": "Intermediate", "topics": ["WAF security rules", "Rate limiting", "Workers", "Load balancing", "Analytics"] },
+    { "step": "Advanced", "topics": ["Workers development", "Stream", "Images optimization", "Zero Trust", "API Shield"] }
+  ],
+  "officialDocs": "https://developers.cloudflare.com",
+  "github": "https://github.com/cloudflare",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Website acceleration", "DDoS protection", "DNS management", "Edge computing", "Security hardening"]
+}

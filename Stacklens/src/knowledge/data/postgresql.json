@@ -1,0 +1,33 @@
+{
+  "id": "postgresql",
+  "name": "PostgreSQL",
+  "category": "Database",
+  "developer": "PostgreSQL Global Development Group",
+  "releaseYear": 1996,
+  "latestVersion": "16",
+  "description": "A powerful, open-source object-relational database system with a strong reputation for reliability, feature robustness, and performance. PostgreSQL supports advanced data types and JSON querying.",
+  "advantages": [
+    "Advanced SQL features and compliance",
+    "Extensible with custom data types",
+    "Excellent support for JSON and NoSQL workloads",
+    "Strong ACID compliance",
+    "Advanced indexing (GiST, GIN, BRIN)",
+    "Active open-source development"
+  ],
+  "disadvantages": [
+    "Performance tuning can be complex",
+    "Replication setup is more involved than MySQL",
+    "Memory usage for connection handling",
+    "Less widespread hosting support"
+  ],
+  "alternatives": ["MySQL", "SQLite", "MariaDB", "SQL Server", "MongoDB"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["SQL queries", "Table design", "Data types", "Joins", "Indexing"] },
+    { "step": "Intermediate", "topics": ["JSON/JSONB operations", "Full-text search", "Window functions", "CTEs", "Transactions and MVCC"] },
+    { "step": "Advanced", "topics": ["Performance tuning", "Streaming replication", "Partitioning", "Extensions", "High availability"] }
+  ],
+  "officialDocs": "https://www.postgresql.org/docs",
+  "github": "https://github.com/postgres/postgres",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Web applications", "Geospatial applications", "Analytics and reporting", "Data warehousing", "Financial systems"]
+}

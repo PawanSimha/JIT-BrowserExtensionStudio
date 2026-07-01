@@ -1,0 +1,17 @@
+{
+  "id": "sendgrid",
+  "github": "",
+  "name": "SendGrid",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A cloud-based email delivery service for transactional emails.",
+  "developer": "Twilio",
+  "releaseYear": 2009,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "6.0.0",
+  "officialDocs": "https://sendgrid.com",
+  "category": "Email",
+  "commonUseCases": [],
+  "disadvantages": []
+}

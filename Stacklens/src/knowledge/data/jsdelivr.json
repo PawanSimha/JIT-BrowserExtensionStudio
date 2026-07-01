@@ -1,0 +1,17 @@
+{
+  "category": "CDN",
+  "id": "jsdelivr",
+  "officialDocs": "https://jsdelivr.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "jsDelivr",
+  "difficulty": "Intermediate",
+  "latestVersion": "1.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A free CDN for open-source JavaScript libraries.",
+  "releaseYear": 2014,
+  "developer": "jsDelivr"
+}

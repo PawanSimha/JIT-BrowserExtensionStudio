@@ -1,0 +1,17 @@
+{
+  "officialDocs": "https://astro.com",
+  "advantages": [],
+  "latestVersion": "5.0.0",
+  "difficulty": "Intermediate",
+  "releaseYear": 2021,
+  "learningRoadmap": [],
+  "commonUseCases": [],
+  "name": "Astro",
+  "alternatives": [],
+  "disadvantages": [],
+  "github": "",
+  "category": "Static Site Generator",
+  "description": "An all-in-one web framework for content-focused websites with zero-JS output by default.",
+  "developer": "Astro",
+  "id": "astro"
+}

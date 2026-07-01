@@ -1,0 +1,33 @@
+{
+  "id": "lighttpd",
+  "name": "lighttpd",
+  "category": "Hosting",
+  "developer": "lighttpd Community",
+  "releaseYear": 2003,
+  "latestVersion": "1.4.77",
+  "description": "lighttpd (pronounced 'lighty') is an open-source web server designed for speed-critical environments. It is optimized for low memory usage and high performance under high concurrent loads, making it ideal for servers with limited resources.",
+  "advantages": [
+    "Extremely low memory footprint",
+    "Excellent for high concurrency workloads",
+    "Fast CGI support with PHP optimization",
+    "Built-in URL rewriting and HTTP compression",
+    "Small attack surface due to minimal codebase",
+    "Works well on embedded systems and low-end hardware"
+  ],
+  "disadvantages": [
+    "Smaller module ecosystem than Apache",
+    "Less documentation and community support",
+    ".htaccess not supported (requires server config changes)",
+    "Not ideal for shared hosting environments"
+  ],
+  "alternatives": ["Nginx", "Apache HTTP Server", "Caddy", "OpenLiteSpeed", "H2O"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Installation and basic configuration", "Virtual host setup", "PHP-FPM integration", "Access and error logging", "Directory listing configuration"] },
+    { "step": "Intermediate", "topics": ["SSL/TLS configuration", "URL rewriting rules", "Caching and compression", "Rate limiting", "Security hardening"] },
+    { "step": "Advanced", "topics": ["Custom CGI scripts", "ModProxy configuration", "Performance benchmarking", "Embedded system optimization", "High availability setup"] }
+  ],
+  "officialDocs": "https://lighttpd.net/documentation/",
+  "github": "https://github.com/lighttpd/lighttpd1.4",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Static file serving for high-traffic sites", "PHP applications on low-memory servers", "Embedded systems and IoT", "Media streaming servers", "Development sandbox environments"]
+}

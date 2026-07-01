@@ -1,0 +1,17 @@
+{
+  "category": "JavaScript Libraries",
+  "id": "gsap",
+  "officialDocs": "https://gsap.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "GSAP",
+  "difficulty": "Intermediate",
+  "latestVersion": "3.12.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A high-performance animation library for the web.",
+  "releaseYear": 2011,
+  "developer": "GreenSock"
+}

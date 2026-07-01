@@ -1,0 +1,17 @@
+{
+  "category": "JavaScript Libraries",
+  "id": "rxjs",
+  "officialDocs": "https://rxjs.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "RxJS",
+  "difficulty": "Intermediate",
+  "latestVersion": "7.8.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A reactive programming library for JavaScript using Observables.",
+  "releaseYear": 2015,
+  "developer": "ReactiveX"
+}

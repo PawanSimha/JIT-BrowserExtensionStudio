@@ -1,0 +1,33 @@
+{
+  "id": "aws",
+  "name": "AWS",
+  "category": "Hosting",
+  "developer": "Amazon",
+  "releaseYear": 2006,
+  "latestVersion": "2024",
+  "description": "Amazon Web Services is the world's most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally. AWS provides computing, storage, databases, and more.",
+  "advantages": [
+    "Widest range of cloud services",
+    "Global infrastructure across 30+ regions",
+    "Pay-as-you-go pricing",
+    "Enterprise-grade security and compliance",
+    "Strong ecosystem and community",
+    "Comprehensive documentation"
+  ],
+  "disadvantages": [
+    "Complex pricing can be confusing",
+    "Steep learning curve",
+    "Vendor lock-in concerns",
+    "Costs can escalate quickly without management"
+  ],
+  "alternatives": ["Azure", "Google Cloud", "DigitalOcean", "Linode", "Vercel"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["EC2 compute", "S3 storage", "IAM security", "VPC networking", "RDS databases"] },
+    { "step": "Intermediate", "topics": ["Lambda serverless", "API Gateway", "CloudFront CDN", "DynamoDB", "Elastic Load Balancing"] },
+    { "step": "Advanced", "topics": ["ECS/EKS containers", "CloudFormation", "Step Functions", "Cost optimization", "Security best practices"] }
+  ],
+  "officialDocs": "https://docs.aws.amazon.com",
+  "github": "https://github.com/aws",
+  "difficulty": "Advanced",
+  "commonUseCases": ["Web hosting", "Serverless applications", "Data storage and backup", "Machine learning", "Enterprise infrastructure"]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "go",
+  "name": "Go",
+  "category": "Backend",
+  "developer": "Google",
+  "releaseYear": 2009,
+  "latestVersion": "1.22",
+  "description": "A statically typed, compiled programming language designed at Google for building efficient, reliable software. Go is known for its simplicity, concurrency support, and fast compilation times.",
+  "advantages": [
+    "Fast compilation and execution",
+    "Built-in concurrency with goroutines",
+    "Simple and clean syntax",
+    "Excellent standard library",
+    "Cross-platform compilation",
+    "Great for microservices and cloud-native apps"
+  ],
+  "disadvantages": [
+    "Limited generic support (until recently)",
+    "No inheritance or classes",
+    "Smaller ecosystem compared to Java/Python",
+    "Verbose error handling"
+  ],
+  "alternatives": ["Node.js", "Python", "Java", "Rust", "C#"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Syntax and data types", "Control structures", "Functions and methods", "Structs and interfaces", "Packages and modules"] },
+    { "step": "Intermediate", "topics": ["Goroutines and channels", "HTTP servers and clients", "File and database operations", "Error handling patterns", "Testing"] },
+    { "step": "Advanced", "topics": ["Microservices architecture", "gRPC", "Performance optimization", "Concurrency patterns", "Cloud-native development"] }
+  ],
+  "officialDocs": "https://go.dev/doc",
+  "github": "https://github.com/golang/go",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Microservices", "CLI tools", "Cloud-native applications", "Network servers", "DevOps and infrastructure"]
+}

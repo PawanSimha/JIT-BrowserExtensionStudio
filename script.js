@@ -103,7 +103,8 @@
       mutedhue: { name: 'MutedHue', icon: 'MutedHue/icons/MutedHue.png' },
       refreshner: { name: 'Refreshner', icon: 'Refreshner/icons/Refreshner.png' },
       goofanizer: { name: 'Goofanizer', icon: 'Goofanizer/assets/Icon.png' },
-      imageination: { name: 'Imageination', icon: 'Imageination/icons/icon.png' }
+      imageination: { name: 'Imageination', icon: 'Imageination/icons/icon.png' },
+      stacklens: { name: 'StackLens', icon: 'Stacklens/icons/StackLens.png' }
     };
 
     function openInstallModal(ext) {

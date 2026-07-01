@@ -1,0 +1,17 @@
+{
+  "id": "datadog",
+  "github": "",
+  "name": "Datadog",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A cloud-scale monitoring platform for applications.",
+  "developer": "Datadog",
+  "releaseYear": 2010,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "3.0.0",
+  "officialDocs": "https://datadog.com",
+  "category": "Monitoring",
+  "commonUseCases": [],
+  "disadvantages": []
+}

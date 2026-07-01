@@ -1,0 +1,33 @@
+{
+  "id": "python",
+  "name": "Python",
+  "category": "Backend",
+  "developer": "Python Software Foundation",
+  "releaseYear": 1991,
+  "latestVersion": "3.13",
+  "description": "A high-level, interpreted programming language known for its readability and versatility. Python emphasizes code readability with significant indentation and is widely used in web development, data science, and automation.",
+  "advantages": [
+    "Readable and clean syntax",
+    "Versatile for various domains",
+    "Rich standard library",
+    "Large ecosystem of third-party packages",
+    "Excellent for prototyping and rapid development",
+    "Strong community and resources"
+  ],
+  "disadvantages": [
+    "Slower execution than compiled languages",
+    "Global Interpreter Lock (GIL) limits threading",
+    "Runtime errors more common without type hints",
+    "Package management can be messy"
+  ],
+  "alternatives": ["Node.js", "Go", "Ruby", "Java", "PHP"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Syntax and data types", "Control flow", "Functions", "Data structures", "File handling"] },
+    { "step": "Intermediate", "topics": ["OOP in Python", "Modules and packages", "Error handling", "Working with APIs", "Database connectivity"] },
+    { "step": "Advanced", "topics": ["Web frameworks (Django/Flask)", "Async programming", "Testing and debugging", "Performance optimization", "Deployment"] }
+  ],
+  "officialDocs": "https://docs.python.org",
+  "github": "https://github.com/python/cpython",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Web development", "Data science and ML", "Automation scripts", "API development", "Backend services"]
+}

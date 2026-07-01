@@ -1,0 +1,30 @@
+{
+  "id": "core-js",
+  "name": "core-js",
+  "category": "Frontend",
+  "developer": "Denis Pushkarev (zloirock)",
+  "releaseYear": 2014,
+  "latestVersion": "3.41.0",
+  "description": "A modular JavaScript polyfill library that provides support for the latest ECMAScript features in older browsers. core-js is the most widely used polyfill solution, powering Babel's preset-env and used by millions of websites to ensure cross-browser compatibility.",
+  "advantages": [
+    "Comprehensive coverage of ECMAScript features and proposals",
+    "Modular architecture allows selective polyfill loading",
+    "Automatically detects required polyfills when used with Babel",
+    "Supports modern JavaScript features like Promise, async/await, and Symbol",
+    "Regular updates to support the latest ECMAScript proposals"
+  ],
+  "disadvantages": [
+    "Adds bundle size overhead when not properly optimized",
+    "Can polyfill features even in modern browsers that already support them",
+    "Version 2 to 3 migration required significant changes"
+  ],
+  "alternatives": ["es-shims", "polyfill.io", "es6-shim", "zloirock/core-js"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["What are polyfills", "core-js usage with Babel", "@babel/preset-env configuration", "Selective polyfill imports"] },
+    { "step": "Intermediate", "topics": ["core-js v3 modules", "Global vs instance polyfills", "Feature detection", "Bundle optimization"] }
+  ],
+  "officialDocs": "https://github.com/zloirock/core-js",
+  "github": "https://github.com/zloirock/core-js",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Browser compatibility layers", "Babel polyfill targets", "Legacy browser support", "Library development"]
+}

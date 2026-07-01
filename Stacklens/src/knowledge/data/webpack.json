@@ -1,0 +1,33 @@
+{
+  "id": "webpack",
+  "name": "Webpack",
+  "category": "Build Tool",
+  "developer": "Tobias Koppers",
+  "releaseYear": 2012,
+  "latestVersion": "5.94",
+  "description": "A static module bundler for modern JavaScript applications. Webpack builds a dependency graph of modules and generates optimized bundles with loaders and plugins for transforming assets.",
+  "advantages": [
+    "Powerful module bundling",
+    "Rich plugin ecosystem",
+    "Code splitting capabilities",
+    "Loaders for any file type",
+    "Development server with HMR",
+    "Highly configurable"
+  ],
+  "disadvantages": [
+    "Complex configuration",
+    "Slow build times for large projects",
+    "Configuration learning curve",
+    "Documentation can be difficult to navigate"
+  ],
+  "alternatives": ["Vite", "esbuild", "Rollup", "Parcel", "Turbopack"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Entry and output", "Loaders", "Plugins", "Mode configuration", "Dev server"] },
+    { "step": "Intermediate", "topics": ["Code splitting", "Asset management", "Environment variables", "Source maps", "Performance optimization"] },
+    { "step": "Advanced", "topics": ["Custom plugins", "Custom loaders", "Module federation", "Tree shaking", "Build analysis"] }
+  ],
+  "officialDocs": "https://webpack.js.org/concepts",
+  "github": "https://github.com/webpack/webpack",
+  "difficulty": "Advanced",
+  "commonUseCases": ["JavaScript application bundling", "React/Vue/Angular projects", "Library bundling", "Legacy project build systems", "Enterprise application builds"]
+}

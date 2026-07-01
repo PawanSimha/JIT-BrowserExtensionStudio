@@ -1,0 +1,33 @@
+{
+  "id": "netlify",
+  "name": "Netlify",
+  "category": "Hosting",
+  "developer": "Netlify Inc.",
+  "releaseYear": 2014,
+  "latestVersion": "2024",
+  "description": "A cloud platform that provides hosting and serverless backend services for static websites and web applications with Git-based workflow, continuous deployment, and global CDN.",
+  "advantages": [
+    "Git-based continuous deployment",
+    "Instant rollbacks",
+    "Serverless functions",
+    "Form handling without backend",
+    "Split testing for deployments",
+    "Generous free tier"
+  ],
+  "disadvantages": [
+    "Build minutes limits on free tier",
+    "Limited dynamic capabilities",
+    "Can be slow for large sites",
+    "Vendor lock-in for features"
+  ],
+  "alternatives": ["Vercel", "Cloudflare Pages", "Render", "Railway", "GitHub Pages"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Git integration", "Deploy setup", "Custom domains", "Environment variables", "Netlify CLI"] },
+    { "step": "Intermediate", "topics": ["Serverless functions", "Forms and identity", "Redirects and headers", "Split testing", "Analytics"] },
+    { "step": "Advanced", "topics": ["Build plugins", "Edge functions", "Large media optimization", "Team collaboration", "Migration"] }
+  ],
+  "officialDocs": "https://docs.netlify.com",
+  "github": "https://github.com/netlify",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Static sites", "Jamstack applications", "Documentation sites", "Landing pages", "Small to medium web apps"]
+}

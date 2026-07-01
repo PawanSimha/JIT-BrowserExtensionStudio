@@ -1,0 +1,17 @@
+{
+  "id": "plausible",
+  "github": "",
+  "name": "Plausible",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A lightweight open-source web analytics tool with no cookies.",
+  "developer": "Plausible Insights",
+  "releaseYear": 2020,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "2.1.0",
+  "officialDocs": "https://plausible.com",
+  "category": "Analytics",
+  "commonUseCases": [],
+  "disadvantages": []
+}

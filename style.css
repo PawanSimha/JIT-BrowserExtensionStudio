@@ -134,7 +134,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: clamp(0.9rem, 1.3vw, 1.05rem);
   color: var(--text-3);
   max-width: 640px;
-  margin: 0 auto 48px;
+  margin: 0 auto 24px;
   line-height: var(--lh-loose);
 }
 
@@ -379,13 +379,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    EXTENSIONS
 =================================================== */
 .extensions {
-  padding: clamp(60px, 10vh, 100px) 0;
+  padding: clamp(40px, 6vh, 60px) 0;
   text-align: center;
+  position: relative;
+  background:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: center center;
+  background-color: var(--bg-2);
+}
+.extensions::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 300px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(66,133,244,0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 .ext-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(16px, 2.5vw, 24px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 1.5vw, 20px);
   text-align: left;
 }
 .ext-card {
@@ -399,20 +414,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .ext-card:hover { border-color: var(--border-strong); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
 .ext-art {
-  height: clamp(160px, 20vw, 200px);
+  height: clamp(110px, 14vw, 140px);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
 }
-.ext-art-1 { background: linear-gradient(135deg, #1a1d2e 0%, #0a0d18 100%); }
-.ext-art-2 { background: linear-gradient(135deg, #2a1d2e 0%, #160d18 100%); }
-.ext-art-3 { background: linear-gradient(135deg, #1a2a2a 0%, #0d1816 100%); }
-.ext-art-4 { background: linear-gradient(135deg, #2a1d3e 0%, #1a0d28 100%); }
-.ext-logo { width: 100%; height: 100%; object-fit: contain; padding: 24px; }
-.ext-body { padding: clamp(20px, 2.5vw, 28px); flex: 1; display: flex; flex-direction: column; }
-.ext-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.ext-art-1 { background: radial-gradient(ellipse at top, rgba(66,133,244,0.08) 0%, transparent 70%), var(--bg-0); }
+.ext-art-2 { background: radial-gradient(ellipse at top, rgba(52,168,83,0.08) 0%, transparent 70%), var(--bg-0); }
+.ext-art-3 { background: radial-gradient(ellipse at top, rgba(251,188,4,0.08) 0%, transparent 70%), var(--bg-0); }
+.ext-art-4 { background: radial-gradient(ellipse at top, rgba(234,67,53,0.08) 0%, transparent 70%), var(--bg-0); }
+.ext-art-5 { background: radial-gradient(ellipse at top, rgba(66,133,244,0.08) 0%, transparent 70%), var(--bg-0); }
+.ext-logo { width: 100%; height: 100%; object-fit: contain; padding: 16px; }
+.ext-body { padding: clamp(14px, 1.5vw, 18px); flex: 1; display: flex; flex-direction: column; }
+.ext-head { display: flex; align-items: center; margin-bottom: 6px; }
 .ext-head h3 { font-size: var(--fs-body); font-weight: var(--fw-bold); color: var(--text-1); }
 .ext-status {
   font-size: var(--fs-tiny);
@@ -421,7 +437,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: var(--radius-pill);
 }
 .ext-live { background: rgba(52,168,83,0.15); color: var(--g-green); }
-.ext-body p { color: var(--text-3); font-size: var(--fs-small); line-height: var(--lh-loose); margin-bottom: 20px; flex: 1; }
+.ext-body p { color: var(--text-3); font-size: var(--fs-small); line-height: var(--lh-loose); margin-bottom: 12px; flex: 1; }
 .ext-details { list-style: none; margin-bottom: 16px; padding: 0; }
 .ext-details li { font-size: var(--fs-small); color: var(--text-3); padding: 3px 0; }
 .ext-details li strong { color: var(--text-2); font-weight: var(--fw-medium); }

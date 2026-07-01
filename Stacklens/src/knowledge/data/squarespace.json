@@ -1,0 +1,17 @@
+{
+  "id": "squarespace",
+  "github": "",
+  "name": "Squarespace",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "An all-in-one website building and hosting platform.",
+  "developer": "Squarespace",
+  "releaseYear": 2003,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "7.1",
+  "officialDocs": "https://squarespace.com",
+  "category": "CMS",
+  "commonUseCases": [],
+  "disadvantages": []
+}

@@ -1,0 +1,31 @@
+{
+  "id": "arkose-labs",
+  "name": "Arkose Labs",
+  "category": "Security",
+  "developer": "Arkose Labs",
+  "releaseYear": 2015,
+  "latestVersion": "N/A",
+  "description": "Arkose Labs is a fraud prevention and bot detection platform that uses risk-based authentication challenges. Their MatchKey technology presents users with interactive puzzles (such as image matching) to distinguish between human users and automated bots, without relying on traditional CAPTCHA methods.",
+  "advantages": [
+    "Advanced bot detection beyond traditional CAPTCHA",
+    "Risk-based challenge difficulty adapts to threat level",
+    "User-friendly puzzles that don't frustrate legitimate users",
+    "Real-time fraud scoring and decisioning",
+    "Protects against account takeover, credential stuffing, and spam"
+  ],
+  "disadvantages": [
+    "Can add friction to legitimate user sessions",
+    "Premium pricing compared to simpler CAPTCHA solutions",
+    "Requires integration effort for custom workflows",
+    "Some users may find puzzles disruptive"
+  ],
+  "alternatives": ["reCAPTCHA (Google)", "hCaptcha", "Cloudflare Turnstile", "DataDome", "PerimeterX"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Bot detection fundamentals", "Arkose MatchKey overview", "Challenge types (image, audio)", "Integration setup"] },
+    { "step": "Intermediate", "topics": ["Risk scoring configuration", "Custom challenge branding", "Session and telemetry analysis", "Dashboard and reporting"] }
+  ],
+  "officialDocs": "https://www.arkoselabs.com",
+  "github": "",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Login page bot protection", "Account takeover prevention", "Credential stuffing mitigation", "Spam and fake account prevention"]
+}

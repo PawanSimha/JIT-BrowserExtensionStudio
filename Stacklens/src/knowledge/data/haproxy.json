@@ -1,0 +1,17 @@
+{
+  "category": "Reverse Proxies",
+  "id": "haproxy",
+  "officialDocs": "https://haproxy.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "HAProxy",
+  "difficulty": "Intermediate",
+  "latestVersion": "2.9.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A reliable, high-performance TCP/HTTP load balancer.",
+  "releaseYear": 2006,
+  "developer": "HAProxy Technologies"
+}

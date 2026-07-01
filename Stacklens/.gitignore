@@ -1,0 +1,9 @@
+node_modules/
+.output/
+manifest.json
+popup.html
+background.js
+chunks/
+content-scripts/
+assets/
+# NOTE: icons/ is NOT ignored — StackLens.png is needed by the website

@@ -1,0 +1,33 @@
+{
+  "id": "openai",
+  "name": "OpenAI",
+  "category": "AI SDK",
+  "developer": "OpenAI",
+  "releaseYear": 2015,
+  "latestVersion": "2024",
+  "description": "An AI research and deployment company providing APIs for large language models, including GPT-4 and GPT-3.5. OpenAI's APIs enable natural language processing, code generation, image generation, and more.",
+  "advantages": [
+    "State-of-the-art language models",
+    "Versatile API for multiple use cases",
+    "Code generation and analysis",
+    "Image generation (DALL-E)",
+    "Easy-to-use API",
+    "Regular model improvements"
+  ],
+  "disadvantages": [
+    "API costs can be significant at scale",
+    "Privacy concerns with data sent to API",
+    "Model output reliability varies",
+    "Rate limiting and availability issues"
+  ],
+  "alternatives": ["Anthropic Claude", "Google Gemini", "Hugging Face", "Cohere", "Local LLMs"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["API key setup", "Chat completions", "Prompt engineering", "Tokens and pricing", "Response handling"] },
+    { "step": "Intermediate", "topics": ["Function calling", "Embeddings", "Fine-tuning basics", "Streaming responses", "Error handling"] },
+    { "step": "Advanced", "topics": ["Assistants API", "Retrieval augmented generation", "Safety and moderation", "Production deployment", "Cost optimization"] }
+  ],
+  "officialDocs": "https://platform.openai.com/docs",
+  "github": "https://github.com/openai",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Chatbots and assistants", "Content generation", "Code generation", "Semantic search", "Data analysis"]
+}

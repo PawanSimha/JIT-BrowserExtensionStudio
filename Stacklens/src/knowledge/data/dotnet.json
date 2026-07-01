@@ -1,0 +1,33 @@
+{
+  "id": "dotnet",
+  "name": ".NET",
+  "category": "Backend",
+  "developer": "Microsoft",
+  "releaseYear": 2002,
+  "latestVersion": "8.0",
+  "description": "A free, cross-platform, open-source developer platform for building many types of applications. .NET provides a comprehensive ecosystem with languages like C#, F#, and VB.NET for web, cloud, and enterprise development.",
+  "advantages": [
+    "Cross-platform with .NET Core",
+    "High performance and scalability",
+    "Excellent IDE support with Visual Studio",
+    "Strong typing and language features",
+    "Comprehensive class library",
+    "Great for enterprise applications"
+  ],
+  "disadvantages": [
+    "Learning curve for the ecosystem",
+    "Less prevalent in open-source community",
+    "Windows-centric legacy perception",
+    "Frequent version updates"
+  ],
+  "alternatives": ["Java", "Go", "Node.js", "Python", "Ruby"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["C# syntax", "OOP concepts", ".NET SDK and CLI", "ASP.NET Core basics", "Razor pages"] },
+    { "step": "Intermediate", "topics": ["Entity Framework Core", "Web APIs", "Authentication and authorization", "Dependency injection", "Configuration and logging"] },
+    { "step": "Advanced", "topics": ["Microservices", "Blazor for full-stack", "Performance optimization", "Testing with xUnit", "Azure deployment"] }
+  ],
+  "officialDocs": "https://learn.microsoft.com/dotnet",
+  "github": "https://github.com/dotnet/core",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Enterprise web applications", "Cloud-native services", "Gaming (Unity)", "Desktop applications", "Microservices"]
+}

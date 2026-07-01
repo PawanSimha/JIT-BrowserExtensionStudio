@@ -1,0 +1,33 @@
+{
+  "id": "clarity",
+  "name": "Microsoft Clarity",
+  "category": "Analytics",
+  "developer": "Microsoft",
+  "releaseYear": 2020,
+  "latestVersion": "2024",
+  "description": "A free user behavior analytics tool that provides heatmaps, session recordings, and insights into how users interact with websites. Clarity is designed to be privacy-focused and easy to implement.",
+  "advantages": [
+    "Completely free with unlimited data",
+    "Session recordings with AI insights",
+    "Heatmaps for click and scroll behavior",
+    "Privacy-focused design",
+    "Integration with Google Analytics",
+    "Simple setup and dashboard"
+  ],
+  "disadvantages": [
+    "Limited advanced analytics features",
+    "Less known than Hotjar or FullStory",
+    "AI insights can be noisy",
+    "Fewer integrations"
+  ],
+  "alternatives": ["Hotjar", "FullStory", "Crazy Egg", "Lucky Orange", "Smartlook"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Project setup", "Dashboard overview", "Session recordings", "Heatmaps", "Filters"] },
+    { "step": "Intermediate", "topics": ["Rage clicks analysis", "Dead clicks", "Quick back navigation", "Pages insights", "Integration with GA4"] },
+    { "step": "Advanced", "topics": ["API access", "Custom events", "Data export", "Privacy settings", "Teams and collaboration"] }
+  ],
+  "officialDocs": "https://clarity.microsoft.com/docs",
+  "github": "https://github.com/microsoft/clarity",
+  "difficulty": "Beginner",
+  "commonUseCases": ["UX analysis", "Conversion optimization", "User behavior research", "Website usability testing", "Free heatmaps and recordings"]
+}

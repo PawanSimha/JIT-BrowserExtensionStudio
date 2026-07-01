@@ -1,0 +1,33 @@
+{
+  "id": "csp",
+  "name": "Content Security Policy",
+  "category": "Security",
+  "developer": "W3C",
+  "releaseYear": 2013,
+  "latestVersion": "Level 3",
+  "description": "An added layer of security that helps detect and mitigate certain types of attacks including Cross-Site Scripting (XSS) and data injection attacks. CSP is implemented via HTTP headers.",
+  "advantages": [
+    "Mitigates XSS attacks effectively",
+    "Controls resource loading policies",
+    "Reporting capabilities for policy violations",
+    "Granular control over content sources",
+    "Browser-enforced security",
+    "Can block inline scripts and eval"
+  ],
+  "disadvantages": [
+    "Complex to configure correctly",
+    "Can break legitimate functionality",
+    "Inline styles and scripts require nonces or hashes",
+    "Debugging violations can be challenging"
+  ],
+  "alternatives": ["XSS filters", "Input sanitization", "Subresource Integrity", "Trusted Types", "Feature Policy"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["What is CSP", "Directives overview", "Script sources", "Style sources", "Reporting"] },
+    { "step": "Intermediate", "topics": ["Nonces and hashes", "Strict CSP", "Report-only mode", "CSP bypasses", "Testing configuration"] },
+    { "step": "Advanced", "topics": ["CSP Level 3 features", "Trusted Types integration", "Performance impact", "Monitoring and remediation", "Enterprise deployment"] }
+  ],
+  "officialDocs": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+  "github": "https://github.com/w3c/webappsec-csp",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["XSS mitigation", "Content security hardening", "Compliance requirements", "Enterprise security", "Web application protection"]
+}

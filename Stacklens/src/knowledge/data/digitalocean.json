@@ -1,0 +1,17 @@
+{
+  "category": "Hosting",
+  "id": "digitalocean",
+  "officialDocs": "https://digitalocean.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "DigitalOcean",
+  "difficulty": "Intermediate",
+  "latestVersion": "1.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A cloud infrastructure provider with simple and scalable virtual servers.",
+  "releaseYear": 2011,
+  "developer": "DigitalOcean"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "amazon-web-services",
+  "name": "AWS",
+  "category": "Hosting",
+  "developer": "Amazon",
+  "releaseYear": 2006,
+  "latestVersion": "N/A",
+  "description": "Amazon Web Services (AWS) is a comprehensive cloud computing platform offering over 200 services including compute, storage, databases, machine learning, and content delivery. AWS powers a significant portion of the internet, from startups to enterprise applications.",
+  "advantages": [
+    "Broadest cloud service portfolio available",
+    "Global infrastructure with regions worldwide",
+    "Pay-as-you-go pricing model",
+    "Strong security and compliance certifications",
+    "Mature ecosystem with extensive documentation"
+  ],
+  "disadvantages": [
+    "Complex pricing that can be difficult to estimate",
+    "Steep learning curve for the full platform",
+    "Vendor lock-in concerns with proprietary services",
+    "Cost management requires active monitoring"
+  ],
+  "alternatives": ["Google Cloud Platform", "Microsoft Azure", "DigitalOcean", "Linode"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["AWS Console navigation", "EC2 compute instances", "S3 storage", "IAM security", "VPC networking"] },
+    { "step": "Intermediate", "topics": ["ELB and Auto Scaling", "RDS databases", "Lambda serverless functions", "CloudWatch monitoring", "CloudFront CDN"] },
+    { "step": "Advanced", "topics": ["ECS/EKS container orchestration", "Step Functions workflows", "CloudFormation infrastructure as code", "AWS Well-Architected Framework"] }
+  ],
+  "officialDocs": "https://aws.amazon.com",
+  "github": "",
+  "difficulty": "Advanced",
+  "commonUseCases": ["Cloud application hosting", "Microservices and container orchestration", "Data warehousing and analytics", "Machine learning pipelines", "Serverless computing"]
+}

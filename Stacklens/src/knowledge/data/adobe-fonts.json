@@ -1,0 +1,17 @@
+{
+  "id": "adobe-fonts",
+  "github": "",
+  "name": "Adobe Fonts",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A font service offering thousands of high-quality fonts for web use.",
+  "developer": "Adobe",
+  "releaseYear": 2000,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "1.0.0",
+  "officialDocs": "https://adobe-fonts.com",
+  "category": "Font Script",
+  "commonUseCases": [],
+  "disadvantages": []
+}

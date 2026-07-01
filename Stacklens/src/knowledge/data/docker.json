@@ -1,0 +1,17 @@
+{
+  "category": "DevOps",
+  "id": "docker",
+  "officialDocs": "https://docker.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Docker",
+  "difficulty": "Intermediate",
+  "latestVersion": "27.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A platform for developing, shipping, and running applications in containers.",
+  "releaseYear": 2013,
+  "developer": "Docker Inc."
+}

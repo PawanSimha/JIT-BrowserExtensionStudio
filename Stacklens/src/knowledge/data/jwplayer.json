@@ -1,0 +1,17 @@
+{
+  "category": "Video Players",
+  "id": "jwplayer",
+  "officialDocs": "https://jwplayer.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "JW Player",
+  "difficulty": "Intermediate",
+  "latestVersion": "8.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A self hosted and cloud hosted video player for the web.",
+  "releaseYear": 2005,
+  "developer": "JW Player"
+}

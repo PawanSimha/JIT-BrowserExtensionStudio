@@ -34,6 +34,7 @@ JIT is a small studio that builds thoughtfully designed browser extensions -- to
 - **Refreshner** provides smart auto-refresh with customizable intervals, keyword page monitoring, live countdown timer, and audio alerts.
 - **Goofanizer** instantly emulates mobile and tablet viewports with one click. Switch between 4 device presets, rotate, capture screenshots, and batch export.
 - **Imageination** scans any webpage for images, video and audio. Download individually or batch as ZIP. PNG, JPEG, WebP, SVG, GIF, AVIF, MP4, MP3 and more.
+- **StackLens** detects, explains, and visualizes the technology stack of any website. Identifies 100+ technologies including frameworks, analytics, CDNs, security, fonts, and more. Built with React + TypeScript.
 
 ### Design Philosophy - Google-Inspired Dark UI
 
@@ -41,7 +42,7 @@ A pitch-black background (`#000`) with Google Sans typography, glassmorphism flo
 
 ### GEO-First Architecture
 
-Every section heading is followed by a concise, descriptive subtitle, optimized for both human readers and AI crawlers. JSON-LD `@graph` (Organization + Person + 4x SoftwareApplication), per-page canonical URLs, Open Graph and Twitter Card meta tags, an AI-friendly `robots.txt`, and a complete `_headers` security policy complete the Generative Engine Optimization layer.
+Every section heading is followed by a concise, descriptive subtitle, optimized for both human readers and AI crawlers. JSON-LD `@graph` (Organization + Person + 5x SoftwareApplication), per-page canonical URLs, Open Graph and Twitter Card meta tags, an AI-friendly `robots.txt`, and a complete `_headers` security policy complete the Generative Engine Optimization layer.
 
 ---
 
@@ -55,6 +56,7 @@ Every section heading is followed by a concise, descriptive subtitle, optimized 
 | **Refreshner** | Smart auto-refresh with quick presets, custom HH:MM:SS intervals, random intervals, keyword page monitoring, live countdown ring, and audio alerts on match. | 2.0 | 28 KB |
 | **Goofanizer** | Emulate mobile and tablet viewports instantly. 4 device presets, rotate, screenshot, batch export, and search filter. Uses Chrome Debugger API. | 1.0.0 | 50 KB |
 | **Imageination** | Scans any webpage for images, video and audio. Download PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more individually or batch as ZIP. | 1.0.0 | 16 KB |
+| **StackLens** | Detects, explains, and visualizes the technology stack of any website. Identifies frameworks, analytics, CDNs, security, fonts, and 100+ other technologies. Built with WXT (React + TypeScript + Tailwind). | 1.0.0 | 277 KB |
 
 ### Website
 
@@ -74,10 +76,10 @@ Every section heading is followed by a concise, descriptive subtitle, optimized 
 
 | Capability | Details |
 |---|---|
-| **JSON-LD Structured Data** | 6-node @graph (Organization + Person + 4 SoftwareApplication) for rich search results |
+| **JSON-LD Structured Data** | 7-node @graph (Organization + Person + 5 SoftwareApplication) for rich search results |
 | **Open Graph / Twitter Cards** | Pre-configured meta tags for social link previews with Logo.webp |
 | **AI Crawler Strategy** | robots.txt allows Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User, Claude-Web, PerplexityBot; blocks training scrapers |
-| **Sitemap** | sitemap.xml covering 6 URLs (/, /extension.html, 4 description pages) |
+| **Sitemap** | sitemap.xml covering 7 URLs (/, /extension.html, 5 description pages) |
 | **Per-Page Canonicals** | Every page exports canonical URL pointing to github.io sub-path |
 | **Security Headers** | CSP, HSTS, X-Frame-Options, Permissions-Policy via `_headers` (GitHub Pages) |
 
@@ -103,9 +105,9 @@ Every section heading is followed by a concise, descriptive subtitle, optimized 
 |  "Power your everyday with a JIT plan"                              |
 |  [Download extensions]                                              |
 +--------------------------------------------------------------------+
-|  About  |  Extensions (4 cards)  |  FAQ (8 Qs)  |  Developer      |
+|  About  |  Extensions (5 cards)  |  FAQ (8 Qs)  |  Developer      |
 |  (2-col |  MutedHue, Refreshner, | single-open  |  7-link grid    |
-|   grid) |  Goofanizer, Imageination | accordion  |  + full Portfolio|
+|   grid) |  Goofanizer, Imageination, StackLens | accordion  |  + full Portfolio|
 +--------------------------------------------------------------------+
 |  Contact Form (FormSubmit.io - serverless POST)                     |
 +--------------------------------------------------------------------+
@@ -124,9 +126,10 @@ index.html  ──[Learn More]──>  descriptions/MutedHue.html       (full de
                                 descriptions/Refreshner.html     (full details + download)
                                 descriptions/Goofanizer.html    (full details + download)
                                 descriptions/Imageination.html  (full details + download)
+                                descriptions/Stacklens.html     (full details + download)
 
 extension.html ──[Add to Chrome]──>  ZIP download + Install Modal (step-by-step guide)
-                ──[Learn More]──>  descriptions/MutedHue.html / Refreshner.html / Goofanizer.html / Imageination.html
+                ──[Learn More]──>  descriptions/MutedHue.html / Refreshner.html / Goofanizer.html / Imageination.html / Stacklens.html
 ```
 
 ---
@@ -192,22 +195,30 @@ JIT/
 │   ├── icons/icon.png          #   Extension icon (300x300, 32-bit ARGB)
 │   └── test-media.html         #   Test fixture for content script scanning
 │
+├── Stacklens/                  # Chrome Extension MV3 - website tech stack detector
+│   ├── manifest.json           #   storage, activeTab, webRequest, tabs
+│   ├── .output/chrome-mv3/     #   WXT build output (React + TypeScript + Tailwind)
+│   ├── src/                    #   React + TypeScript source code
+│   ├── icons/StackLens.png     #   Extension logo
+│   └── Stacklens.zip           #   Packaged extension download
+│
 ├── descriptions/              # Extension detail pages with full info + download
 │   ├── MutedHue.html          #   MutedHue features, how-it-works, privacy, install guide
 │   ├── Refreshner.html        #   Refreshner features, how-it-works, privacy, install guide
 │   ├── Goofanizer.html        #   Goofanizer features, how-it-works, privacy, install guide
-│   └── Imageination.html      #   Imageination features, how-it-works, privacy, install guide
+│   ├── Imageination.html      #   Imageination features, how-it-works, privacy, install guide
+│   └── Stacklens.html         #   StackLens features, how-it-works, privacy, install guide
 │
 ├── MutedHue.zip               # Packaged MutedHue extension for download
 ├── Refreshner.zip             # Packaged Refreshner extension for download
 ├── Goofanizer.zip             # Packaged Goofanizer extension for download
 ├── Imageination.zip           # Packaged Imageination extension for download
-│
+├── Stacklens.zip              # Packaged StackLens extension for download
 ├── robots.txt                 # AI crawler directives (search allowed, training scrapers blocked)
-├── sitemap.xml                # SEO sitemap (6 URLs with priority + lastmod)
+├── sitemap.xml                # SEO sitemap (7 URLs with priority + lastmod)
 ├── _headers                   # Security headers (CSP, HSTS, X-Frame-Options, Permissions-Policy)
 ├── site.webmanifest           # PWA manifest (name, theme_color, icons 192 + 512)
-├── .gitignore                 # OS files, editor configs, env secrets, stale partials, *.zip
+├── .gitignore                 # OS files, editor configs, env secrets, stale partials, ZIP exceptions
 ├── LICENSE                    # GNU General Public License v3.0
 ├── PRIVACY.md                 # Privacy policy (GDPR/CCPA compliant, zero-collection)
 ├── PRD.md                     # Product requirements document
@@ -236,7 +247,7 @@ xdg-open index.html      # Linux
 1. Open `chrome://extensions`
 2. Enable **Developer mode** (top right)
 3. Click **Load unpacked**
- 4. Select the `MutedHue/`, `Refreshner/`, `Goofanizer/`, or `Imageination/` folder
+ 4. Select the `MutedHue/`, `Refreshner/`, `Goofanizer/`, `Imageination/`, or `Stacklens/` folder
 
 Or download the ZIP from the website and follow the install guide:
 
@@ -248,8 +259,8 @@ Or download the ZIP from the website and follow the install guide:
 
 ## Product Roadmap
 
-- [ ] **Chrome Web Store publishing** -- Submit MutedHue, Refreshner, Goofanizer, and Imageination officially
-- [ ] **Firefox port** -- Rewrite extensions for WebExtension API compatibility (Goofanizer excluded -- uses Chrome-specific debugger API)
+- [ ] **Chrome Web Store publishing** -- Submit MutedHue, Refreshner, Goofanizer, Imageination, and StackLens officially
+- [ ] **Firefox port** -- Rewrite extensions for WebExtension API compatibility (Goofanizer excluded -- uses Chrome-specific debugger API; StackLens excluded -- uses Chrome-specific webRequest)
 - [ ] **Privacy Policy / ToS pages** -- Convert PRIVACY.md to dedicated HTML pages
 - [ ] **FormSubmit thank-you redirect** -- Custom redirect page after form submission
 - [ ] **PWA service worker** -- Add offline caching support
@@ -266,6 +277,7 @@ Or download the ZIP from the website and follow the install guide:
 | `open descriptions/Refreshner.html` | View Refreshner detail page |
 | `open descriptions/Goofanizer.html` | View Goofanizer detail page |
 | `open descriptions/Imageination.html` | View Imageination detail page |
+| `open descriptions/Stacklens.html` | View StackLens detail page |
 | Load unpacked in Chrome | Test extensions locally |
 
 ### Contribution

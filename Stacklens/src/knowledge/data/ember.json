@@ -1,0 +1,17 @@
+{
+  "category": "Frontend",
+  "id": "ember",
+  "officialDocs": "https://ember.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Ember.js",
+  "difficulty": "Intermediate",
+  "latestVersion": "5.12.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A productive JavaScript framework for ambitious web applications.",
+  "releaseYear": 2011,
+  "developer": "Ember Core Team"
+}

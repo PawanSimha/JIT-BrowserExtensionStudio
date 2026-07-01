@@ -1,0 +1,33 @@
+{
+  "id": "facebook-pixel",
+  "name": "Facebook Pixel",
+  "category": "Analytics",
+  "developer": "Meta",
+  "releaseYear": 2015,
+  "latestVersion": "2024",
+  "description": "An analytics tool from Meta that helps measure the effectiveness of Facebook advertising by tracking user actions on websites. The pixel enables ad optimization, retargeting, and conversion measurement.",
+  "advantages": [
+    "Track conversions from Facebook ads",
+    "Build targeted audiences for retargeting",
+    "Optimize ad delivery",
+    "Automatic matching of user events",
+    "Integration with Meta ecosystem",
+    "Event tracking for specific actions"
+  ],
+  "disadvantages": [
+    "Privacy concerns and regulations",
+    "iOS 14+ impact on tracking",
+    "Requires cookie consent",
+    "Can slow page load"
+  ],
+  "alternatives": ["Google Tag Manager", "LinkedIn Insight Tag", "Twitter Pixel", "TikTok Pixel", "Snap Pixel"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Pixel setup", "Event tracking", "Conversion tracking", "Custom audiences", "Meta Events Manager"] },
+    { "step": "Intermediate", "topics": ["Advanced matching", "Custom conversions", "Catalog tracking", "Dynamic ads", "Cross-domain tracking"] },
+    { "step": "Advanced", "topics": ["Server-side API", "CAPI integration", "Privacy compliance", "Optimization", "Troubleshooting"] }
+  ],
+  "officialDocs": "https://developers.facebook.com/docs/meta-pixel",
+  "github": "https://github.com/facebook",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Ad conversion tracking", "Retargeting campaigns", "Lookalike audience building", "E-commerce tracking", "Ad optimization"]
+}

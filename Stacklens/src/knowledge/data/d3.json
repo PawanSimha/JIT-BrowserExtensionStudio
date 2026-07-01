@@ -1,0 +1,17 @@
+{
+  "category": "JavaScript Libraries",
+  "id": "d3",
+  "officialDocs": "https://d3.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "D3.js",
+  "difficulty": "Intermediate",
+  "latestVersion": "7.9.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A JavaScript library for producing dynamic, interactive data visualizations.",
+  "releaseYear": 2011,
+  "developer": "Mike Bostock"
+}

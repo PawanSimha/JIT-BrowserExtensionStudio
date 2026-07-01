@@ -1,0 +1,17 @@
+{
+  "category": "JavaScript Libraries",
+  "id": "threejs",
+  "officialDocs": "https://threejs.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Three.js",
+  "difficulty": "Intermediate",
+  "latestVersion": "0.170.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A cross-browser JavaScript library for 3D graphics.",
+  "releaseYear": 2010,
+  "developer": "Three.js Authors"
+}

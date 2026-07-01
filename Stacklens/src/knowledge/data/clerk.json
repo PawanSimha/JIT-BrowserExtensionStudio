@@ -1,0 +1,17 @@
+{
+  "category": "Authentication",
+  "id": "clerk",
+  "officialDocs": "https://clerk.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Clerk",
+  "difficulty": "Intermediate",
+  "latestVersion": "5.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A modern authentication and user management platform.",
+  "releaseYear": 2019,
+  "developer": "Clerk"
+}

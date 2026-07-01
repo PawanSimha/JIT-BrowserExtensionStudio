@@ -1,0 +1,33 @@
+{
+  "id": "jetty",
+  "name": "Jetty",
+  "category": "Backend",
+  "developer": "Eclipse Foundation",
+  "releaseYear": 1995,
+  "latestVersion": "12.0.16",
+  "description": "Jetty is a highly scalable, open-source Java servlet container and HTTP server. It is designed for embedding into Java applications and frameworks, providing both HTTP/1.1, HTTP/2, and WebSocket support.",
+  "advantages": [
+    "Lightweight and embeddable design",
+    "Excellent for microservices and cloud native apps",
+    "Fast startup time",
+    "Full HTTP/2 and WebSocket support",
+    "Asynchronous request handling",
+    "Used by major frameworks (Spring Boot, Dropwizard)"
+  ],
+  "disadvantages": [
+    "Smaller ecosystem than Tomcat",
+    "Less documentation for production tuning",
+    "Fewer hosting providers offer native Jetty support",
+    "Some enterprise features require additional configuration"
+  ],
+  "alternatives": ["Apache Tomcat", "Undertow", "WildFly", "Netty", "Grizzly"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Embedded Jetty setup", "Servlet configuration", "Connector configuration", "Static file serving", "Logging setup"] },
+    { "step": "Intermediate", "topics": ["SSL/TLS configuration", "HTTP/2 setup", "WebSocket handlers", "Session management", "JMX monitoring"] },
+    { "step": "Advanced", "topics": ["Custom handlers", "Performance tuning", "High availability clustering", "NIO optimization", "Security hardening"] }
+  ],
+  "officialDocs": "https://eclipse.dev/jetty/documentation/",
+  "github": "https://github.com/eclipse/jetty.project",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Embedded web server in Java apps", "Spring Boot applications", "Microservices and REST APIs", "WebSocket servers", "Development and testing environments"]
+}

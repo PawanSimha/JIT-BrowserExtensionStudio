@@ -1,0 +1,33 @@
+{
+  "id": "tailwind",
+  "name": "Tailwind CSS",
+  "category": "CSS Framework",
+  "developer": "Tailwind Labs",
+  "releaseYear": 2017,
+  "latestVersion": "3.4",
+  "description": "A utility-first CSS framework that provides low-level utility classes for building custom designs without leaving your HTML. Tailwind promotes rapid development with consistent design systems.",
+  "advantages": [
+    "Highly customizable without fighting framework styles",
+    "Small production bundles with purging",
+    "Rapid prototyping with utility classes",
+    "Consistent design system enforcement",
+    "Excellent responsive design utilities",
+    "Strong community and plugin ecosystem"
+  ],
+  "disadvantages": [
+    "Verbose HTML with many utility classes",
+    "Learning curve for remembering class names",
+    "Can look similar without customization",
+    "CSS purging requires careful configuration"
+  ],
+  "alternatives": ["Bootstrap", "Bulma", "Open Props", "UnoCSS", "Vanilla Extract"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Utility-first concept", "Layout (flex, grid)", "Spacing and sizing", "Typography", "Colors and backgrounds"] },
+    { "step": "Intermediate", "topics": ["Responsive design", "Dark mode", "Custom configuration", "Plugins", "Component extraction"] },
+    { "step": "Advanced", "topics": ["Custom utilities", "Design tokens", "Performance optimization", "Integration with frameworks", "Custom plugins"] }
+  ],
+  "officialDocs": "https://tailwindcss.com/docs",
+  "github": "https://github.com/tailwindlabs/tailwindcss",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Rapid prototyping", "Marketing websites", "SaaS dashboards", "Design systems", "Any project needing utility-first CSS"]
+}

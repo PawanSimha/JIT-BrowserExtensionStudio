@@ -1,0 +1,17 @@
+{
+  "category": "Build Tool",
+  "id": "rollup",
+  "officialDocs": "https://rollup.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Rollup",
+  "difficulty": "Intermediate",
+  "latestVersion": "4.30.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A module bundler for JavaScript that compiles small code into larger libraries.",
+  "releaseYear": 2015,
+  "developer": "Rollup Contributors"
+}

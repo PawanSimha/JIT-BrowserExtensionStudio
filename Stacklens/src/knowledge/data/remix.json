@@ -1,0 +1,17 @@
+{
+  "id": "remix",
+  "github": "",
+  "name": "Remix",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A full-stack web framework built on React Router.",
+  "developer": "Shopify",
+  "releaseYear": 2021,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "2.15.0",
+  "officialDocs": "https://remix.com",
+  "category": "Frontend",
+  "commonUseCases": [],
+  "disadvantages": []
+}

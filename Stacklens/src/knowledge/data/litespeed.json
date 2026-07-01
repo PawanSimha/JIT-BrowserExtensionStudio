@@ -1,0 +1,33 @@
+{
+  "id": "litespeed",
+  "name": "LiteSpeed",
+  "category": "Hosting",
+  "developer": "LiteSpeed Technologies",
+  "releaseYear": 2003,
+  "latestVersion": "6.3",
+  "description": "LiteSpeed Web Server is a high-performance, commercial web server known for its exceptional speed, security, and compatibility with Apache configuration files. Its event-driven architecture handles thousands of concurrent connections with minimal resource usage.",
+  "advantages": [
+    "Drop-in Apache replacement with .htaccess support",
+    "Superior performance under high concurrency",
+    "Built-in DDoS protection and anti-hotlink",
+    "Native QUIC and HTTP/3 support",
+    "Integrated caching and optimization",
+    "Lower memory footprint than Apache"
+  ],
+  "disadvantages": [
+    "Enterprise version is commercial software",
+    "Open-source version (OpenLiteSpeed) has fewer features",
+    "Smaller community compared to Apache and Nginx",
+    "Premium features require paid license"
+  ],
+  "alternatives": ["Nginx", "Apache HTTP Server", "OpenLiteSpeed", "Caddy", "H2O"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Installation and setup", "Virtual host configuration", "Apache-compatible directives", "PHP integration (LSAPI)", "Web admin console"] },
+    { "step": "Intermediate", "topics": ["Cache setup and tuning", "SSL/TLS configuration", "Rewrite rules", "Security settings", "Performance monitoring"] },
+    { "step": "Advanced", "topics": ["Cluster setup", "Load balancing configuration", "Custom LSAPI configuration", "Edge side includes", "Migration from Apache"] }
+  ],
+  "officialDocs": "https://docs.litespeedtech.com/",
+  "github": "https://github.com/litespeedtech/openlitespeed",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Shared web hosting", "High-traffic WordPress hosting", "E-commerce platforms", "PHP application servers", "Content delivery origin servers"]
+}

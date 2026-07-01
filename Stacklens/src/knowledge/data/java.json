@@ -1,0 +1,33 @@
+{
+  "id": "java",
+  "name": "Java",
+  "category": "Backend",
+  "developer": "Oracle",
+  "releaseYear": 1995,
+  "latestVersion": "22",
+  "description": "A class-based, object-oriented programming language designed for portability across platforms. Java is one of the most widely used languages for enterprise backend development with the Java Virtual Machine (JVM).",
+  "advantages": [
+    "Platform independence via JVM",
+    "Strong typing and robust error handling",
+    "Excellent performance and scalability",
+    "Huge ecosystem and enterprise support",
+    "Strong multithreading capabilities",
+    "Mature tooling and development environment"
+  ],
+  "disadvantages": [
+    "Verbose syntax compared to modern languages",
+    "Memory overhead from JVM",
+    "Slow startup time for some applications",
+    "Complex build and dependency management"
+  ],
+  "alternatives": ["Kotlin", "C#", "Go", "Python", "Node.js"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Syntax and data types", "OOP concepts", "Collections framework", "Exception handling", "File I/O"] },
+    { "step": "Intermediate", "topics": ["Multithreading", "JDBC and database access", "Servlets and JSP", "Spring Boot basics", "Maven/Gradle build tools"] },
+    { "step": "Advanced", "topics": ["Microservices with Spring Cloud", "JPA and Hibernate", "Security with Spring Security", "Testing with JUnit", "Performance tuning"] }
+  ],
+  "officialDocs": "https://docs.oracle.com/en/java",
+  "github": "https://github.com/openjdk/jdk",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Enterprise backend systems", "Banking and financial services", "Android development", "Big data processing", "Cloud-native applications"]
+}

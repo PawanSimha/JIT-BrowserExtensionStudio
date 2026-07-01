@@ -1,0 +1,17 @@
+{
+  "category": "Monitoring",
+  "id": "bugsnag",
+  "officialDocs": "https://bugsnag.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Bugsnag",
+  "difficulty": "Intermediate",
+  "latestVersion": "2.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A cross-platform error monitoring and stability management tool.",
+  "releaseYear": 2012,
+  "developer": "SmartBear"
+}

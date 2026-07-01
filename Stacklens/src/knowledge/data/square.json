@@ -1,0 +1,17 @@
+{
+  "id": "square",
+  "github": "",
+  "name": "Square",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A payment processing platform for businesses.",
+  "developer": "Block",
+  "releaseYear": 2009,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "1.0.0",
+  "officialDocs": "https://square.com",
+  "category": "Payments",
+  "commonUseCases": [],
+  "disadvantages": []
+}

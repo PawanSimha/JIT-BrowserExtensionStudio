@@ -1,0 +1,17 @@
+{
+  "id": "wix",
+  "github": "",
+  "name": "Wix",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A cloud-based website builder platform.",
+  "developer": "Wix.com",
+  "releaseYear": 2006,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "1.0.0",
+  "officialDocs": "https://wix.com",
+  "category": "CMS",
+  "commonUseCases": [],
+  "disadvantages": []
+}

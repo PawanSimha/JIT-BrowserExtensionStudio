@@ -1,0 +1,33 @@
+{
+  "id": "puma",
+  "name": "Puma",
+  "category": "Backend",
+  "developer": "Puma Community",
+  "releaseYear": 2013,
+  "latestVersion": "6.5",
+  "description": "Puma is a high-performance, multi-threaded web server for Ruby applications. It is designed for concurrency, using a threading model combined with a reactor pattern to handle multiple requests simultaneously with minimal resource consumption.",
+  "advantages": [
+    "Multi-threaded architecture for high concurrency",
+    "Lower memory usage per request compared to Unicorn",
+    "Built-in request buffering",
+    "Works with all major Ruby web frameworks",
+    "Supports both thread and process modes",
+    "Excellent for JRuby deployments"
+  ],
+  "disadvantages": [
+    "Thread safety requires careful gem selection",
+    "Debugging concurrent issues can be challenging",
+    "Not as performant as compiled language servers",
+    "Configuration can be complex for optimal tuning"
+  ],
+  "alternatives": ["Unicorn", "Passenger", "Thin", "WEBrick", "IIS with HttpPlatformHandler"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Installation and configuration", "Rails integration", "Process and thread configuration", "Logging and monitoring", "Development vs production settings"] },
+    { "step": "Intermediate", "topics": ["Load balancing setup", "SSL termination", "Unix socket configuration", "Systemd integration", "Health checks"] },
+    { "step": "Advanced", "topics": ["Cluster mode tuning", "Request queuing and backpressure", "Hot restart strategies", "Performance profiling", "Custom middleware"] }
+  ],
+  "officialDocs": "https://puma.io/docs/",
+  "github": "https://github.com/puma/puma",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Ruby on Rails applications", "Sinatra and Rack applications", "High-traffic Ruby web services", "API servers", "Production Ruby deployment"]
+}

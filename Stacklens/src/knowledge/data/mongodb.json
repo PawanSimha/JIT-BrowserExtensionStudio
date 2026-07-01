@@ -1,0 +1,33 @@
+{
+  "id": "mongodb",
+  "name": "MongoDB",
+  "category": "Database",
+  "developer": "MongoDB Inc.",
+  "releaseYear": 2009,
+  "latestVersion": "7.0",
+  "description": "A popular NoSQL document database that stores data in flexible, JSON-like documents. MongoDB is designed for scalability, high performance, and ease of development for modern applications.",
+  "advantages": [
+    "Flexible schema design",
+    "Horizontal scaling with sharding",
+    "Rich query language",
+    "High performance for read-heavy workloads",
+    "Great for rapid prototyping",
+    "Atlas managed service available"
+  ],
+  "disadvantages": [
+    "No joins (references instead)",
+    "Memory usage can be high",
+    "Less suited for complex transactions",
+    "Data duplication in denormalized designs"
+  ],
+  "alternatives": ["PostgreSQL", "Firebase", "Cassandra", "DynamoDB", "CouchDB"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Document model", "CRUD operations", "Query operators", "Indexes", "Aggregation pipeline"] },
+    { "step": "Intermediate", "topics": ["Data modeling", "Replication", "Sharding", "Security", "Backup and restore"] },
+    { "step": "Advanced", "topics": ["Performance tuning", "Atlas cloud", "Change streams", "Transactions", "Migration strategies"] }
+  ],
+  "officialDocs": "https://www.mongodb.com/docs",
+  "github": "https://github.com/mongodb/mongo",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Content management", "Real-time applications", "Mobile backends", "IoT data storage", "Catalog management"]
+}

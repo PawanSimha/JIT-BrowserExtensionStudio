@@ -1,0 +1,33 @@
+{
+  "id": "shopify",
+  "name": "Shopify",
+  "category": "CMS",
+  "developer": "Shopify Inc.",
+  "releaseYear": 2006,
+  "latestVersion": "2024",
+  "description": "A leading e-commerce platform that enables businesses to create online stores. Shopify provides a complete solution for product management, payments, shipping, and marketing.",
+  "advantages": [
+    "Quick setup for online stores",
+    "Built-in payment processing",
+    "Mobile-responsive themes",
+    "App ecosystem for extending functionality",
+    "Secure and reliable hosting",
+    "Multi-channel selling (social, marketplaces)"
+  ],
+  "disadvantages": [
+    "Transaction fees on non-Shopify Payments",
+    "Customization limited by platform",
+    "Monthly costs can add up with apps",
+    "Liquid template language learning curve"
+  ],
+  "alternatives": ["WooCommerce", "Magento", "BigCommerce", "Wix Stores", "Square Online"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Store setup", "Product management", "Collections", "Theme selection", "Payment setup"] },
+    { "step": "Intermediate", "topics": ["Liquid templating", "Custom themes", "App integration", "Shipping configuration", "Marketing tools"] },
+    { "step": "Advanced", "topics": ["Shopify API", "Custom app development", "Headless commerce", "Performance optimization", "International selling"] }
+  ],
+  "officialDocs": "https://shopify.dev",
+  "github": "https://github.com/Shopify/shopify-api-js",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Online stores", "Dropshipping", "Print-on-demand", "Digital products", "Subscription boxes"]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "next",
+  "name": "Next.js (Backend)",
+  "category": "Backend",
+  "developer": "Vercel",
+  "releaseYear": 2016,
+  "latestVersion": "14.2",
+  "description": "Next.js provides backend capabilities through API routes and serverless functions, enabling full-stack development within a single framework. Route handlers and server actions handle server-side logic.",
+  "advantages": [
+    "Full-stack application in a single framework",
+    "Serverless API routes scale automatically",
+    "Middleware for request processing",
+    "Edge functions for global performance",
+    "Tight integration with frontend rendering",
+    "File-based API routing"
+  ],
+  "disadvantages": [
+    "Vendor lock-in with Vercel for optimal features",
+    "Cold starts for serverless functions",
+    "Limited control over server configuration",
+    "Can be overkill for simple API needs"
+  ],
+  "alternatives": ["Remix", "SvelteKit", "Nuxt", "Express", "Fastify"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["API routes", "Request and response helpers", "Middleware", "Environment variables", "API route patterns"] },
+    { "step": "Intermediate", "topics": ["Database integration", "Authentication APIs", "File uploads", "Background tasks", "Error handling"] },
+    { "step": "Advanced", "topics": ["Serverless optimization", "Edge functions", "Route handlers (App Router)", "Server actions", "Rate limiting and security"] }
+  ],
+  "officialDocs": "https://nextjs.org/docs",
+  "github": "https://github.com/vercel/next.js",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Full-stack web applications", "API endpoints for frontend", "Serverless functions", "Authentication handlers", "Form processing"]
+}

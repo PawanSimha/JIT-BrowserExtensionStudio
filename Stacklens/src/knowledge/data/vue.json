@@ -1,0 +1,33 @@
+{
+  "id": "vue",
+  "name": "Vue.js",
+  "category": "Frontend",
+  "developer": "Evan You",
+  "releaseYear": 2014,
+  "latestVersion": "3.4",
+  "description": "A progressive JavaScript framework for building user interfaces. Vue is designed from the ground up to be incrementally adoptable, making it easy to integrate with existing projects while scaling to complex single-page applications.",
+  "advantages": [
+    "Gentle learning curve with clear documentation",
+    "Reactive data binding simplifies state management",
+    "Single-file components keep templates, logic, and styles together",
+    "Flexible and incrementally adoptable",
+    "Excellent performance with virtual DOM",
+    "Strong ecosystem including Pinia, Vue Router, and Nuxt"
+  ],
+  "disadvantages": [
+    "Smaller ecosystem compared to React",
+    "Less corporate backing than React or Angular",
+    "Breaking changes between Vue 2 and Vue 3",
+    "Fewer job opportunities in some markets"
+  ],
+  "alternatives": ["React", "Angular", "Svelte", "SolidJS", "Alpine.js"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Template syntax", "Directives (v-if, v-for, v-model)", "Computed properties and watchers", "Component basics", "Props and events"] },
+    { "step": "Intermediate", "topics": ["Composition API", "Lifecycle hooks", "Slots", "Vue Router", "Pinia state management"] },
+    { "step": "Advanced", "topics": ["Render functions", "Custom directives", "Transition and animation", "Server-side rendering with Nuxt", "Testing with Vitest"] }
+  ],
+  "officialDocs": "https://vuejs.org",
+  "github": "https://github.com/vuejs/core",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Single-page applications", "Prototyping and MVPs", "Interactive dashboards", "Content management systems", "E-commerce frontends"]
+}

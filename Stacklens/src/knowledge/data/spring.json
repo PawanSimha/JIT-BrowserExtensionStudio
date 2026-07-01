@@ -1,0 +1,33 @@
+{
+  "id": "spring",
+  "name": "Spring",
+  "category": "Backend",
+  "developer": "VMware",
+  "releaseYear": 2002,
+  "latestVersion": "6.1",
+  "description": "A comprehensive Java framework for enterprise application development. Spring provides infrastructure support for dependency injection, transaction management, web applications, and microservices.",
+  "advantages": [
+    "Comprehensive enterprise features",
+    "Dependency injection promotes testable code",
+    "Large ecosystem (Spring Boot, Cloud, Security)",
+    "Excellent documentation and community",
+    "Microservices support with Spring Cloud",
+    "Production-ready with Spring Boot"
+  ],
+  "disadvantages": [
+    "Steep learning curve",
+    "Configuration overhead (though reduced by Boot)",
+    "Can be overkill for simple applications",
+    "Complex debugging and troubleshooting"
+  ],
+  "alternatives": ["Java EE", "Micronaut", "Quarkus", "Helidon", "Dropwizard"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Dependency injection", "Inversion of control", "Spring Boot setup", "REST controllers", "Application properties"] },
+    { "step": "Intermediate", "topics": ["Spring Data JPA", "Security with Spring Security", "Spring MVC", "Actuator and monitoring", "Testing with Spring Boot Test"] },
+    { "step": "Advanced", "topics": ["Spring Cloud microservices", "Reactive programming with WebFlux", "Batch processing", "AOP and aspects", "Performance optimization"] }
+  ],
+  "officialDocs": "https://spring.io/projects/spring-boot",
+  "github": "https://github.com/spring-projects/spring-boot",
+  "difficulty": "Advanced",
+  "commonUseCases": ["Enterprise REST APIs", "Microservices", "Banking and finance systems", "E-commerce platforms", "Cloud-native applications"]
+}

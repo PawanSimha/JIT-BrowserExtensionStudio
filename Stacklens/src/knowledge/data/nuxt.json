@@ -1,0 +1,33 @@
+{
+  "id": "nuxt",
+  "name": "Nuxt.js",
+  "category": "Frontend",
+  "developer": "NuxtLabs",
+  "releaseYear": 2016,
+  "latestVersion": "3.11",
+  "description": "A Vue.js framework for building modern web applications with server-side rendering, static generation, and automatic routing. Nuxt provides a powerful development experience with conventions that speed up development.",
+  "advantages": [
+    "Automatic file-based routing",
+    "Server-side rendering for better SEO",
+    "Auto-imports for components and composables",
+    "Module ecosystem for extending functionality",
+    "Great developer experience with hot module replacement",
+    "Static site generation for optimal performance"
+  ],
+  "disadvantages": [
+    "Smaller ecosystem compared to Next.js",
+    "Learning curve for Nuxt-specific concepts",
+    "Breaking changes between Nuxt 2 and 3",
+    "Limited resources for advanced use cases"
+  ],
+  "alternatives": ["Next.js", "Gatsby", "Remix", "Astro", "SvelteKit"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Project structure", "Pages and routing", "Components", "Assets and styles", "Vue.js fundamentals"] },
+    { "step": "Intermediate", "topics": ["Data fetching", "State management with Pinia", "Middleware", "Plugins", "Modules"] },
+    { "step": "Advanced", "topics": ["Server routes", "Hybrid rendering", "Content module", "Authentication", "Deployment strategies"] }
+  ],
+  "officialDocs": "https://nuxt.com",
+  "github": "https://github.com/nuxt/nuxt",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Content websites", "E-commerce stores", "Documentation sites", "SaaS platforms", "Portfolio websites"]
+}

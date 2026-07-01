@@ -1,0 +1,33 @@
+{
+  "id": "paypal",
+  "name": "PayPal",
+  "category": "Payments",
+  "developer": "PayPal Holdings",
+  "releaseYear": 1998,
+  "latestVersion": "2024",
+  "description": "A global online payment system that enables individuals and businesses to send and receive payments online. PayPal is one of the most widely recognized payment methods for e-commerce.",
+  "advantages": [
+    "Widely recognized and trusted brand",
+    "Buyer and seller protection",
+    "Multi-currency support",
+    "Quick and easy checkout",
+    "Mobile payment support",
+    "Global reach in 200+ markets"
+  ],
+  "disadvantages": [
+    "Transaction fees can be high",
+    "Account freezes on suspicious activity",
+    "Limited customization",
+    "Not available in all countries"
+  ],
+  "alternatives": ["Stripe", "Square", "Braintree", "Adyen", "Venmo"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Business account setup", "Payment buttons", "Checkout integration", "IPN notifications", "Sandbox testing"] },
+    { "step": "Intermediate", "topics": ["REST API integration", "Subscription payments", "Payouts", "Dispute management", "Reporting"] },
+    { "step": "Advanced", "topics": ["Payflow gateway", "Advanced credit card processing", "Fraud management", "Multi-currency management", "Compliance"] }
+  ],
+  "officialDocs": "https://developer.paypal.com",
+  "github": "https://github.com/paypal",
+  "difficulty": "Beginner",
+  "commonUseCases": ["E-commerce checkout", "Digital goods payments", "Donation buttons", "Subscription billing", "International payments"]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "open-graph",
+  "name": "Open Graph",
+  "category": "Frontend",
+  "developer": "Meta (Facebook)",
+  "releaseYear": 2010,
+  "latestVersion": "N/A",
+  "description": "The Open Graph protocol enables web pages to become rich objects in social media feeds. By adding meta tags to HTML pages, websites can control how their content appears when shared on Facebook, Twitter, LinkedIn, and other social platforms with custom titles, descriptions, images, and URLs.",
+  "advantages": [
+    "Controls how content appears when shared on social media",
+    "Improves click-through rates with rich preview cards",
+    "Widely supported across all major social platforms",
+    "Simple to implement with just meta tags",
+    "Supports structured data like videos, products, and articles"
+  ],
+  "disadvantages": [
+    "Only affects how links appear when shared",
+    "Different platforms may render OG tags slightly differently",
+    "Requires server-side rendering or static meta tags for full support"
+  ],
+  "alternatives": ["Twitter Cards", "JSON-LD structured data", "Schema.org markup", "oEmbed"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["og:title", "og:description", "og:image", "og:url", "og:type"] },
+    { "step": "Intermediate", "topics": ["og:video", "og:audio", "og:locale", "Facebook Open Graph debugger", "Twitter Card integration"] }
+  ],
+  "officialDocs": "https://ogp.me",
+  "github": "",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Social media link previews", "Content sharing optimization", "SEO enhancement", "E-commerce product sharing"]
+}

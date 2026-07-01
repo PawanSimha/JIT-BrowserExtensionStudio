@@ -1,0 +1,33 @@
+{
+  "id": "babel",
+  "name": "Babel",
+  "category": "Build Tool",
+  "developer": "Babel Team",
+  "releaseYear": 2014,
+  "latestVersion": "7.25",
+  "description": "A JavaScript compiler that converts modern JavaScript code into a backward-compatible version for older browsers. Babel supports syntax transformation, polyfill injection, and plugin-based architecture.",
+  "advantages": [
+    "Transforms modern JavaScript for browser compatibility",
+    "Extensive plugin ecosystem",
+    "Customizable transformation pipelines",
+    "JSX and TypeScript support",
+    "Polyfill management",
+    "Integration with build tools"
+  ],
+  "disadvantages": [
+    "Adds build complexity",
+    "Configuration can be verbose",
+    "Can produce larger output code",
+    "Build time overhead"
+  ],
+  "alternatives": ["TypeScript compiler (tsc)", "swc", "esbuild", "Rollup", "Vite"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["What is transpilation", "Presets", "Plugins", "Configuration", "CLI usage"] },
+    { "step": "Intermediate", "topics": ["Custom presets", "Polyfill configuration", "Env preset targeting", "JSX/TS transformation", "Integration with Webpack/Vite"] },
+    { "step": "Advanced", "topics": ["Custom plugins", "AST manipulation", "Performance optimization", "Browser targeting", "Migration to SWC/esbuild"] }
+  ],
+  "officialDocs": "https://babeljs.io/docs",
+  "github": "https://github.com/babel/babel",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["JavaScript transpilation", "Browser compatibility", "JSX transformation", "Polyfill management", "Legacy browser support"]
+}

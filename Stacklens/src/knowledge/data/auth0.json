@@ -1,0 +1,33 @@
+{
+  "id": "auth0",
+  "name": "Auth0",
+  "category": "Authentication",
+  "developer": "Okta",
+  "releaseYear": 2013,
+  "latestVersion": "2024",
+  "description": "A flexible, drop-in authentication and authorization platform. Auth0 provides a comprehensive solution for identity management including single sign-on, multi-factor authentication, and user management.",
+  "advantages": [
+    "Covers all auth needs in one platform",
+    "Enterprise-grade security",
+    "Social login and SSO support",
+    "Customizable login pages",
+    "Anomaly detection and brute force protection",
+    "Extensive integration options"
+  ],
+  "disadvantages": [
+    "Cost increases with active users",
+    "Complex pricing structure",
+    "Vendor lock-in concerns",
+    "Can be overkill for simple apps"
+  ],
+  "alternatives": ["Firebase Auth", "Clerk", "Supabase Auth", "NextAuth.js", "AWS Cognito"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Tenant setup", "Application registration", "Authentication flows", "Social connections", "Hosted login page"] },
+    { "step": "Intermediate", "topics": ["Custom domains", "Rules and hooks", "MFA configuration", "User management API", "Role-based access"] },
+    { "step": "Advanced", "topics": ["Custom database connections", "Anomaly detection", "Logs and monitoring", "Migration strategies", "Enterprise SSO"] }
+  ],
+  "officialDocs": "https://auth0.com/docs",
+  "github": "https://github.com/auth0",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Enterprise SSO", "User authentication", "API authorization", "Multi-tenant apps", "Identity management"]
+}

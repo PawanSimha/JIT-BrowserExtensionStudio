@@ -1,0 +1,17 @@
+{
+  "id": "recaptcha",
+  "github": "",
+  "name": "reCAPTCHA",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A free service protecting websites from spam and abuse.",
+  "developer": "Google",
+  "releaseYear": 2007,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "3.0.0",
+  "officialDocs": "https://recaptcha.com",
+  "category": "Security",
+  "commonUseCases": [],
+  "disadvantages": []
+}

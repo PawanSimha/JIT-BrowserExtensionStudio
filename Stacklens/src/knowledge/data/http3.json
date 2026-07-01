@@ -1,0 +1,31 @@
+{
+  "id": "http3",
+  "name": "HTTP/3",
+  "category": "CDN",
+  "developer": "IETF (QUIC Working Group)",
+  "releaseYear": 2022,
+  "latestVersion": "N/A",
+  "description": "HTTP/3 is the third major version of the Hypertext Transfer Protocol, using QUIC (Quick UDP Internet Connections) as its transport layer instead of TCP. It reduces latency through faster connection establishment, improved multiplexing, and better performance on lossy networks.",
+  "advantages": [
+    "Faster connection establishment with 0-RTT handshake",
+    "No head-of-line blocking compared to HTTP/2 over TCP",
+    "Better performance on unreliable or high-latency networks",
+    "Built-in encryption with TLS 1.3 by default",
+    "Automatic connection migration across network changes"
+  ],
+  "disadvantages": [
+    "Requires both server and client support",
+    "Some network appliances and firewalls may block UDP",
+    "Not all CDN providers have full HTTP/3 support",
+    "CPU overhead from QUIC encryption on servers"
+  ],
+  "alternatives": ["HTTP/2", "HTTP/1.1", "HTTP/2 with multiplexing"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["HTTP/3 vs HTTP/2 vs HTTP/1.1", "QUIC protocol fundamentals", "0-RTT connection establishment", "UDP transport overview"] },
+    { "step": "Intermediate", "topics": ["Server configuration for HTTP/3", "CDN HTTP/3 support", "Browser developer tools for H3", "Performance benchmarking"] }
+  ],
+  "officialDocs": "https://httpwg.org/http-core/",
+  "github": "",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["High-performance web delivery", "Video streaming platforms", "Real-time applications", "Global CDN deployments"]
+}

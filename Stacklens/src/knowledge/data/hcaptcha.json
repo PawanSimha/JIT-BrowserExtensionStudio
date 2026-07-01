@@ -1,0 +1,17 @@
+{
+  "id": "hcaptcha",
+  "github": "",
+  "name": "hCaptcha",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A privacy-focused CAPTCHA alternative.",
+  "developer": "Intuition Machines",
+  "releaseYear": 2020,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "1.0.0",
+  "officialDocs": "https://hcaptcha.com",
+  "category": "Security",
+  "commonUseCases": [],
+  "disadvantages": []
+}

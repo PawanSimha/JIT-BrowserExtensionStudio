@@ -1,0 +1,17 @@
+{
+  "category": "Miscellaneous",
+  "id": "onetrust",
+  "officialDocs": "https://onetrust.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "OneTrust",
+  "difficulty": "Intermediate",
+  "latestVersion": "6.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A privacy management platform for cookie consent and compliance.",
+  "releaseYear": 2016,
+  "developer": "OneTrust"
+}

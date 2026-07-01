@@ -1,0 +1,33 @@
+{
+  "id": "flask",
+  "name": "Flask",
+  "category": "Backend",
+  "developer": "Armin Ronacher",
+  "releaseYear": 2010,
+  "latestVersion": "3.0",
+  "description": "A lightweight WSGI web application framework for Python. Flask is designed to make getting started quick and easy with the ability to scale up to complex applications. It follows a minimalistic approach.",
+  "advantages": [
+    "Simple and lightweight",
+    "Flexible with minimal assumptions",
+    "Great for microservices and APIs",
+    "Easy to learn and get started",
+    "Large extension ecosystem",
+    "Excellent documentation"
+  ],
+  "disadvantages": [
+    "No built-in ORM or authentication",
+    "Requires more decisions for structure",
+    "Less suitable for large monoliths",
+    "No built-in admin interface"
+  ],
+  "alternatives": ["Django", "FastAPI", "Express", "Sinatra", "Bottle"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Application setup", "Routing", "Jinja2 templates", "Request and response", "Static files"] },
+    { "step": "Intermediate", "topics": ["SQLAlchemy ORM", "User authentication", "RESTful APIs", "Blueprints for modularity", "Error handling"] },
+    { "step": "Advanced", "topics": ["Testing with pytest", "Async Flask", "Deployment (Gunicorn, uWSGI)", "Security best practices", "Performance optimization"] }
+  ],
+  "officialDocs": "https://flask.palletsprojects.com",
+  "github": "https://github.com/pallets/flask",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Microservices", "RESTful APIs", "Prototypes and MVPs", "Small to medium web apps", "Backend for mobile apps"]
+}

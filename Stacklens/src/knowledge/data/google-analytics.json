@@ -1,0 +1,33 @@
+{
+  "id": "google-analytics",
+  "name": "Google Analytics",
+  "category": "Analytics",
+  "developer": "Google",
+  "releaseYear": 2005,
+  "latestVersion": "GA4",
+  "description": "A web analytics service that tracks and reports website traffic. Google Analytics provides insights into user behavior, acquisition channels, and conversion metrics to help optimize website performance.",
+  "advantages": [
+    "Free tier for most websites",
+    "Comprehensive traffic analysis",
+    "Integration with Google Ads",
+    "Real-time reporting",
+    "Custom dashboards and reports",
+    "Event tracking and conversion goals"
+  ],
+  "disadvantages": [
+    "Privacy concerns with data collection",
+    "Sample data for high-traffic sites",
+    "Complex configuration for advanced tracking",
+    "Data ownership questions"
+  ],
+  "alternatives": ["Plausible", "Fathom", "Matomo", "Mixpanel", "Hotjar"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Account setup", "Tracking code", "Audience reports", "Acquisition reports", "Behavior reports"] },
+    { "step": "Intermediate", "topics": ["Goals and conversions", "Event tracking", "Custom dimensions", "Segments", "Dashboards"] },
+    { "step": "Advanced", "topics": ["GA4 migration", "BigQuery integration", "Google Tag Manager", "Advanced analysis", "API access"] }
+  ],
+  "officialDocs": "https://developers.google.com/analytics",
+  "github": "https://github.com/googleanalytics",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Website traffic analysis", "Marketing attribution", "User behavior insights", "Conversion optimization", "E-commerce tracking"]
+}

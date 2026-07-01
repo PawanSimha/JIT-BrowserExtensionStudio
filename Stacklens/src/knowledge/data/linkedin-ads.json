@@ -1,0 +1,31 @@
+{
+  "id": "linkedin-ads",
+  "name": "LinkedIn Ads",
+  "category": "Advertising",
+  "developer": "LinkedIn (Microsoft)",
+  "releaseYear": 2011,
+  "latestVersion": "N/A",
+  "description": "LinkedIn Ads (Insight Tag) is a conversion tracking and retargeting platform for LinkedIn advertising campaigns. The Insight Tag is a JavaScript snippet placed on websites to track conversions, build audience segments, and measure the effectiveness of LinkedIn ad campaigns.",
+  "advantages": [
+    "Professional audience targeting (job title, industry, company)",
+    "Conversion tracking for LinkedIn ad campaigns",
+    "Audience retargeting across LinkedIn network",
+    "B2B-focused analytics and reporting",
+    "GDPR and CCPA compliant with built-in consent controls"
+  ],
+  "disadvantages": [
+    "Premium pricing compared to other ad platforms",
+    "Smaller audience pool than Google or Meta",
+    "Higher cost per click for competitive industries",
+    "Requires LinkedIn Ads account to use effectively"
+  ],
+  "alternatives": ["Google Ads", "Meta Ads (Facebook Pixel)", "Twitter Ads", "Microsoft Advertising"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Insight Tag installation", "Conversion tracking setup", "Audience segments", "Campaign performance reporting"] },
+    { "step": "Intermediate", "topics": ["Offline conversions API", "Enhanced conversions", "Multi-touch attribution", "Privacy and consent management"] }
+  ],
+  "officialDocs": "https://business.linkedin.com/marketing-solutions/insight-tag",
+  "github": "",
+  "difficulty": "Beginner",
+  "commonUseCases": ["B2B conversion tracking", "Lead generation attribution", "Professional audience retargeting", "LinkedIn ad campaign optimization"]
+}

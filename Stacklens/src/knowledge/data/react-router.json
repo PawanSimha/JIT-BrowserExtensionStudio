@@ -1,0 +1,31 @@
+{
+  "id": "react-router",
+  "name": "React Router",
+  "category": "Frontend",
+  "developer": "Remix Software",
+  "releaseYear": 2014,
+  "latestVersion": "7.6.0",
+  "description": "A standard routing library for React applications that enables navigation between views, URL parameter handling, and nested route layouts. React Router provides both client-side and server-side routing capabilities with support for loaders, actions, and data fetching.",
+  "advantages": [
+    "Declarative routing with nested route configuration",
+    "Data loading and mutation with loaders and actions",
+    "Automatic route-based code splitting",
+    "Strong TypeScript support with type-safe route params",
+    "SEO-friendly with server-side rendering support"
+  ],
+  "disadvantages": [
+    "API changes across major versions require migration effort",
+    "Can be overkill for simple applications with few pages",
+    "Learning curve for advanced patterns like nested routes and data loaders"
+  ],
+  "alternatives": ["TanStack Router", "Next.js App Router", "Wouter", "Reach Router"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Route configuration", "Link and NavLink components", "URL parameters", "Nested routes", "Navigate component"] },
+    { "step": "Intermediate", "topics": ["Loaders and actions", "useFetcher", "Form components", "Search params", "Route guards"] },
+    { "step": "Advanced", "topics": ["Lazy loading routes", "Server-side rendering", "Route-based code splitting", "Custom route matching", "Error boundaries"] }
+  ],
+  "officialDocs": "https://reactrouter.com",
+  "github": "https://github.com/remix-run/react-router",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["SPA routing", "Server-rendered React apps", "Multi-page dashboards", "E-commerce product navigation"]
+}

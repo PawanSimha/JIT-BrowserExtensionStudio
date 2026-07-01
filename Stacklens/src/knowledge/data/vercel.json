@@ -1,0 +1,33 @@
+{
+  "id": "vercel",
+  "name": "Vercel",
+  "category": "Hosting",
+  "developer": "Vercel Inc.",
+  "releaseYear": 2015,
+  "latestVersion": "2024",
+  "description": "A cloud platform for static sites and serverless functions optimized for frontend frameworks. Vercel provides instant deployment, automatic scaling, and global CDN with a focus on developer experience.",
+  "advantages": [
+    "Instant deployment from Git",
+    "Automatic SSL and CDN",
+    "Serverless functions at the edge",
+    "Preview deployments for every branch",
+    "Framework-aware optimizations",
+    "Generous free tier"
+  ],
+  "disadvantages": [
+    "Can be expensive at scale",
+    "Vendor lock-in for serverless features",
+    "Cold starts for serverless functions",
+    "Limited regions compared to major clouds"
+  ],
+  "alternatives": ["Netlify", "Cloudflare Pages", "Railway", "Render", "AWS Amplify"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Project setup", "Deployment", "Domains", "Environment variables", "Analytics"] },
+    { "step": "Intermediate", "topics": ["Serverless functions", "Edge functions", "Middleware", "ISR and SSR", "Preview deployments"] },
+    { "step": "Advanced", "topics": ["Monorepos", "Custom domains", "Team collaboration", "Performance optimization", "Migration strategies"] }
+  ],
+  "officialDocs": "https://vercel.com/docs",
+  "github": "https://github.com/vercel",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Frontend applications", "Next.js hosting", "Static sites", "Jamstack sites", "API endpoints"]
+}

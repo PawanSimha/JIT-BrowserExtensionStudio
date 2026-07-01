@@ -1,0 +1,17 @@
+{
+  "category": "Reverse Proxies",
+  "id": "traefik",
+  "officialDocs": "https://traefik.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Traefik",
+  "difficulty": "Intermediate",
+  "latestVersion": "3.2.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A modern reverse proxy and load balancer for microservices.",
+  "releaseYear": 2016,
+  "developer": "Traefik Labs"
+}

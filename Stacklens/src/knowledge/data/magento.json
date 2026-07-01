@@ -1,0 +1,17 @@
+{
+  "officialDocs": "https://magento.com",
+  "advantages": [],
+  "latestVersion": "2.4.7",
+  "difficulty": "Intermediate",
+  "releaseYear": 2008,
+  "learningRoadmap": [],
+  "commonUseCases": [],
+  "name": "Magento",
+  "alternatives": [],
+  "disadvantages": [],
+  "github": "",
+  "category": "E-commerce",
+  "description": "A powerful open-source e-commerce platform with flexible shopping cart and enterprise features.",
+  "developer": "Adobe",
+  "id": "magento"
+}

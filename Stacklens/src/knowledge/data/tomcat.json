@@ -1,0 +1,33 @@
+{
+  "id": "tomcat",
+  "name": "Apache Tomcat",
+  "category": "Backend",
+  "developer": "Apache Software Foundation",
+  "releaseYear": 1999,
+  "latestVersion": "11.0.5",
+  "description": "Apache Tomcat is an open-source implementation of the Jakarta Servlet, Jakarta Expression Language, and WebSocket technologies. It is one of the most widely used application servers for Java-based web applications.",
+  "advantages": [
+    "Pure Java implementation works across all platforms",
+    "Lightweight compared to full Java EE servers",
+    "Excellent servlet and JSP support",
+    "Easy integration with Apache HTTP Server",
+    "Strong tool support (Eclipse, IntelliJ, Maven)",
+    "Mature and battle-tested"
+  ],
+  "disadvantages": [
+    "Not a full Java EE/Jakarta EE application server",
+    "Can require significant tuning for production",
+    "Memory management requires expertise",
+    "Limited clustering capabilities out of the box"
+  ],
+  "alternatives": ["Jetty", "WildFly", "Undertow", "Payara", "Spring Boot (embedded)"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Installation and directory structure", "Deploying WAR files", "Server.xml configuration", "Context configuration", "Logging setup"] },
+    { "step": "Intermediate", "topics": ["Connection pooling", "SSL/TLS configuration", "Virtual hosting", "Valve components", "Manager app usage"] },
+    { "step": "Advanced", "topics": ["Clustering and session replication", "Performance tuning", "Custom valves and realms", "JMX monitoring", "Embedded Tomcat"] }
+  ],
+  "officialDocs": "https://tomcat.apache.org/docs.html",
+  "github": "https://github.com/apache/tomcat",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Java servlet and JSP hosting", "Spring Boot embedded server", "Enterprise web applications", "REST API backends", "Legacy Java application hosting"]
+}

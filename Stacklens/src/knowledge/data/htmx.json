@@ -1,0 +1,17 @@
+{
+  "id": "htmx",
+  "github": "",
+  "name": "htmx",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A library for accessing modern browser features directly from HTML.",
+  "developer": "Big Sky Software",
+  "releaseYear": 2020,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "2.0.0",
+  "officialDocs": "https://htmx.com",
+  "category": "Frontend",
+  "commonUseCases": [],
+  "disadvantages": []
+}

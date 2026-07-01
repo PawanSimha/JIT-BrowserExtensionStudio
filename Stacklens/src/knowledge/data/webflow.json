@@ -1,0 +1,33 @@
+{
+  "id": "webflow",
+  "name": "Webflow",
+  "category": "CMS",
+  "developer": "Webflow Inc.",
+  "releaseYear": 2013,
+  "latestVersion": "2024",
+  "description": "A visual web development platform that allows designers to build responsive websites without coding. Webflow combines a visual editor with CMS, hosting, and e-commerce capabilities.",
+  "advantages": [
+    "Visual design with code-quality output",
+    "No coding required for basic sites",
+    "Built-in CMS for dynamic content",
+    "Responsive design tools",
+    "Hosting and security included",
+    "Clean semantic HTML output"
+  ],
+  "disadvantages": [
+    "Monthly subscription costs",
+    "Limited compared to custom development",
+    "Can be complex for advanced customizations",
+    "Vendor lock-in with hosting"
+  ],
+  "alternatives": ["WordPress", "Wix", "Squarespace", "Framer", "Bubble"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Visual editor", "Layout and styling", "Responsive design", "Interactions", "CMS collection setup"] },
+    { "step": "Intermediate", "topics": ["Custom code", "CMS dynamic content", "E-commerce setup", "SEO settings", "Animations"] },
+    { "step": "Advanced", "topics": ["Custom workflows", "API integration", "Advanced interactions", "Performance optimization", "Client handoff"] }
+  ],
+  "officialDocs": "https://university.webflow.com",
+  "github": "https://github.com/webflow",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Marketing websites", "Portfolio sites", "Blogs", "Landing pages", "Small business sites"]
+}

@@ -1,0 +1,17 @@
+{
+  "category": "JavaScript Libraries",
+  "id": "axios",
+  "officialDocs": "https://axios.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Axios",
+  "difficulty": "Intermediate",
+  "latestVersion": "1.7.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A promise-based HTTP client for the browser and Node.js.",
+  "releaseYear": 2014,
+  "developer": "Axios Contributors"
+}

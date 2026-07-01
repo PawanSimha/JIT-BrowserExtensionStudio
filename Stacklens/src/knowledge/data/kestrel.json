@@ -1,0 +1,33 @@
+{
+  "id": "kestrel",
+  "name": "Kestrel",
+  "category": "Backend",
+  "developer": "Microsoft",
+  "releaseYear": 2016,
+  "latestVersion": "9.0",
+  "description": "Kestrel is a cross-platform, open-source web server for ASP.NET Core applications. Developed by Microsoft, it is the default web server included with ASP.NET Core and is designed for high performance and cloud-native workloads.",
+  "advantages": [
+    "Cross-platform (Windows, Linux, macOS)",
+    "High performance with async I/O",
+    "Built-in HTTP/2 and HTTP/3 support",
+    "Seamless ASP.NET Core integration",
+    "Docker-friendly and cloud-native",
+    "Can run behind IIS or Nginx for production"
+  ],
+  "disadvantages": [
+    "Primarily designed for ASP.NET Core only",
+    "Less feature-rich than full IIS for Windows hosting",
+    "Some enterprise features require IIS reverse proxy",
+    "Smaller ecosystem for non-.NET applications"
+  ],
+  "alternatives": ["IIS", "Nginx", "HTTP.sys", "IIS Express", "Apache HTTP Server"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["ASP.NET Core hosting setup", "Kestrel configuration in appsettings.json", "URL and port binding", "Development vs production profiles", "Logging integration"] },
+    { "step": "Intermediate", "topics": ["HTTPS configuration", "HTTP/2 and HTTP/3 setup", "Reverse proxy setup with Nginx/IIS", "Connection limits and timeouts", "Unix socket binding"] },
+    { "step": "Advanced", "topics": ["Custom transport configuration", "Performance tuning", "Security hardening", "Container optimization", "Load balancing with YARP"] }
+  ],
+  "officialDocs": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel",
+  "github": "https://github.com/dotnet/aspnetcore",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["ASP.NET Core web applications", "Microservices architecture", "REST and GraphQL APIs", "Cloud-native .NET applications", "Docker container hosting"]
+}

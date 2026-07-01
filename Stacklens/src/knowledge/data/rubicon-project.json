@@ -1,0 +1,31 @@
+{
+  "id": "rubicon-project",
+  "name": "Rubicon Project",
+  "category": "Advertising",
+  "developer": "Magnite (formerly Rubicon Project)",
+  "releaseYear": 2007,
+  "latestVersion": "N/A",
+  "description": "Rubicon Project, now part of Magnite, is one of the largest independent sell-side advertising platforms. It provides programmatic advertising technology for publishers to manage and monetize their ad inventory across display, video, and mobile formats through real-time bidding.",
+  "advantages": [
+    "Access to major advertising demand sources",
+    "Real-time bidding for inventory monetization",
+    "Header bidding integration support",
+    "Cross-platform ad management",
+    "Strong publisher-focused tools and analytics"
+  ],
+  "disadvantages": [
+    "Consolidated market with few major competitors",
+    "Complex setup for header bidding integrations",
+    "Revenue share model reduces publisher earnings",
+    "Ad quality and brand safety concerns"
+  ],
+  "alternatives": ["Google Ad Manager", "OpenX", "PubMatic", "Index Exchange", "AppNexus (Xandr)"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Programmatic advertising overview", "Rubicon Project ad tags", "Real-time bidding mechanics", "Publisher dashboard"] },
+    { "step": "Intermediate", "topics": ["Header bidding integration", "Yield optimization", "Ad quality controls", "Reporting and analytics"] }
+  ],
+  "officialDocs": "https://www.magnite.com",
+  "github": "",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Publisher ad monetization", "Programmatic display advertising", "Header bidding management", "Video ad inventory optimization"]
+}

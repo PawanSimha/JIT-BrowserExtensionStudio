@@ -1,0 +1,33 @@
+{
+  "id": "nextjs",
+  "name": "Next.js",
+  "category": "Frontend",
+  "developer": "Vercel",
+  "releaseYear": 2016,
+  "latestVersion": "14.2",
+  "description": "A React framework for production-grade applications with server-side rendering, static site generation, and API routes. Next.js provides a complete solution for building fast, SEO-friendly web applications.",
+  "advantages": [
+    "Hybrid rendering (SSR, SSG, ISR) for optimal performance",
+    "Excellent SEO with server-side rendering",
+    "File-based routing simplifies navigation",
+    "API routes enable backend functionality without separate server",
+    "Image optimization and font optimization built in",
+    "Great developer experience with fast refresh"
+  ],
+  "disadvantages": [
+    "Can be complex for simple static sites",
+    "Server costs for SSR compared to pure static sites",
+    "Learning curve for data fetching methods",
+    "Regular breaking changes across major versions"
+  ],
+  "alternatives": ["Nuxt.js", "Gatsby", "Remix", "Astro", "SvelteKit"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Pages and routing", "Link and navigation", "Static assets", "Layouts", "React basics"] },
+    { "step": "Intermediate", "topics": ["Data fetching (SSR, SSG, ISR)", "API routes", "Dynamic routes", "Middleware", "Environment variables"] },
+    { "step": "Advanced", "topics": ["App Router", "Server components", "Route handlers", "Authentication patterns", "Deployment on Vercel"] }
+  ],
+  "officialDocs": "https://nextjs.org/docs",
+  "github": "https://github.com/vercel/next.js",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Marketing websites", "E-commerce platforms", "Blogs and content sites", "SaaS applications", "Portfolio websites"]
+}

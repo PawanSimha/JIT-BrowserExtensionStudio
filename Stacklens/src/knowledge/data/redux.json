@@ -1,0 +1,33 @@
+{
+  "id": "redux",
+  "name": "Redux",
+  "category": "Frontend",
+  "developer": "Dan Abramov, Andrew Clark",
+  "releaseYear": 2015,
+  "latestVersion": "5.0",
+  "description": "A predictable state container for JavaScript applications. Redux helps you write applications that behave consistently across environments with centralized state management and powerful developer tooling.",
+  "advantages": [
+    "Predictable state updates with pure reducers",
+    "Centralized store simplifies debugging",
+    "Excellent DevTools for time-travel debugging",
+    "Middleware for side effects and async logic",
+    "Works with any UI framework",
+    "Large ecosystem of addons and tools"
+  ],
+  "disadvantages": [
+    "Boilerplate code for simple state needs",
+    "Learning curve for Redux concepts",
+    "Can be overkill for small applications",
+    "Verbose compared to Zustand or Context API"
+  ],
+  "alternatives": ["Zustand", "Pinia", "MobX", "Jotai", "Recoil"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Store, actions, and reducers", "Dispatch and subscribe", "Action creators", "Combine reducers", "Redux DevTools"] },
+    { "step": "Intermediate", "topics": ["Redux Toolkit", "createSlice and createAsyncThunk", "Middleware (Thunk, Saga)", "Selectors and memoization", "Normalized state"] },
+    { "step": "Advanced", "topics": ["RTK Query", "Custom middleware", "Performance optimization", "Testing reducers and selectors", "Server-side rendering"] }
+  ],
+  "officialDocs": "https://redux.js.org",
+  "github": "https://github.com/reduxjs/redux",
+  "difficulty": "Advanced",
+  "commonUseCases": ["Large-scale single-page applications", "Complex state management", "Real-time collaborative apps", "Enterprise dashboards", "Applications with complex data flows"]
+}

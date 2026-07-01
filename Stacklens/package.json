@@ -1,0 +1,45 @@
+{
+  "name": "stacklens",
+  "version": "1.0.0",
+  "description": "See Beyond the Website - Detect, explain, and visualize the technology stack of any website.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "build:copy": "node scripts/copy-build.mjs",
+    "zip": "wxt zip",
+    "compile": "wxt prepare",
+    "lint": "eslint src/ --ext .ts,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "lucide-react": "^0.488.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.0",
+    "@wxt-dev/module-react": "^1.2.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.2",
+    "globals": "^16.1.0",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.5.5",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.0",
+    "vitest": "^3.2.6",
+    "wxt": "^0.20.13"
+  }
+}

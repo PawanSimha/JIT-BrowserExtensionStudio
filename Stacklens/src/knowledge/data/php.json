@@ -1,0 +1,33 @@
+{
+  "id": "php",
+  "name": "PHP",
+  "category": "Backend",
+  "developer": "PHP Group",
+  "releaseYear": 1995,
+  "latestVersion": "8.4",
+  "description": "A widely-used open-source scripting language especially suited for web development. PHP powers a significant portion of the web, including major platforms like WordPress, Wikipedia, and Facebook.",
+  "advantages": [
+    "Easy to learn and deploy",
+    "Excellent web integration",
+    "Large ecosystem (WordPress, Laravel, Symfony)",
+    "Shared hosting availability",
+    "Great documentation and community",
+    "Constant performance improvements"
+  ],
+  "disadvantages": [
+    "Inconsistent function naming and parameter order",
+    "Security issues if not careful",
+    "Less suitable for real-time applications",
+    "Mixed paradigm approach can be confusing"
+  ],
+  "alternatives": ["Python", "Node.js", "Ruby", "Java", "Go"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Syntax and variables", "Arrays and strings", "Functions", "Form handling", "Sessions and cookies"] },
+    { "step": "Intermediate", "topics": ["OOP in PHP", "PDO and database access", "MVC architecture", "Composer and packages", "RESTful APIs"] },
+    { "step": "Advanced", "topics": ["Laravel framework", "Testing with PHPUnit", "Security best practices", "Performance optimization", "Deployment and DevOps"] }
+  ],
+  "officialDocs": "https://www.php.net/docs",
+  "github": "https://github.com/php/php-src",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Content management systems", "E-commerce websites", "Web applications", "WordPress themes and plugins", "Backend APIs"]
+}

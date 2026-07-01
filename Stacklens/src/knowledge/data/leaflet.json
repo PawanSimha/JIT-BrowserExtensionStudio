@@ -1,0 +1,17 @@
+{
+  "id": "leaflet",
+  "github": "",
+  "name": "Leaflet",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "An open-source JavaScript library for mobile-friendly interactive maps.",
+  "developer": "Vladimir Agafonkin",
+  "releaseYear": 2011,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "1.9.4",
+  "officialDocs": "https://leaflet.com",
+  "category": "Map",
+  "commonUseCases": [],
+  "disadvantages": []
+}

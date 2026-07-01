@@ -1,0 +1,33 @@
+{
+  "id": "mixpanel",
+  "name": "Mixpanel",
+  "category": "Analytics",
+  "developer": "Mixpanel Inc.",
+  "releaseYear": 2009,
+  "latestVersion": "2024",
+  "description": "A product analytics platform for tracking user interactions with web and mobile applications. Mixpanel focuses on event-based tracking to understand user behavior, retention, and engagement.",
+  "advantages": [
+    "Event-based tracking is flexible",
+    "Powerful segmentation and funnel analysis",
+    "Retention analysis",
+    "A/B testing integration",
+    "API-first design",
+    "Real-time data processing"
+  ],
+  "disadvantages": [
+    "Costly for high-volume tracking",
+    "Complex setup for event tracking",
+    "Learning curve for advanced features",
+    "Data sampling on larger plans"
+  ],
+  "alternatives": ["Amplitude", "Heap", "PostHog", "Google Analytics", "Pendo"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Project setup", "Event tracking", "User properties", "Reports overview", "Dashboard"] },
+    { "step": "Intermediate", "topics": ["Funnel analysis", "Retention analysis", "Segmentation", "Formulas", "Cohorts"] },
+    { "step": "Advanced", "topics": ["A/B testing", "Predictive analytics", "API integration", "Data management", "Warehouse integration"] }
+  ],
+  "officialDocs": "https://docs.mixpanel.com",
+  "github": "https://github.com/mixpanel",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Product analytics", "User engagement tracking", "Retention analysis", "Feature adoption", "Conversion optimization"]
+}

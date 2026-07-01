@@ -1,0 +1,33 @@
+{
+  "id": "hsts",
+  "name": "HSTS",
+  "category": "Security",
+  "developer": "IETF",
+  "releaseYear": 2012,
+  "latestVersion": "RFC 6797",
+  "description": "HTTP Strict Transport Security is a web security policy mechanism that protects websites from protocol downgrade attacks and cookie hijacking by forcing browsers to communicate over HTTPS only.",
+  "advantages": [
+    "Forces HTTPS connections",
+    "Prevents SSL stripping attacks",
+    "Protects against cookie hijacking",
+    "Browser-enforced security",
+    "Simple to implement via header",
+    "Improves user trust"
+  ],
+  "disadvantages": [
+    "Once enabled, cannot be disabled until expiry",
+    "Misconfiguration can block HTTP access",
+    "Requires valid HTTPS setup first",
+    "Preload lists require manual submission"
+  ],
+  "alternatives": ["Content Security Policy", "HTTPS redirect", "Expect-CT", "Certificate Pinning"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["What is HSTS", "How it works", "max-age directive", "includeSubDomains", "Browser behavior"] },
+    { "step": "Intermediate", "topics": ["Preload lists", "HSTS headers configuration", "Mixed content handling", "Testing and validation", "Common pitfalls"] },
+    { "step": "Advanced", "topics": ["Preload submission process", "HSTS for APIs", "Troubleshooting", "Monitoring compliance", "Security headers audit"] }
+  ],
+  "officialDocs": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security",
+  "github": "https://github.com/",
+  "difficulty": "Beginner",
+  "commonUseCases": ["HTTPS enforcement", "Secure cookie protection", "SSL stripping prevention", "Web security hardening", "Compliance requirements"]
+}

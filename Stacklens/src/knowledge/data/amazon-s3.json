@@ -1,0 +1,32 @@
+{
+  "id": "amazon-s3",
+  "name": "Amazon S3",
+  "category": "CDN",
+  "developer": "Amazon Web Services",
+  "releaseYear": 2006,
+  "latestVersion": "N/A",
+  "description": "Amazon Simple Storage Service (S3) is a scalable object storage service used for storing and retrieving any amount of data. S3 is commonly used as a content delivery origin, hosting static assets (images, CSS, JavaScript), and as a building block for cloud-native applications.",
+  "advantages": [
+    "99.999999999% durability (11 nines) of stored objects",
+    "Highly scalable with no capacity limits",
+    "Integration with CloudFront CDN for global delivery",
+    "Lifecycle management for automatic data tiering",
+    "Strong security with bucket policies and encryption"
+  ],
+  "disadvantages": [
+    "Costs can grow with data transfer and request volume",
+    "Not a traditional file system, no hierarchical directories",
+    "Eventual consistency for some operations",
+    "Complex permission model can lead to misconfigurations"
+  ],
+  "alternatives": ["Google Cloud Storage", "Azure Blob Storage", "Cloudflare R2", "Backblaze B2"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Bucket creation and configuration", "Upload and download objects", "S3 access control (IAM)", "Static website hosting"] },
+    { "step": "Intermediate", "topics": ["S3 lifecycle policies", "Versioning and replication", "CloudFront+S3 integration", "S3 event notifications"] },
+    { "step": "Advanced", "topics": ["S3 Glacier and storage tiers", "S3 Select and analytics", "S3 batch operations", "Cross-region replication"] }
+  ],
+  "officialDocs": "https://aws.amazon.com/s3/",
+  "github": "",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Static asset hosting (images, CSS, JS)", "Content delivery origin", "Data backup and archival", "Big data storage and analytics"]
+}

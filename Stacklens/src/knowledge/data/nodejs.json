@@ -1,0 +1,33 @@
+{
+  "id": "nodejs",
+  "name": "Node.js",
+  "category": "Backend",
+  "developer": "OpenJS Foundation",
+  "releaseYear": 2009,
+  "latestVersion": "22.5",
+  "description": "A JavaScript runtime built on Chrome's V8 engine that enables server-side JavaScript execution. Node.js uses an event-driven, non-blocking I/O model making it lightweight and efficient for real-time applications.",
+  "advantages": [
+    "JavaScript across frontend and backend",
+    "Excellent for real-time applications",
+    "Large package ecosystem (npm)",
+    "High performance for I/O operations",
+    "Great for microservices architecture",
+    "Strong community and corporate support"
+  ],
+  "disadvantages": [
+    "Single-threaded for CPU-intensive tasks",
+    "Callback-heavy patterns can lead to callback hell",
+    "Less suitable for heavy computation",
+    "Rapidly evolving ecosystem causes churn"
+  ],
+  "alternatives": ["Deno", "Bun", "Python", "Go", "Java"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Module system (CommonJS/ESM)", "File system operations", "HTTP server", "npm package management", "Event loop"] },
+    { "step": "Intermediate", "topics": ["Express.js framework", "RESTful APIs", "Database integration", "Authentication", "Error handling"] },
+    { "step": "Advanced", "topics": ["Streams and buffers", "Worker threads", "Performance profiling", "Testing and debugging", "Deployment strategies"] }
+  ],
+  "officialDocs": "https://nodejs.org/docs",
+  "github": "https://github.com/nodejs/node",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Web servers and APIs", "Real-time applications", "CLI tools", "Microservices", "Streaming applications"]
+}

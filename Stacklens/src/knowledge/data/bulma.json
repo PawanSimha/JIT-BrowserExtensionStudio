@@ -1,0 +1,17 @@
+{
+  "id": "bulma",
+  "github": "",
+  "name": "Bulma",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A modern CSS framework based on Flexbox.",
+  "developer": "Jeremy Thomas",
+  "releaseYear": 2016,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "1.0.3",
+  "officialDocs": "https://bulma.com",
+  "category": "CSS Framework",
+  "commonUseCases": [],
+  "disadvantages": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "esbuild",
+  "name": "esbuild",
+  "category": "Build Tool",
+  "developer": "Evan Wallace",
+  "releaseYear": 2020,
+  "latestVersion": "0.23",
+  "description": "An extremely fast JavaScript bundler and minifier written in Go. esbuild is designed for speed, bundling code 10-100x faster than traditional JavaScript-based bundlers.",
+  "advantages": [
+    "Extremely fast build times",
+    "Built-in bundling, minification, and transpilation",
+    "Simple configuration",
+    "Go-based for performance",
+    "Great as a foundation for other tools",
+    "Plugin support"
+  ],
+  "disadvantages": [
+    "Limited plugin ecosystem compared to Webpack",
+    "No built-in HMR",
+    "Not designed as a full-featured dev server",
+    "Mainly used as a build tool, not dev server"
+  ],
+  "alternatives": ["Vite", "Webpack", "Rollup", "Parcel", "Turbopack"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["CLI usage", "Bundling", "Transpilation", "Minification", "Source maps"] },
+    { "step": "Intermediate", "topics": ["Plugins", "Code splitting", "CSS bundling", "Asset loading", "Configuration"] },
+    { "step": "Advanced", "topics": ["Custom plugins", "Integration with frameworks", "Performance tuning", "Migration strategies", "Production optimization"] }
+  ],
+  "officialDocs": "https://esbuild.github.io",
+  "github": "https://github.com/evanw/esbuild",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["JavaScript bundling", "TypeScript transpilation", "Minification", "Build tool foundation", "Performance-critical builds"]
+}

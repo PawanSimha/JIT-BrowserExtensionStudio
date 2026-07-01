@@ -1,0 +1,17 @@
+{
+  "id": "okta",
+  "github": "",
+  "name": "Okta",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "An enterprise-grade identity and access management platform.",
+  "developer": "Okta",
+  "releaseYear": 2009,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "2.0.0",
+  "officialDocs": "https://okta.com",
+  "category": "Authentication",
+  "commonUseCases": [],
+  "disadvantages": []
+}

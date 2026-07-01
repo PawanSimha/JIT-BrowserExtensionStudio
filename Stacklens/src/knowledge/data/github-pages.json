@@ -1,0 +1,33 @@
+{
+  "id": "github-pages",
+  "name": "GitHub Pages",
+  "category": "Hosting",
+  "developer": "GitHub",
+  "releaseYear": 2008,
+  "latestVersion": "2024",
+  "description": "A static site hosting service that takes HTML, CSS, and JavaScript files directly from a GitHub repository and publishes them as a website with built-in custom domain support.",
+  "advantages": [
+    "Free hosting for public repositories",
+    "Automatic deployment from Git pushes",
+    "Custom domain support with SSL",
+    "Integration with Jekyll and static generators",
+    "No server management needed",
+    "Great for documentation"
+  ],
+  "disadvantages": [
+    "Static content only (no server-side)",
+    "Build times for large sites",
+    "100GB bandwidth limit per month",
+    "1GB file size limit"
+  ],
+  "alternatives": ["Netlify", "Vercel", "Cloudflare Pages", "Render", "Surge"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Repository setup", "Pages configuration", "Custom domains", "Jekyll basics", "Markdown pages"] },
+    { "step": "Intermediate", "topics": ["GitHub Actions deployment", "Custom workflows", "Theme customization", "SEO setup", "Analytics integration"] },
+    { "step": "Advanced", "topics": ["Static site generators", "Build optimization", "Custom 404 pages", "Subdirectory hosting", "Project sites"] }
+  ],
+  "officialDocs": "https://docs.github.com/pages",
+  "github": "https://github.com/github/pages-gem",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Project documentation", "Personal portfolio", "Open-source project sites", "Blogs", "Organization websites"]
+}

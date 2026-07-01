@@ -1,0 +1,33 @@
+{
+  "id": "react",
+  "name": "React",
+  "category": "Frontend",
+  "developer": "Meta (Facebook)",
+  "releaseYear": 2013,
+  "latestVersion": "19.1.0",
+  "description": "A JavaScript library for building user interfaces with a component-based architecture. React uses a virtual DOM to efficiently update and render UI components, making it one of the most popular frontend libraries in the world.",
+  "advantages": [
+    "Component-based architecture promotes reusability and maintainability",
+    "Virtual DOM provides excellent performance for complex UIs",
+    "Large ecosystem with extensive third-party libraries and tools",
+    "Strong community support and Meta backing",
+    "React Native enables cross-platform mobile development",
+    "Excellent developer tools and debugging experience"
+  ],
+  "disadvantages": [
+    "Learning curve for JSX syntax and component lifecycle",
+    "Boilerplate code for state management in large applications",
+    "Fast-paced ecosystem can be overwhelming for beginners",
+    "Client-side rendering can impact SEO without additional tooling"
+  ],
+  "alternatives": ["Vue.js", "Angular", "Svelte", "SolidJS", "Preact"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["JSX syntax", "Functional components", "Props", "State with useState", "Event handling"] },
+    { "step": "Intermediate", "topics": ["useEffect hook", "Context API", "useRef", "Custom hooks", "React Router"] },
+    { "step": "Advanced", "topics": ["Performance optimization", "Server components", "Suspense and transitions", "Testing with React Testing Library", "State management (Redux/Zustand)"] }
+  ],
+  "officialDocs": "https://react.dev",
+  "github": "https://github.com/facebook/react",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Single-page applications", "Dashboards and analytics", "E-commerce platforms", "Social media platforms", "Collaboration tools"]
+}

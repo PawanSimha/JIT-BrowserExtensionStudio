@@ -1,0 +1,34 @@
+{
+  "id": "typescript",
+  "name": "TypeScript",
+  "category": "Frontend",
+  "developer": "Microsoft",
+  "releaseYear": 2012,
+  "latestVersion": "5.5",
+  "description": "A typed superset of JavaScript that compiles to plain JavaScript. TypeScript adds static type checking, interfaces, generics, and modern ECMAScript features to catch errors early and improve code quality.",
+  "advantages": [
+    "Catches type errors at compile time",
+    "Better IDE support with autocomplete and refactoring",
+    "Self-documenting code with type annotations",
+    "Excellent for large codebases and teams",
+    "Gradual adoption possible in existing projects",
+    "Active development by Microsoft"
+  ],
+  "disadvantages": [
+    "Additional compilation step",
+    "Learning curve for type system",
+    "More verbose than plain JavaScript",
+    "Configuration can be complex",
+    "Type errors can be cryptic"
+  ],
+  "alternatives": ["Flow", "PureScript", "ReasonML", "Elm", "ClojureScript"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Types and interfaces", "Functions and parameters", "Arrays and tuples", "Union and intersection types", "Type inference"] },
+    { "step": "Intermediate", "topics": ["Generics", "Enums and literals", "Type aliases", "Modules and namespaces", "Declaration files"] },
+    { "step": "Advanced", "topics": ["Conditional types", "Template literal types", "Mapped types", "Utility types", "Type challenges"] }
+  ],
+  "officialDocs": "https://www.typescriptlang.org/docs",
+  "github": "https://github.com/microsoft/TypeScript",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Large-scale web applications", "Library and framework development", "Enterprise software", "API development", "Any JavaScript project needing type safety"]
+}

@@ -1,0 +1,17 @@
+{
+  "category": "JavaScript Libraries",
+  "id": "chartjs",
+  "officialDocs": "https://chartjs.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Chart.js",
+  "difficulty": "Intermediate",
+  "latestVersion": "4.4.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A simple yet flexible JavaScript charting library.",
+  "releaseYear": 2013,
+  "developer": "Chart.js Contributors"
+}

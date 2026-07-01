@@ -1,0 +1,33 @@
+{
+  "id": "mantine",
+  "name": "Mantine",
+  "category": "CSS Framework",
+  "developer": "Vitaly Rtishchev",
+  "releaseYear": 2021,
+  "latestVersion": "7.10",
+  "description": "A modern React component library with 100+ customizable components and hooks. Mantine focuses on providing a great developer experience with dark mode, responsive design, and accessibility.",
+  "advantages": [
+    "100+ well-designed components",
+    "Dark mode built in",
+    "Rich hooks collection",
+    "Notifications and overlays system",
+    "TypeScript support",
+    "Excellent documentation"
+  ],
+  "disadvantages": [
+    "Newer library with smaller community",
+    "Rapid changes between versions",
+    "Limited resources and tutorials",
+    "Component API changes"
+  ],
+  "alternatives": ["Material UI", "Chakra UI", "Ant Design", "Radix UI", "Shadcn/ui"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Core components", "Layout and grid", "Inputs and forms", "Navigation", "Theme configuration"] },
+    { "step": "Intermediate", "topics": ["Hooks library", "Notifications", "Modals and drawers", "Tables and lists", "Custom styling"] },
+    { "step": "Advanced", "topics": ["Custom components", "Server-side rendering", "Performance", "Migration", "Accessibility"] }
+  ],
+  "officialDocs": "https://mantine.dev",
+  "github": "https://github.com/mantinedev/mantine",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Web applications", "Admin dashboards", "SaaS platforms", "Internal tools", "Prototypes"]
+}

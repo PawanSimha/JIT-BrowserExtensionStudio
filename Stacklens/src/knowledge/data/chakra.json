@@ -1,0 +1,33 @@
+{
+  "id": "chakra",
+  "name": "Chakra UI",
+  "category": "CSS Framework",
+  "developer": "Chakra UI Team",
+  "releaseYear": 2019,
+  "latestVersion": "2.8",
+  "description": "A simple, modular and accessible React component library that provides the building blocks for building React applications with a focus on developer experience and accessibility.",
+  "advantages": [
+    "Excellent accessibility out of the box",
+    "Simple and intuitive API",
+    "Dark mode support built in",
+    "Composition-based component design",
+    "Great TypeScript support",
+    "Customizable theme system"
+  ],
+  "disadvantages": [
+    "Smaller ecosystem than Material UI",
+    "Limited complex components",
+    "Performance with many components",
+    "Breaking changes between versions"
+  ],
+  "alternatives": ["Material UI", "Radix UI", "Headless UI", "Ant Design", "Shadcn/ui"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Component API", "Layout components", "Typography", "Forms and inputs", "Theme setup"] },
+    { "step": "Intermediate", "topics": ["Custom themes", "Dark mode", "Responsive styles", "Hooks", "Component composition"] },
+    { "step": "Advanced", "topics": ["Custom components", "Performance", "Accessibility patterns", "Migration", "Testing"] }
+  ],
+  "officialDocs": "https://chakra-ui.com",
+  "github": "https://github.com/chakra-ui/chakra-ui",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["SaaS applications", "Admin panels", "Portfolio sites", "Internal tools", "Accessible web apps"]
+}

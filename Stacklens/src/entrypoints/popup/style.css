@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface-base: #FFFFFF;
+    --surface-card: #F1F5F9;
+    --surface-hover: #E2E8F0;
+    --surface-border: #CBD5E1;
+    --text-primary: #1E293B;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+    --bg-app: #FFFFFF;
+  }
+
+  .dark {
+    --surface-base: #000000;
+    --surface-card: #111111;
+    --surface-hover: #1A1A1A;
+    --surface-border: #2A2A2A;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --bg-app: #000000;
+  }
+
+  .dark.dim {
+    --surface-base: #1E293B;
+    --surface-card: #334155;
+    --surface-hover: #475569;
+    --surface-border: #64748B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --bg-app: #1E293B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    width: 520px;
+    min-height: 540px;
+    max-height: 600px;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #64748B;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #475569 transparent;
+  }
+}
+
+@layer components {
+  .nav-item {
+    @apply flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150;
+  }
+
+  .nav-item-active {
+    @apply bg-brand-primary/10 text-brand-primary;
+  }
+
+  .nav-item-inactive {
+    @apply text-text-secondary hover:bg-surface-hover hover:text-text-primary;
+  }
+
+  .page-container {
+    @apply h-full overflow-y-auto px-4 py-4 animate-fade-in;
+  }
+
+  .card {
+    @apply bg-surface-card rounded-xl border border-surface-border p-4;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-2xs font-medium;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary/50;
+  }
+
+  .btn-primary {
+    @apply bg-brand-primary text-white hover:bg-brand-primary/90;
+  }
+
+  .btn-ghost {
+    @apply text-text-secondary hover:bg-surface-hover hover:text-text-primary;
+  }
+}
+
+@layer utilities {
+  .scrollable {
+    @apply overflow-y-auto;
+    scrollbar-gutter: stable;
+  }
+}

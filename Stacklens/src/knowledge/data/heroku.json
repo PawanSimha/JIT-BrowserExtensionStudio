@@ -1,0 +1,17 @@
+{
+  "category": "PaaS",
+  "id": "heroku",
+  "officialDocs": "https://heroku.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Heroku",
+  "difficulty": "Intermediate",
+  "latestVersion": "1.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A cloud platform as a service supporting multiple programming languages.",
+  "releaseYear": 2007,
+  "developer": "Salesforce"
+}

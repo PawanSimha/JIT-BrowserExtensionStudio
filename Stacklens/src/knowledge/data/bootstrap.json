@@ -1,0 +1,33 @@
+{
+  "id": "bootstrap",
+  "name": "Bootstrap",
+  "category": "CSS Framework",
+  "developer": "Twitter",
+  "releaseYear": 2011,
+  "latestVersion": "5.3",
+  "description": "The most popular CSS framework for developing responsive, mobile-first websites. Bootstrap provides a comprehensive set of pre-built components, grid system, and utilities.",
+  "advantages": [
+    "Pre-built components for rapid development",
+    "Responsive grid system out of the box",
+    "Consistent cross-browser styling",
+    "Large community and extensive resources",
+    "JavaScript plugins for interactivity",
+    "Well-documented with many examples"
+  ],
+  "disadvantages": [
+    "Sites can look similar without heavy customization",
+    "Large bundle size when using all features",
+    "Overriding styles can require specificity battles",
+    "Heavy reliance on jQuery in older versions"
+  ],
+  "alternatives": ["Tailwind CSS", "Bulma", "Foundation", "Materialize", "UIKit"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Grid system", "Typography", "Tables and forms", "Buttons and badges", "Cards and lists"] },
+    { "step": "Intermediate", "topics": ["Navbar and navigation", "Modals and tooltips", "Carousel and collapse", "Customization with SASS", "Utilities"] },
+    { "step": "Advanced", "topics": ["Custom themes", "JavaScript plugins", "Performance optimization", "Webpack integration", "Bootstrap Icons"] }
+  ],
+  "officialDocs": "https://getbootstrap.com",
+  "github": "https://github.com/twbs/bootstrap",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Admin dashboards", "Marketing websites", "Rapid prototyping", "Internal tools", "Landing pages"]
+}

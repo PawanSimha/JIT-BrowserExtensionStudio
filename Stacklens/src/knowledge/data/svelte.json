@@ -1,0 +1,33 @@
+{
+  "id": "svelte",
+  "name": "Svelte",
+  "category": "Frontend",
+  "developer": "Rich Harris",
+  "releaseYear": 2016,
+  "latestVersion": "4.2",
+  "description": "A radical approach to building user interfaces that shifts much of the work to compile time. Svelte produces highly optimized vanilla JavaScript, resulting in smaller bundles and better performance.",
+  "advantages": [
+    "No virtual DOM for smaller bundle sizes",
+    "Truly reactive with minimal boilerplate",
+    "Compiled to vanilla JavaScript for excellent performance",
+    "Built-in state management without external libraries",
+    "Easier learning curve than React or Angular",
+    "Great for building animations and transitions"
+  ],
+  "disadvantages": [
+    "Smaller ecosystem and community",
+    "Fewer job opportunities",
+    "Limited third-party component libraries",
+    "Tooling is less mature than React ecosystem"
+  ],
+  "alternatives": ["React", "Vue.js", "SolidJS", "Qwik", "Preact"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Reactive declarations", "Template syntax", "Props and events", "Conditional rendering", "Each blocks"] },
+    { "step": "Intermediate", "topics": ["Stores", "Lifecycle functions", "Bindings", "Transitions and animations", "Slots"] },
+    { "step": "Advanced", "topics": ["SvelteKit framework", "Server-side rendering", "Actions", "Custom stores", "Testing"] }
+  ],
+  "officialDocs": "https://svelte.dev",
+  "github": "https://github.com/sveltejs/svelte",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Interactive websites", "Data dashboards", "Mobile-first web apps", "Small to medium applications", "Prototypes"]
+}

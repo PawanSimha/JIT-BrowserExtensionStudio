@@ -1,0 +1,33 @@
+{
+  "id": "stripe",
+  "name": "Stripe",
+  "category": "Payments",
+  "developer": "Stripe Inc.",
+  "releaseYear": 2010,
+  "latestVersion": "2024",
+  "description": "A leading payment processing platform for internet businesses. Stripe provides a complete payment infrastructure including payment acceptance, subscriptions, marketplaces, and financial reporting.",
+  "advantages": [
+    "Simple API and excellent documentation",
+    "Global payment methods support",
+    "Built-in subscription management",
+    "Strong security and compliance",
+    "Marketplace and platform support",
+    "Transparent pricing"
+  ],
+  "disadvantages": [
+    "Transaction fees per payment",
+    "Can be complex for international businesses",
+    "Account holds and reserve risks",
+    "Limited customer support on lower tiers"
+  ],
+  "alternatives": ["PayPal", "Square", "Braintree", "Adyen", "Paddle"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Account setup", "Payment intents", "Checkout integration", "Webhooks", "API keys"] },
+    { "step": "Intermediate", "topics": ["Subscription billing", "Customer portal", "Invoice management", "Refunds and disputes", "Reporting"] },
+    { "step": "Advanced", "topics": ["Connect platform", "Tax automation", "Revenue recognition", "Fraud prevention", "Global expansion"] }
+  ],
+  "officialDocs": "https://stripe.com/docs",
+  "github": "https://github.com/stripe",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["E-commerce payments", "Subscription billing", "Marketplace payouts", "Invoice management", "Global payment processing"]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "drupal",
+  "github": "",
+  "name": "Drupal",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A powerful open-source CMS known for flexibility.",
+  "developer": "Drupal Association",
+  "releaseYear": 2001,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "11.1.0",
+  "officialDocs": "https://drupal.com",
+  "category": "CMS",
+  "commonUseCases": [],
+  "disadvantages": []
+}

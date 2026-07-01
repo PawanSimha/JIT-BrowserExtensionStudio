@@ -1,0 +1,17 @@
+{
+  "category": "Backend",
+  "id": "ruby",
+  "officialDocs": "https://ruby.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Ruby",
+  "difficulty": "Intermediate",
+  "latestVersion": "3.4.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A dynamic, open source programming language focused on simplicity and productivity.",
+  "releaseYear": 1995,
+  "developer": "Yukihiro Matsumoto"
+}

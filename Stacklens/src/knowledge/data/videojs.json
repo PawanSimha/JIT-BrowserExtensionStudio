@@ -1,0 +1,17 @@
+{
+  "category": "Video Players",
+  "id": "videojs",
+  "officialDocs": "https://videojs.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Video.js",
+  "difficulty": "Intermediate",
+  "latestVersion": "8.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "An open-source HTML5 video player library.",
+  "releaseYear": 2010,
+  "developer": "Brightcove"
+}

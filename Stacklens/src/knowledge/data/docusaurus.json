@@ -1,0 +1,17 @@
+{
+  "id": "docusaurus",
+  "github": "",
+  "name": "Docusaurus",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A static site generator optimized for documentation websites.",
+  "developer": "Meta",
+  "releaseYear": 2017,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "3.7.0",
+  "officialDocs": "https://docusaurus.com",
+  "category": "Static Site Generator",
+  "commonUseCases": [],
+  "disadvantages": []
+}

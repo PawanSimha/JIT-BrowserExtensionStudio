@@ -1,0 +1,31 @@
+{
+  "id": "priority-hints",
+  "name": "Priority Hints",
+  "category": "Frontend",
+  "developer": "Google (WICG)",
+  "releaseYear": 2023,
+  "latestVersion": "N/A",
+  "description": "Priority Hints (fetchpriority attribute) allow developers to signal the relative priority of resources to the browser. By setting fetchpriority=high or fetchpriority=low on images, scripts, and links, developers can optimize Largest Contentful Paint (LCP) and improve perceived loading performance.",
+  "advantages": [
+    "Fine-grained control over resource loading priority",
+    "Direct impact on Core Web Vitals, especially LCP",
+    "Works with images, iframes, scripts, and links",
+    "Simple attribute-based API",
+    "Can significantly improve perceived page load speed"
+  ],
+  "disadvantages": [
+    "Relatively new API with partial browser support",
+    "Browser may override hints based on its own heuristics",
+    "Requires understanding of browser loading pipeline",
+    "Can worsen performance if used incorrectly"
+  ],
+  "alternatives": ["preload/preconnect hints", "async/defer script attributes", "Critical CSS inlining", "Resource loading through JavaScript"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["fetchpriority=high usage", "fetchpriority=low usage", "Priority hints on images", "Priority hints on scripts"] },
+    { "step": "Intermediate", "topics": ["Browser priority heuristics", "LCP optimization with priority hints", "Combining with preload", "Performance measurement"] }
+  ],
+  "officialDocs": "https://web.dev/priority-hints",
+  "github": "",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Hero image priority optimization", "Critical script loading", "Above-the-fold resource prioritization", "Core Web Vitals optimization"]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "envoy",
+  "name": "Envoy",
+  "category": "Hosting",
+  "developer": "Lyft (CNCF)",
+  "releaseYear": 2016,
+  "latestVersion": "1.34.0",
+  "description": "Envoy is a high-performance, open-source proxy and communication bus designed for cloud-native applications. It serves as a sidecar proxy in service mesh architectures, handling load balancing, traffic routing, observability, and security at the network edge.",
+  "advantages": [
+    "High performance with C++ implementation",
+    "Rich observability with metrics, logging, and tracing",
+    "Dynamic configuration via xDS protocol",
+    "Advanced load balancing algorithms",
+    "L7 routing with support for HTTP/2 and gRPC"
+  ],
+  "disadvantages": [
+    "Complex configuration with extensive YAML",
+    "Significant memory footprint in large deployments",
+    "Steep learning curve for advanced features",
+    "Can be overkill for simpler architectures"
+  ],
+  "alternatives": ["NGINX", "HAProxy", "Traefik", "Caddy", "Linkerd"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Envoy architecture overview", "Listener and cluster configuration", "Static configuration", "Admin interface"] },
+    { "step": "Intermediate", "topics": ["Dynamic configuration with xDS", "Rate limiting and circuit breaking", "TLS termination", "Access logging"] },
+    { "step": "Advanced", "topics": ["Envoy in service mesh (Istio)", "Extending with Wasm filters", "Envoy control plane development", "Performance tuning"] }
+  ],
+  "officialDocs": "https://www.envoyproxy.io",
+  "github": "https://github.com/envoyproxy/envoy",
+  "difficulty": "Advanced",
+  "commonUseCases": ["Service mesh sidecar proxy", "API gateway and edge proxy", "Load balancing and traffic routing", "Cloud-native observability"]
+}

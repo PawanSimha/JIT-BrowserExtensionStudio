@@ -1,0 +1,33 @@
+{
+  "id": "apache",
+  "name": "Apache HTTP Server",
+  "category": "Hosting",
+  "developer": "Apache Software Foundation",
+  "releaseYear": 1995,
+  "latestVersion": "2.4.63",
+  "description": "The Apache HTTP Server is a free, open-source web server software developed and maintained by the Apache Software Foundation. It has been the most popular web server on the internet since 1996, known for its robustness, flexibility, and extensive module ecosystem.",
+  "advantages": [
+    "Proven stability and reliability",
+    "Extensive module ecosystem for customization",
+    "Excellent documentation and community support",
+    "Strong security track record",
+    "Supports .htaccess for per-directory configuration",
+    "Wide hosting provider compatibility"
+  ],
+  "disadvantages": [
+    "Can be less performant than Nginx under high concurrency",
+    "Configuration can be complex for beginners",
+    "Thread-based architecture consumes more memory per connection",
+    "Performance tuning requires expertise"
+  ],
+  "alternatives": ["Nginx", "Caddy", "LiteSpeed", "Lighttpd", "IIS"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Installation and basic configuration", "Virtual hosts setup", "Directory permissions", "Log files analysis", "Module management"] },
+    { "step": "Intermediate", "topics": ["SSL/TLS configuration", "URL rewriting with mod_rewrite", "Caching strategies", "Performance tuning", "Security hardening"] },
+    { "step": "Advanced", "topics": ["Custom module development", "Load balancing", "Reverse proxy configuration", "High availability setups", "Automated deployment with Ansible"] }
+  ],
+  "officialDocs": "https://httpd.apache.org/docs/",
+  "github": "https://github.com/apache/httpd",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Static and dynamic website hosting", "Reverse proxy and load balancing", "Application server frontend", "Development environments", "Enterprise web hosting"]
+}

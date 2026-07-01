@@ -1,0 +1,33 @@
+{
+  "id": "azure",
+  "name": "Azure",
+  "category": "Hosting",
+  "developer": "Microsoft",
+  "releaseYear": 2010,
+  "latestVersion": "2024",
+  "description": "Microsoft's cloud computing platform providing infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS) with integration with Microsoft's enterprise tools.",
+  "advantages": [
+    "Strong enterprise integration",
+    "Hybrid cloud capabilities",
+    "Excellent .NET and Microsoft tooling support",
+    "Global data center presence",
+    "AI and machine learning services",
+    "Enterprise compliance and security"
+  ],
+  "disadvantages": [
+    "Complex pricing structure",
+    "Management portal can be overwhelming",
+    "Less intuitive than competitors",
+    "Strong ties to Microsoft ecosystem"
+  ],
+  "alternatives": ["AWS", "Google Cloud", "DigitalOcean", "Linode", "Vercel"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Portal navigation", "Virtual machines", "App Services", "Azure Storage", "SQL Database"] },
+    { "step": "Intermediate", "topics": ["Azure Functions", "DevOps pipelines", "Active Directory", "Cosmos DB", "Azure Kubernetes"] },
+    { "step": "Advanced", "topics": ["Microservices architecture", "AI services", "Cost management", "Security and compliance", "Migration strategies"] }
+  ],
+  "officialDocs": "https://learn.microsoft.com/azure",
+  "github": "https://github.com/Azure",
+  "difficulty": "Advanced",
+  "commonUseCases": ["Enterprise applications", ".NET hosting", "Hybrid cloud solutions", "AI/ML workloads", "Microsoft 365 integration"]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "matomo",
+  "github": "",
+  "name": "Matomo",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "An open-source web analytics platform with full data ownership.",
+  "developer": "Matomo",
+  "releaseYear": 2007,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "5.2.0",
+  "officialDocs": "https://matomo.com",
+  "category": "Analytics",
+  "commonUseCases": [],
+  "disadvantages": []
+}

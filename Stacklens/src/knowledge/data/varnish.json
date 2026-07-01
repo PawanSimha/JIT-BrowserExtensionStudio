@@ -1,0 +1,17 @@
+{
+  "id": "varnish",
+  "github": "",
+  "name": "Varnish",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A powerful HTTP accelerator and reverse proxy cache.",
+  "developer": "Varnish Software",
+  "releaseYear": 2006,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "7.6.0",
+  "officialDocs": "https://varnish.com",
+  "category": "Caching",
+  "commonUseCases": [],
+  "disadvantages": []
+}

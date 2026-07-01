@@ -1,0 +1,17 @@
+{
+  "category": "Monitoring",
+  "id": "rollbar",
+  "officialDocs": "https://rollbar.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Rollbar",
+  "difficulty": "Intermediate",
+  "latestVersion": "2.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A real-time error tracking and monitoring platform.",
+  "releaseYear": 2012,
+  "developer": "Rollbar"
+}

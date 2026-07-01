@@ -1,0 +1,33 @@
+{
+  "id": "angular",
+  "name": "Angular",
+  "category": "Frontend",
+  "developer": "Google",
+  "releaseYear": 2016,
+  "latestVersion": "17.3",
+  "description": "A comprehensive TypeScript-based web application framework. Angular provides a complete solution for building large-scale enterprise applications with built-in routing, state management, form handling, and HTTP client.",
+  "advantages": [
+    "Full-featured framework with built-in solutions for common needs",
+    "Strong typing with TypeScript from the ground up",
+    "Dependency injection promotes modular and testable code",
+    "Powerful CLI for scaffolding and building projects",
+    "Comprehensive documentation and enterprise support",
+    "RxJS integration for reactive programming"
+  ],
+  "disadvantages": [
+    "Steep learning curve compared to React or Vue",
+    "Verbose boilerplate for simple applications",
+    "Larger bundle size out of the box",
+    "Framework updates can introduce significant changes"
+  ],
+  "alternatives": ["React", "Vue.js", "Svelte", "SolidJS", "Qwik"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["TypeScript fundamentals", "Components and templates", "Directives", "Data binding", "Services and dependency injection"] },
+    { "step": "Intermediate", "topics": ["Routing and navigation", "Forms (template-driven and reactive)", "HTTP client and interceptors", "Pipes", "Modules and lazy loading"] },
+    { "step": "Advanced", "topics": ["State management with NgRx", "Custom directives and pipes", "Change detection strategy", "Server-side rendering with Angular Universal", "Testing with Jasmine and Protractor"] }
+  ],
+  "officialDocs": "https://angular.dev",
+  "github": "https://github.com/angular/angular",
+  "difficulty": "Advanced",
+  "commonUseCases": ["Enterprise applications", "Large-scale dashboards", "Banking and finance portals", "Healthcare management systems", "Admin panels"]
+}

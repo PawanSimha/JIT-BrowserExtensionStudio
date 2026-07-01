@@ -1,0 +1,33 @@
+{
+  "id": "vite",
+  "name": "Vite",
+  "category": "Build Tool",
+  "developer": "Evan You",
+  "releaseYear": 2020,
+  "latestVersion": "5.4",
+  "description": "A next-generation frontend tooling that provides fast development server startup and instant hot module replacement. Vite uses native ES modules during development and Rollup for production builds.",
+  "advantages": [
+    "Instant server startup",
+    "Fast HMR for all frameworks",
+    "Out-of-the-box TypeScript support",
+    "Built-in CSS preprocessing",
+    "Optimized production builds",
+    "Plugin ecosystem"
+  ],
+  "disadvantages": [
+    "Relatively new compared to Webpack",
+    "Some older libraries may have compatibility issues",
+    "Dev and production builds can differ",
+    "Less community resources than Webpack"
+  ],
+  "alternatives": ["Webpack", "esbuild", "Rollup", "Parcel", "Turbopack"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Project scaffolding", "Dev server", "Static assets", "CSS and preprocessors", "TypeScript setup"] },
+    { "step": "Intermediate", "topics": ["Plugins", "Environment variables", "Build configuration", "Code splitting", "Proxy configuration"] },
+    { "step": "Advanced", "topics": ["Custom plugins", "SSR support", "Library mode", "Performance optimization", "Migration from Webpack"] }
+  ],
+  "officialDocs": "https://vitejs.dev/guide",
+  "github": "https://github.com/vitejs/vite",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Modern frontend development", "React/Vue/Svelte projects", "Library development", "SSR applications", "Rapid prototyping"]
+}

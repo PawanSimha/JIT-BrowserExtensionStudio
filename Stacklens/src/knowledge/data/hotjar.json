@@ -1,0 +1,33 @@
+{
+  "id": "hotjar",
+  "name": "Hotjar",
+  "category": "Analytics",
+  "developer": "Hotjar Ltd.",
+  "releaseYear": 2014,
+  "latestVersion": "2024",
+  "description": "A behavior analytics tool that provides heatmaps, session recordings, and feedback polls to understand how users interact with websites. Hotjar helps optimize user experience through visual insights.",
+  "advantages": [
+    "Visual heatmap representation of clicks",
+    "Session recordings show real user behavior",
+    "Feedback polls and surveys",
+    "Funnel analysis",
+    "Easy setup with tracking code",
+    "Privacy-conscious features"
+  ],
+  "disadvantages": [
+    "Sample data on lower tiers",
+    "Performance impact from recordings",
+    "Limited customization",
+    "Data retention limits"
+  ],
+  "alternatives": ["Microsoft Clarity", "FullStory", "Crazy Egg", "Lucky Orange", "Smartlook"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Installation", "Heatmaps", "Session recordings", "Basic filters", "Dashboard"] },
+    { "step": "Intermediate", "topics": ["Feedback widgets", "Surveys", "Funnel analysis", "User attributes", "Integrations"] },
+    { "step": "Advanced", "topics": ["Advanced targeting", "API usage", "Data export", "A/B testing integration", "Privacy settings"] }
+  ],
+  "officialDocs": "https://help.hotjar.com",
+  "github": "https://github.com/hotjar",
+  "difficulty": "Beginner",
+  "commonUseCases": ["UX optimization", "Conversion rate optimization", "User behavior research", "Website usability testing", "Form abandonment analysis"]
+}

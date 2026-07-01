@@ -1,0 +1,31 @@
+{
+  "id": "amazon-ads",
+  "name": "Amazon Ads",
+  "category": "Advertising",
+  "developer": "Amazon",
+  "releaseYear": 2003,
+  "latestVersion": "N/A",
+  "description": "Amazon Ads is an advertising platform that enables businesses to promote products and services across Amazon's ecosystem, including Amazon.com, Fire TV, Kindle, and third-party publisher sites through the Amazon Ad Network. It uses the Amazon Ad System (amazon-adsystem.com) for ad delivery and tracking.",
+  "advantages": [
+    "Access to Amazon's massive shopper audience and purchase intent data",
+    "Self-serve ad platform with flexible budgeting options",
+    "Multi-channel advertising across search, display, and video",
+    "Detailed performance analytics and attribution",
+    "Integration with Amazon's e-commerce ecosystem"
+  ],
+  "disadvantages": [
+    "Competitive CPC pricing for popular product categories",
+    "Ad policies and restrictions can be complex",
+    "Limited targeting options compared to Google or Meta",
+    "Reporting data can have attribution delays"
+  ],
+  "alternatives": ["Google Ads", "Meta Ads", "Microsoft Advertising", "Pinterest Ads"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Amazon Ads console overview", "Sponsored Products campaigns", "Campaign budgeting and bidding", "Keyword research and targeting"] },
+    { "step": "Intermediate", "topics": ["Sponsored Brands campaigns", "Display and video advertising", "Amazon Attribution", "Creative optimization"] }
+  ],
+  "officialDocs": "https://advertising.amazon.com",
+  "github": "",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["E-commerce product promotion", "Brand awareness campaigns", "Shopper marketing and retargeting", "New product launches"]
+}

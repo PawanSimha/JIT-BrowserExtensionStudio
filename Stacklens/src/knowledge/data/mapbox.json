@@ -1,0 +1,17 @@
+{
+  "id": "mapbox",
+  "github": "",
+  "name": "Mapbox",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A platform for custom online maps and location-based services.",
+  "developer": "Mapbox",
+  "releaseYear": 2010,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "3.8.0",
+  "officialDocs": "https://mapbox.com",
+  "category": "Map",
+  "commonUseCases": [],
+  "disadvantages": []
+}

@@ -23,8 +23,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   <!-- ── Primary Meta ── -->
   <title>JIT - Browser Extension Studio | Privacy-First Chrome Extensions by Pawan Simha R</title>
-  <meta name="description" content="JIT builds clean, focused browser extensions — MutedHue, Refreshner, Goofanizer, and Imageination — with zero data collection, open source code, and a quiet, powerful design philosophy. Download free Chrome extensions built by Pawan Simha R at Sapthagiri NPS University." />
-  <meta name="keywords" content="JIT, browser extensions, Chrome extensions, MutedHue, Refreshner, Goofanizer, Imageination, privacy-first extensions, open source extensions, Pawan Simha, Sapthagiri NPS University, media downloader, batch download, video downloader, audio downloader, text selection color, auto refresh page monitor, responsive device switcher, viewport emulator" />
+  <meta name="description" content="JIT builds clean, focused browser extensions — MutedHue, Refreshner, Goofanizer, Imageination, and StackLens — with zero data collection, open source code, and a quiet, powerful design philosophy. Download free Chrome extensions built by Pawan Simha R at Sapthagiri NPS University." />
+  <meta name="keywords" content="JIT, browser extensions, Chrome extensions, MutedHue, Refreshner, Goofanizer, Imageination, StackLens, privacy-first extensions, open source extensions, Pawan Simha, Sapthagiri NPS University, media downloader, batch download, video downloader, audio downloader, text selection color, auto refresh page monitor, responsive device switcher, viewport emulator, website technology detector, tech stack analyzer" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Pawan Simha R" />
   <meta name="theme-color" content="#000000" />
@@ -33,8 +33,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
   <!-- ── Open Graph ── -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="JIT - Browser Extension Studio | Privacy-First Chrome Extensions" />
-  <meta property="og:description" content="Clean, focused browser extensions that do one thing well and respect your privacy. MutedHue, Refreshner, Goofanizer, and Imageination by Pawan Simha R." />
+  <meta property="og:title" content="JIT - Browser Extension Studio | Privacy-First Chrome Extensions &amp; StackLens" />
+  <meta property="og:description" content="Clean, focused browser extensions that do one thing well and respect your privacy. MutedHue, Refreshner, Goofanizer, Imageination, and StackLens by Pawan Simha R." />
   <meta property="og:url" content="https://pawansimha.github.io/JIT/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/PawanSimha/JIT/main/Logo.webp" />
   <meta property="og:image:width" content="512" />
@@ -46,7 +46,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <!-- ── Twitter Card ── -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="JIT - Browser Extension Studio" />
-  <meta name="twitter:description" content="Clean, focused browser extensions — MutedHue, Refreshner, Goofanizer, and Imageination. Zero trackers, open source, built by Pawan Simha R." />
+  <meta name="twitter:description" content="Clean, focused browser extensions — MutedHue, Refreshner, Goofanizer, Imageination, and StackLens. Zero trackers, open source, built by Pawan Simha R." />
   <meta name="twitter:image" content="https://raw.githubusercontent.com/PawanSimha/JIT/main/Logo.webp" />
   <meta name="twitter:image:alt" content="JIT logo" />
 
@@ -183,6 +183,24 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           "@id": "https://github.com/PawanSimha/JIT#person"
         },
         "permissions": ["activeTab", "downloads"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://github.com/PawanSimha/JIT#stacklens",
+        "name": "StackLens",
+        "applicationCategory": "BrowserExtension",
+        "operatingSystem": "Chrome",
+        "description": "Detect, explain, and visualize the technology stack of any website. Identifies frameworks, analytics, CDNs, security, fonts, and more.",
+        "softwareVersion": "1.0.0",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@id": "https://github.com/PawanSimha/JIT#person"
+        },
+        "permissions": ["storage", "activeTab", "webRequest", "tabs"]
       }
     ]
   }
@@ -254,6 +272,80 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     </div>
   </section>
 
+  <!-- ============ EXTENSIONS ============ -->
+  <section class="extensions" id="extensions" aria-labelledby="ext-title">
+    <div class="container">
+      <p class="eyebrow">Extensions</p>
+      <h2 class="section-title" id="ext-title">What tools does <span class="text-gradient">JIT</span> offer?</h2>
+      <div class="ext-grid" style="margin-top:-20px;">
+        <article class="ext-card">
+          <div class="ext-art ext-art-1">
+            <img src="MutedHue/icons/MutedHue.png" alt="MutedHue" class="ext-logo" width="96" height="96" loading="lazy" />
+          </div>
+          <div class="ext-body">
+            <div class="ext-head">
+              <h3>MutedHue</h3>
+            </div>
+            <p>Replaces harsh blue text selection with a subtle, adaptive grey highlight on every website. Gentle on the eyes, beautiful on every theme.</p>
+            <a href="descriptions/MutedHue.html" class="ext-link" aria-label="Learn more about MutedHue">Learn more &rsaquo;</a>
+          </div>
+        </article>
+
+        <article class="ext-card">
+          <div class="ext-art ext-art-2">
+            <img src="Refreshner/icons/Refreshner.png" alt="Refreshner" class="ext-logo" width="96" height="96" loading="lazy" />
+          </div>
+          <div class="ext-body">
+            <div class="ext-head">
+              <h3>Refreshner</h3>
+            </div>
+            <p>Smart auto-refresh with customizable intervals, keyword page monitoring, live countdown timer, and audio alerts when matches are found.</p>
+            <a href="descriptions/Refreshner.html" class="ext-link" aria-label="Learn more about Refreshner">Learn more &rsaquo;</a>
+          </div>
+        </article>
+
+        <article class="ext-card">
+          <div class="ext-art ext-art-3">
+            <img src="Goofanizer/assets/Icon.png" alt="Goofanizer" class="ext-logo" width="96" height="96" loading="lazy" />
+          </div>
+          <div class="ext-body">
+            <div class="ext-head">
+              <h3>Goofanizer</h3>
+            </div>
+            <p>Instantly emulate mobile and tablet viewports with one click. Switch between 4 predefined device presets, rotate, capture screenshots, and batch export.</p>
+            <a href="descriptions/Goofanizer.html" class="ext-link" aria-label="Learn more about Goofanizer">Learn more &rsaquo;</a>
+          </div>
+        </article>
+
+        <article class="ext-card">
+          <div class="ext-art ext-art-4">
+            <img src="Imageination/icons/icon.png" alt="Imageination" class="ext-logo" width="96" height="96" loading="lazy" />
+          </div>
+          <div class="ext-body">
+            <div class="ext-head">
+              <h3>Imageination</h3>
+            </div>
+            <p>Scans any webpage for images, video and audio. Download PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more individually or batch as ZIP.</p>
+            <a href="descriptions/Imageination.html" class="ext-link" aria-label="Learn more about Imageination">Learn more &rsaquo;</a>
+          </div>
+        </article>
+
+        <article class="ext-card">
+          <div class="ext-art ext-art-5">
+            <img src="Stacklens/icons/StackLens.png" alt="StackLens" class="ext-logo" width="96" height="96" loading="lazy" />
+          </div>
+          <div class="ext-body">
+            <div class="ext-head">
+              <h3>StackLens</h3>
+            </div>
+            <p>Detect, explain, and visualize the technology stack of any website. Identifies frameworks, analytics, CDNs, security, fonts, and 100+ other technologies.</p>
+            <a href="descriptions/Stacklens.html" class="ext-link" aria-label="Learn more about StackLens">Learn more &rsaquo;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ ABOUT ============ -->
   <section class="about" id="about" aria-labelledby="about-title">
     <div class="container about-inner">
@@ -293,76 +385,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             </div>
           </li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EXTENSIONS ============ -->
-  <section class="extensions" id="extensions" aria-labelledby="ext-title">
-    <div class="container">
-      <p class="eyebrow">Extensions</p>
-      <h2 class="section-title" id="ext-title">What tools does <span class="text-gradient">JIT</span> offer?</h2>
-      <p class="section-sub">
-        <strong>JIT offers four free Chrome extensions with more in development.</strong>
-        MutedHue replaces harsh blue selection with adaptive grey, Refreshner auto-refreshes pages and monitors keywords, Goofanizer emulates mobile and tablet viewports, and Imageination scans and downloads images, video and audio from any page. All four are open source and collect zero data.
-      </p>
-
-      <div class="ext-grid">
-        <article class="ext-card">
-          <div class="ext-art ext-art-1">
-            <img src="MutedHue/icons/MutedHue.png" alt="MutedHue" class="ext-logo" width="96" height="96" loading="lazy" />
-          </div>
-          <div class="ext-body">
-            <div class="ext-head">
-              <h3>MutedHue</h3>
-              <span class="ext-status ext-live">Published</span>
-            </div>
-            <p>Replaces harsh blue text selection with a subtle, adaptive grey highlight on every website. Gentle on the eyes, beautiful on every theme.</p>
-            <a href="descriptions/MutedHue.html" class="ext-link" aria-label="Learn more about MutedHue">Learn more &rsaquo;</a>
-          </div>
-        </article>
-
-        <article class="ext-card">
-          <div class="ext-art ext-art-2">
-            <img src="Refreshner/icons/Refreshner.png" alt="Refreshner" class="ext-logo" width="96" height="96" loading="lazy" />
-          </div>
-          <div class="ext-body">
-            <div class="ext-head">
-              <h3>Refreshner</h3>
-              <span class="ext-status ext-live">Published</span>
-            </div>
-            <p>Smart auto-refresh with customizable intervals, keyword page monitoring, live countdown timer, and audio alerts when matches are found.</p>
-            <a href="descriptions/Refreshner.html" class="ext-link" aria-label="Learn more about Refreshner">Learn more &rsaquo;</a>
-          </div>
-        </article>
-
-        <article class="ext-card">
-          <div class="ext-art ext-art-3">
-            <img src="Goofanizer/assets/Icon.png" alt="Goofanizer" class="ext-logo" width="96" height="96" loading="lazy" />
-          </div>
-          <div class="ext-body">
-            <div class="ext-head">
-              <h3>Goofanizer</h3>
-              <span class="ext-status ext-live">Published</span>
-            </div>
-            <p>Instantly emulate mobile and tablet viewports with one click. Switch between 4 predefined device presets, rotate, capture screenshots, and batch export.</p>
-            <a href="descriptions/Goofanizer.html" class="ext-link" aria-label="Learn more about Goofanizer">Learn more &rsaquo;</a>
-          </div>
-        </article>
-
-        <article class="ext-card">
-          <div class="ext-art ext-art-4">
-            <img src="Imageination/icons/icon.png" alt="Imageination" class="ext-logo" width="96" height="96" loading="lazy" />
-          </div>
-          <div class="ext-body">
-            <div class="ext-head">
-              <h3>Imageination</h3>
-              <span class="ext-status ext-live">Published</span>
-            </div>
-            <p>Scans any webpage for images, video and audio. Download PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more individually or batch as ZIP.</p>
-            <a href="descriptions/Imageination.html" class="ext-link" aria-label="Learn more about Imageination">Learn more &rsaquo;</a>
-          </div>
-        </article>
       </div>
     </div>
   </section>

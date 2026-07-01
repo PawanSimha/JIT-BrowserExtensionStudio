@@ -1,0 +1,33 @@
+{
+  "id": "caddy",
+  "name": "Caddy",
+  "category": "Hosting",
+  "developer": "ZeroSSL",
+  "releaseYear": 2015,
+  "latestVersion": "2.9",
+  "description": "Caddy is a powerful, extensible, open-source web server written in Go. It is known for its automatic HTTPS via Let's Encrypt, sensible defaults, and easy configuration using Caddyfile syntax.",
+  "advantages": [
+    "Automatic HTTPS with Let's Encrypt by default",
+    "Simple and readable configuration (Caddyfile)",
+    "Built-in HTTP/2 and HTTP/3 support",
+    "Automatic certificate renewal",
+    "Excellent for modern web applications",
+    "Small binary size and low resource usage"
+  ],
+  "disadvantages": [
+    "Smaller ecosystem compared to Apache or Nginx",
+    "Fewer hosting provider integrations",
+    "Less documentation and community resources",
+    "Module system can be confusing for beginners"
+  ],
+  "alternatives": ["Nginx", "Apache HTTP Server", "Traefik", "Lighttpd", "H2O"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Installation and setup", "Caddyfile syntax", "Static file serving", "Reverse proxy configuration", "Automatic HTTPS"] },
+    { "step": "Intermediate", "topics": ["PHP-FPM integration", "Custom error pages", "Logging and access logs", "Environment variables", "API usage"] },
+    { "step": "Advanced", "topics": ["Custom modules in Go", "Caddy API for dynamic config", "Cluster deployment", "Security hardening", "Performance tuning"] }
+  ],
+  "officialDocs": "https://caddyserver.com/docs/",
+  "github": "https://github.com/caddyserver/caddy",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Static site hosting", "Reverse proxy with automatic TLS", "API gateway", "Personal websites and blogs", "Modern web application deployment"]
+}

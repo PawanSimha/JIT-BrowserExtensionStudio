@@ -4,7 +4,7 @@
 
 ## 1. System Overview & Strategic Intent
 
-**What it is:** JIT is a small studio brand with a marketing website and four Chrome Manifest V3 extensions. The website serves as landing page, extension showcase, developer portfolio, and contact gateway. The extensions (MutedHue, Refreshner, Goofanizer, Imageination) are privacy-first tools that do one thing well.
+**What it is:** JIT is a small studio brand with a marketing website and five Chrome Manifest V3 extensions. The website serves as landing page, extension showcase, developer portfolio, and contact gateway. The extensions (MutedHue, Refreshner, Goofanizer, Imageination, StackLens) are privacy-first tools that do one thing well.
 
 **Who it's for:** End-users who want minimal, respectful browser extensions. Developers evaluating open-source Chrome extension patterns.
 
@@ -29,7 +29,7 @@
 | **Chrome Ext** | Manifest V3 | MV3 | content_scripts, service_worker (`background.js`), action popup |
 | **Hosting** | GitHub Pages | — | Static HTML at root, no build step |
 | **Security** | `_headers` (GitHub Pages) | — | CSP, HSTS, X-Frame-Options, Permissions-Policy |
-| **SEO** | robots.txt + sitemap.xml + JSON-LD | — | AI crawler separation, 6-node `@graph` schema |
+| **SEO** | robots.txt + sitemap.xml + JSON-LD | — | AI crawler separation, 7-node `@graph` schema |
 
 ---
 
@@ -37,7 +37,7 @@
 
 ### Website (Static Site)
 - **Rendering paradigm:** Pure static (no SSR, no SSG framework). Served as flat HTML/CSS/JS.
-- **Routing:** File-based, manual. `index.html` = home, `extension.html` = extensions catalog with download, `descriptions/MutedHue.html`, `descriptions/Refreshner.html`, `descriptions/Goofanizer.html`, and `descriptions/Imageination.html` = extension detail pages. In-page anchor navigation (`#about`, `#faq`, etc.) via native `scroll-behavior: smooth`.
+- **Routing:** File-based, manual. `index.html` = home, `extension.html` = extensions catalog with download, `descriptions/MutedHue.html`, `descriptions/Refreshner.html`, `descriptions/Goofanizer.html`, `descriptions/Imageination.html`, and `descriptions/Stacklens.html` = extension detail pages. In-page anchor navigation (`#about`, `#faq`, etc.) via native `scroll-behavior: smooth`.
 - **Extension download flow:** Click "Add to Chrome" on `extension.html` or "Download Extension" on detail pages -> downloads ZIP file -> install modal appears with step-by-step "Load unpacked" guide for Chrome Developer mode.
 - **State management:** None. No frameworks, no stores, no reactive state. Cookie consent preference persisted in `localStorage` key `jit_cookie_consent`.
 - **Data flow (contact form):** Browser → POST to FormSubmit.io → email to pawansimha.pc@gmail.com. No database, no storage on our end.
@@ -56,6 +56,12 @@
 - **Content script (`content.js`):** Scans page text for keywords on load, reports back to background via `chrome.runtime.sendMessage`. Plays audio alert on match.
 - **Popup (`popup.html/popup.js/popup.css`):** Light-themed UI with Work Sans font, custom scrollbar, and brand header logo. Timer UI with countdown ring (SVG `stroke-dashoffset` animation), interval preset chips, keyword input, hard-refresh toggle, status indicator. Square layout with sticky header/footer and scrollable content area.
 - **Permissions:** `storage`, `alarms`, `notifications`, `tabs`. Host permissions: `<all_urls>`.
+
+### StackLens Extension (MV3)
+- **Pattern:** Content script + popup + background service worker. Built with WXT (React + TypeScript + Tailwind).
+- **Logic:** Injects a content script that scans DOM, `<script>`/`<link>` tags, JavaScript globals, and HTTP response headers via `chrome.webRequest`. Detects 100+ technologies across frameworks, meta frameworks, build tools, analytics, CDNs, hosting, security, fonts, and more.
+- **Popup:** React-based dashboard with categorized technology cards, counts, explanations, and visual indicators.
+- **Permissions:** `storage`, `activeTab`, `webRequest`, `tabs`. Host permissions: `<all_urls>`.
 
 ### Imageination Extension (MV3)
 - **Pattern:** Content script + popup + background service worker. No `storage` or telemetry. Zero-config popup with sidebar layout.
@@ -118,27 +124,35 @@ JIT/
 │   ├── popup.css               #   Dark theme, 2-column grid, custom scrollbar
 │   └── icons/icon.png          #   Extension icon (300x300, 32-bit ARGB)
 │
+├── Stacklens/                   # Chrome Extension MV3 — website technology stack detector
+│   ├── manifest.json           #   storage, activeTab, webRequest, tabs, host_permissions all_urls
+│   ├── .output/chrome-mv3/     #   WXT build output — background.js, popup.html, content-scripts/, chunks/
+│   ├── src/                    #   React + TypeScript source — pages, stores, utils, knowledge base
+│   ├── icons/StackLens.png     #   Extension logo (used by website for cards and detail pages)
+│   └── Stacklens.zip           #   Packaged extension ZIP for direct download
+│
 ├── descriptions/               # Extension detail pages
 │   ├── MutedHue.html           #   Full MutedHue detail page with logo, features, how-it-works, privacy, install guide
 │   ├── Refreshner.html         #   Full Refreshner detail page with logo, features, how-it-works, privacy, install guide
 │   ├── Goofanizer.html         #   Full Goofanizer detail page with logo, features, how-it-works, privacy, install guide
-│   └── Imageination.html       #   Full Imageination detail page with logo, features, how-it-works, privacy, install guide
+│   ├── Imageination.html       #   Full Imageination detail page with logo, features, how-it-works, privacy, install guide
+│   └── Stacklens.html          #   Full StackLens detail page with logo, features, how-it-works, privacy, install guide
 │
 ├── MutedHue.zip               # Packaged MutedHue extension ZIP for direct download
 ├── Refreshner.zip             # Packaged Refreshner extension ZIP for direct download
 ├── Goofanizer.zip             # Packaged Goofanizer extension ZIP for direct download
 ├── Imageination.zip           # Packaged Imageination extension ZIP for direct download
-│
+├── Stacklens.zip              # Packaged StackLens extension ZIP for direct download
 ├── PRD.md                      # Product Requirements Document — personas, OKRs, MoSCoW, user journeys
 ├── README.md                   # Documentation — badges, tech stack, project tree, quick start, roadmap
 ├── PRIVACY.md                  # Privacy policy — zero-collection, functional cookies, FormSubmit, GDPR/CCPA
 ├── LICENSE                     # GNU General Public License v3.0 — full text with copyright header
 │
 ├── robots.txt                  # AI crawler directives — search bots allowed, training scrapers blocked
-├── sitemap.xml                 # SEO sitemap — 6 URLs (/ at 1.0, /extension.html at 0.8, descriptions/* at 0.6)
+├── sitemap.xml                 # SEO sitemap — 7 URLs (/ at 1.0, /extension.html at 0.8, descriptions/* at 0.6)
 ├── site.webmanifest            # PWA manifest — name, theme_color, icons (192 + 512)
 ├── _headers                    # Security headers — HSTS, CSP, X-Frame-Options, Permissions-Policy
-├── .gitignore                  # Ignores — OS files, editor configs, env secrets, stale partials, *.zip
+├── .gitignore                  # Ignores — OS files, editor configs, env secrets, stale partials, ZIP exceptions
 └── context.md                  # THIS FILE — architectural state map for session continuity
 ```
 
@@ -175,37 +189,37 @@ JIT/
 - `[x]` Floating pill navigation bar (glassmorphism, responsive, hamburger on mobile)
 - `[x]` Hero section with aurora gradient + wave animation (4 colors, equal split, animated `background-position`)
 - `[x]` About section (3-column grid on desktop, logo between text and features on mobile)
-- `[x]` Extensions section (4 cards: MutedHue, Refreshner, Goofanizer, Imageination)
+- `[x]` Extensions section (5 cards: MutedHue, Refreshner, Goofanizer, Imageination, StackLens)
 - `[x]` FAQ accordion (8 questions, single-open, aria-expanded management)
 - `[x]` Developer section (7-link grid, full-width Portfolio button)
 - `[x]` Contact form (FormSubmit.io, serverless POST, disabled-on-submit UX)
 - `[x]` Footer (logo + brand text side-by-side, email, social links, 3-column product/company/legal)
 - `[x]` Extension catalog page (`extension.html`) with version/size details and Chrome Web Store links
-- `[x]` JSON-LD structured data (6-node `@graph`: Organization + Person + 4× SoftwareApplication)
+- `[x]` JSON-LD structured data (7-node `@graph`: Organization + Person + 5× SoftwareApplication)
 - `[x]` Open Graph + Twitter Card meta tags (full set on all HTML pages)
 - `[x]` SEO/GEO meta tags (keywords, robots, canonical, googlebot directives)
 - `[x]` Favicon set (32, 192, apple-touch-icon 180) + `site.webmanifest`
 - `[x]` Preload critical assets (Logo.webp, Google Sans woff2 files, fonts.css)
 - `[x]` `robots.txt` with 2026 AI crawler separation (search allowed, training scrapers blocked)
-- `[x]` `sitemap.xml` (5 URLs with priority + lastmod)
+- `[x]` `sitemap.xml` (7 URLs with priority + lastmod)
 - `[x]` `_headers` with security headers (CSP, HSTS, X-Frame-Options, Permissions-Policy)
 - `[x]` `404.html` branded error page (dark theme, Google Sans, "Back to Home" button)
 - `[x]` Cookie consent banner (localStorage, Accept/Decline, visible on first visit only)
 - `[x]` `PRIVACY.md` (GDPR/CCPA compliant, zero-collection, FormSubmit disclosure)
 - `[x]` `LICENSE` (GNU GPLv3) + per-file copyright headers
 - `[x]` `PRD.md` (problem statement, personas, MoSCoW, OKRs, technical constraints)
-- `[x]` `.gitignore` (OS files, editor configs, env secrets, stale partials)
+- `[x]` `.gitignore` (OS files, editor configs, env secrets, stale partials, ZIP exceptions)
 - `[x]` Custom scrollbar (black track, Google Blue dragger, Firefox `scrollbar-color`)
 - `[x]` Width/height attributes on all images (CLS prevention)
 - `[x]` `aria-label` on all icon-only links and interactive controls
 - `[x]` `:focus-visible` outlines enhanced per element type
 - `[x]` MutedHue extension (content script, luminance detection, Shadow DOM support)
 - `[x]` Refreshner extension (background service worker, alarm scheduler, keyword monitoring, popup UI)
-- `[x]` Extension detail pages (all 4: MutedHue, Refreshner, Goofanizer, Imageination) with full features, privacy, and install guide
+- `[x]` Extension detail pages (all 5: MutedHue, Refreshner, Goofanizer, Imageination, StackLens) with full features, privacy, and install guide
 - `[x]` ZIP download + install modal flow for Chrome Developer mode installation
 - `[x]` "Learn More" links on index.html linking to detail pages
 - `[x]` Structured feature cards, privacy card, and numbered install steps on detail pages
-- `[x]` sitemap.xml updated with 6 URLs
+- `[x]` sitemap.xml updated with 7 URLs
 - `[x]` JSON-LD structured data on extension detail pages (SoftwareApplication schema)
 - `[x]` Responsive breakpoints for ext-detail, feature-grid, install-steps on mobile
 - `[x]` Refreshner version consistency (manifest 2.0.0, website 2.0)
@@ -214,15 +228,20 @@ JIT/
 - `[x]` Goofanizer detail page, catalog card, JSON-LD, sitemap integration
 - `[x]` Imageination extension (media scanner, sidebar popup, 21-type categorization, ZipWriter batch download)
 - `[x]` Imageination detail page, catalog card, JSON-LD, sitemap integration
+- `[x]` StackLens extension (website technology stack detector, 100+ detections, WXT/React/Tailwind)
+- `[x]` StackLens detail page, catalog card, JSON-LD, sitemap integration
 - `[x]` Comprehensive multi-perspective audit — 0 critical/high issues
+- `[x]` Stacklens icons cleanup — deleted 9 unused files, kept only StackLens.png
+- `[x]` Audit fix: gitignore rules corrected for ZIP tracking and StackLens icon
+- `[x]` Audit fix: 4 junk OLD icon files deleted from MutedHue, Imageination, Goofanizer
 
 ### `[/]` In-Progress Workloads
 - `[/]` GitHub Pages activation (requires manual click in repo settings)
 
 ### `[ ]` Upcoming Implementations (Next Steps)
 - `[ ]` Deploy live at `https://pawansimha.github.io/JIT/`
-- `[ ]` Submit MutedHue, Refreshner, Goofanizer, and Imageination to Chrome Web Store
-- `[ ]` Firefox WebExtension port for MutedHue and Refreshner (Goofanizer excluded — uses Chrome-specific debugger API)
+- `[ ]` Submit MutedHue, Refreshner, Goofanizer, Imageination, and StackLens to Chrome Web Store
+- `[ ]` Firefox WebExtension port for MutedHue and Refreshner (Goofanizer excluded — uses Chrome-specific debugger API; StackLens excluded — uses Chrome-specific webRequest)
 - `[ ]` Add Privacy Policy / Terms of Service as dedicated HTML pages (footer links currently point to `PRIVACY.md`)
 - `[ ]` Set up custom FormSubmit thank-you redirect page
 - `[ ]` Add PWA service worker for offline caching

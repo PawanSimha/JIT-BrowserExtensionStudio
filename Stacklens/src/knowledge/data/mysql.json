@@ -1,0 +1,33 @@
+{
+  "id": "mysql",
+  "name": "MySQL",
+  "category": "Database",
+  "developer": "Oracle",
+  "releaseYear": 1995,
+  "latestVersion": "8.4",
+  "description": "The world's most popular open-source relational database management system. MySQL uses structured query language and is known for its reliability, performance, and ease of use.",
+  "advantages": [
+    "Reliable and mature database",
+    "Excellent performance for read-heavy workloads",
+    "Strong ACID compliance",
+    "Large community and resources",
+    "Replication and clustering support",
+    "Free and open source"
+  ],
+  "disadvantages": [
+    "Limited NoSQL capabilities",
+    "Scaling can be complex",
+    "Less suited for unstructured data",
+    "Oracle acquisition concerns"
+  ],
+  "alternatives": ["PostgreSQL", "MariaDB", "SQLite", "SQL Server", "Oracle DB"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Database design", "SQL queries", "Joins and subqueries", "Indexes", "Normalization"] },
+    { "step": "Intermediate", "topics": ["Stored procedures", "Views and triggers", "Transactions", "Performance tuning", "User management"] },
+    { "step": "Advanced", "topics": ["Replication", "Backup strategies", "Query optimization", "High availability", "Migration"] }
+  ],
+  "officialDocs": "https://dev.mysql.com/doc",
+  "github": "https://github.com/mysql/mysql-server",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Web application backends", "CMS databases", "E-commerce platforms", "Data warehousing", "Log management"]
+}

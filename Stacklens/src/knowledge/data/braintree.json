@@ -1,0 +1,17 @@
+{
+  "id": "braintree",
+  "github": "",
+  "name": "Braintree",
+  "difficulty": "Intermediate",
+  "alternatives": [],
+  "description": "A full-stack payment platform for online payments.",
+  "developer": "PayPal",
+  "releaseYear": 2007,
+  "advantages": [],
+  "learningRoadmap": [],
+  "latestVersion": "1.0.0",
+  "officialDocs": "https://braintree.com",
+  "category": "Payments",
+  "commonUseCases": [],
+  "disadvantages": []
+}

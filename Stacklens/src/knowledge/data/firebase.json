@@ -1,0 +1,33 @@
+{
+  "id": "firebase",
+  "name": "Firebase",
+  "category": "Database",
+  "developer": "Google",
+  "releaseYear": 2011,
+  "latestVersion": "11.0",
+  "description": "A comprehensive app development platform by Google that provides backend services including real-time database, authentication, cloud storage, hosting, and analytics. Firebase enables rapid app development without managing servers.",
+  "advantages": [
+    "Real-time data synchronization",
+    "Serverless architecture",
+    "Built-in authentication providers",
+    "Automatic scaling",
+    "Free tier for small projects",
+    "Integrated with Google Cloud"
+  ],
+  "disadvantages": [
+    "Vendor lock-in with Google",
+    "Costs can scale quickly",
+    "Limited querying capabilities",
+    "Security rules complexity"
+  ],
+  "alternatives": ["Supabase", "AWS Amplify", "Appwrite", "PocketBase", "Parse"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Project setup", "Firestore database", "Authentication", "Storage", "Hosting"] },
+    { "step": "Intermediate", "topics": ["Security rules", "Cloud Functions", "Real-time listeners", "Data modeling", "Analytics and Crashlytics"] },
+    { "step": "Advanced", "topics": ["Performance optimization", "Indexing", "Batch operations", "Extend with Extensions", "Migration and backup"] }
+  ],
+  "officialDocs": "https://firebase.google.com/docs",
+  "github": "https://github.com/firebase/firebase-js-sdk",
+  "difficulty": "Beginner",
+  "commonUseCases": ["Mobile backends", "Real-time applications", "Rapid prototyping", "Event-driven apps", "Serverless APIs"]
+}

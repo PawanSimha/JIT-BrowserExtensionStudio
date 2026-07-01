@@ -1,0 +1,33 @@
+{
+  "id": "gatsby",
+  "name": "Gatsby",
+  "category": "Frontend",
+  "developer": "Gatsby Inc.",
+  "releaseYear": 2015,
+  "latestVersion": "5.13",
+  "description": "A React-based static site generator that uses GraphQL to pull data from multiple sources. Gatsby produces highly optimized static sites with excellent performance and SEO out of the box.",
+  "advantages": [
+    "Blazing fast static sites with optimized assets",
+    "Rich plugin ecosystem for extending functionality",
+    "GraphQL data layer unifies multiple data sources",
+    "Excellent performance and SEO",
+    "Great image optimization with Gatsby Image",
+    "Progressive web app support built in"
+  ],
+  "disadvantages": [
+    "Build times can be slow for large sites",
+    "Learning GraphQL adds complexity",
+    "Less flexible than Next.js for dynamic content",
+    "Plugin maintenance and compatibility issues"
+  ],
+  "alternatives": ["Next.js", "Nuxt.js", "Astro", "Hugo", "11ty"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Project setup", "Pages and components", "Linking and navigation", "Styling options", "React basics"] },
+    { "step": "Intermediate", "topics": ["GraphQL data layer", "Source plugins", "Image optimization", "File system routing", "CMS integration"] },
+    { "step": "Advanced", "topics": ["Custom plugins", "Server-side rendering", "API integration", "Performance optimization", "Deployment"] }
+  ],
+  "officialDocs": "https://www.gatsbyjs.com/docs",
+  "github": "https://github.com/gatsbyjs/gatsby",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Blogs", "Marketing websites", "Documentation sites", "Portfolio websites", "E-commerce stores"]
+}

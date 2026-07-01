@@ -12,7 +12,7 @@
 
 ## 1. Executive Summary
 
-JIT is a small studio that builds clean, focused browser extensions and a brand website to showcase them. The product consists of four Chrome extensions — **MutedHue** (adaptive text-selection color replacement), **Refreshner** (smart auto-refresh with keyword page monitoring), **Goofanizer** (responsive device switcher with screenshot/export), and **Imageination** (page media scanner and batch downloader) — plus a dark-themed marketing site with a developer portfolio, FAQ, and contact gateway. We are building this to prove that browser extensions can be minimal, privacy-respecting, and beautifully integrated into the user's daily workflow.
+JIT is a small studio that builds clean, focused browser extensions and a brand website to showcase them. The product consists of five Chrome extensions — **MutedHue** (adaptive text-selection color replacement), **Refreshner** (smart auto-refresh with keyword page monitoring), **Goofanizer** (responsive device switcher with screenshot/export), **Imageination** (page media scanner and batch downloader), and **StackLens** (website tech stack detector) — plus a dark-themed marketing site with a developer portfolio, FAQ, and contact gateway. We are building this to prove that browser extensions can be minimal, privacy-respecting, and beautifully integrated into the user's daily workflow.
 
 ---
 
@@ -37,6 +37,7 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 | **Privacy-Conscious Adopter** | Power user / Open source advocate | Seeks tools that are transparent, auditable, and collect zero data | Reads the FAQ, inspects the source on GitHub, contributes issues/PRs |
 | **Responsive Developer / QA** | Web developer / QA engineer | Needs to test layouts across device sizes, capture screenshots for documentation | Uses Goofanizer presets, rotates viewports, exports batches of responsive screenshots |
 | **Media Collector** | Designer / Content creator / Researcher | Needs to batch-download images, video, and audio from web pages without digging through the DOM | Opens Imageination popup on any page, browses categorized media, downloads individually or batch as ZIP |
+| **Tech Stack Explorer** | Developer / Researcher | Wants to understand what technologies power any website they visit, with explanations and visual diagrams | Opens StackLens popup on each site, browses categorized tech list, explores architecture and security analysis |
 
 ---
 
@@ -69,8 +70,8 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 | Refreshner — countdown timer in popup | SVG progress ring | ✅ Shipped |
 | Marketing website — landing page | `index.html` | ✅ Shipped |
 | Marketing website — extensions listing page | `extension.html` | ✅ Shipped |
-| Marketing website — extension detail pages | `descriptions/MutedHue.html`, `descriptions/Refreshner.html`, `descriptions/Goofanizer.html`, `descriptions/Imageination.html` | ✅ Shipped |
-| ZIP download + install modal for Developer mode | `MutedHue.zip`, `Refreshner.zip`, `Goofanizer.zip`, `Imageination.zip` + modal | ✅ Shipped |
+| Marketing website — extension detail pages | `descriptions/MutedHue.html`, `descriptions/Refreshner.html`, `descriptions/Goofanizer.html`, `descriptions/Imageination.html`, `descriptions/Stacklens.html` | ✅ Shipped |
+| ZIP download + install modal for Developer mode | `MutedHue.zip`, `Refreshner.zip`, `Goofanizer.zip`, `Imageination.zip`, `Stacklens.zip` + modal | ✅ Shipped |
 | Goofanizer extension — responsive device switcher | Chrome MV3 `chrome.debugger` API | ✅ Shipped (v1.0.0) |
 | Goofanizer — 4 device presets (Android, iPhone, Tablet S, iPad Pro) | `utils/devices.js` | ✅ Shipped |
 | Goofanizer — rotate viewport orientation | `background/service-worker.js` — Emulation.setDeviceMetricsOverride | ✅ Shipped |
@@ -84,15 +85,24 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 | Contact form → email (FormSubmit) | POST to `pawansimha.pc@gmail.com` | ✅ Shipped |
 | Developer portfolio section (7 social links) | `.dev-links` grid | ✅ Shipped |
 | Responsive dark-theme design system | `style.css` (~1140 lines) | ✅ Shipped |
+| StackLens extension — website tech stack detector | Chrome MV3 content script + popup (WXT, React, TypeScript, Tailwind) | ✅ Shipped (v1.0.0) |
+| StackLens — 100+ technology detection signatures | `src/knowledge/` knowledge base | ✅ Shipped |
+| StackLens — categorized dashboard with tech counts | `src/pages/Dashboard.tsx` | ✅ Shipped |
+| StackLens — architecture layer diagram | `src/pages/Architecture.tsx` | ✅ Shipped |
+| StackLens — security header analysis | `src/pages/Security.tsx` | ✅ Shipped |
+| StackLens — performance analysis report | `src/pages/Performance.tsx` | ✅ Shipped |
+| StackLens — UI/UX design system analyzer | `src/pages/UiUx.tsx` | ✅ Shipped |
+| StackLens — technology detail pages with explanations | `src/pages/TechnologyDetail.tsx` | ✅ Shipped |
+| StackLens — scan history with favorites | `src/pages/History.tsx` | ✅ Shipped |
 
 ### P1 — Should Have (high priority, not yet complete)
 
 | Feature | Rationale |
 |---|---|
-| **Chrome Web Store publishing** | All four extensions are fully coded but not yet submitted to CWS |
+| **Chrome Web Store publishing** | All five extensions are fully coded but not yet submitted to CWS |
 | **Privacy Policy / Terms of Service pages** | Footer links currently point to PRIVACY.md placeholders — needed before CWS submission |
 | **Thank-you / redirect page after form submission** | Currently button just shows "Sending…" with no success confirmation |
-| **Firefox (WebExtension) port** | MutedHue CSS-only port is trivial; Refreshner needs `browser.alarms` & `browser.notifications` adaptation. Goofanizer cannot be ported — `chrome.debugger` is Chromium-only |
+| **Firefox (WebExtension) port** | MutedHue CSS-only port is trivial; Refreshner needs `browser.alarms` & `browser.notifications` adaptation. Goofanizer cannot be ported — `chrome.debugger` is Chromium-only. StackLens also excluded — uses Chrome-specific `webRequest` |
 
 ### P2 — Could Have (logical future enhancements)
 
@@ -102,7 +112,7 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 | Extension update notification on website | Display latest version / changelog on `extension.html` |
 | Dark/light mode toggle on website | Currently follows OS preference via CSS custom properties (partially implemented) |
 | i18n / multi-language FAQ | Broaden reach to non-English users |
-| Automated CI tests for extensions | Run lint + validation on PRs to `MutedHue/` and `Refreshner/` |
+| Automated CI tests for extensions | Run lint + validation on PRs to `MutedHue/`, `Refreshner/`, and `Stacklens/` (WXT vitest) |
 
 ---
 
@@ -111,13 +121,14 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 | Constraint | Detail |
 |---|---|
 | **Chrome MV3 only** | All extensions target Manifest V3. Service workers replace background pages. No `webRequest` blocking — Refreshner uses `alarms` + `tabs.reload`. |
-| **Zero external network calls from extensions** | MutedHue requests **zero permissions**. Refreshner only uses `storage`, `alarms`, `notifications`, `tabs`. Goofanizer uses `debugger`, `storage`, `tabs`, `activeTab`, `downloads`, `windows`. Imageination uses `activeTab`, `downloads`, and `<all_urls>` host permissions — all local scanning, no analytics, no telemetry. |
+| **Zero external network calls from extensions** | MutedHue requests **zero permissions**. Refreshner only uses `storage`, `alarms`, `notifications`, `tabs`. Goofanizer uses `debugger`, `storage`, `tabs`, `activeTab`, `downloads`, `windows`. Imageination uses `activeTab`, `downloads`, and `<all_urls>` host permissions. StackLens uses `storage`, `activeTab`, `webRequest`, `tabs`, and `<all_urls>` host permissions — all local detection via DOM scanning + header analysis, no analytics, no telemetry. |
 | **Chrome Debugger API (Goofanizer)** | Goofanizer uses `chrome.debugger` to attach to tabs and send `Emulation.setDeviceMetricsOverride`. This is Chrome-specific and will not work in Firefox or non-Chromium browsers. Screenshots use `Page.captureScreenshot`. |
 | **Browser storage for Refreshner state** | `chrome.storage.local` — limited to ~10 MB per extension. State keyed by `tabId`. |
 | **Form submission via third-party** | `formsubmit.co` handles email forwarding. No custom backend. Form data leaves the browser to an external service. |
 | **No build step** | Pure static HTML/CSS/JS. No npm, no bundler, no transpilation. Google Sans fonts loaded via CDN `@font-face` from `fonts.gstatic.com`. |
 | **Web Audio API for alerts** | Refreshner uses `OscillatorNode` + `GainNode` — works in Chrome MV3 service-worker-controlled tabs. |
 | **CSS-only selection override** | MutedHue uses `::selection` + `::-moz-selection` with `!important`. No JavaScript required for basic operation (JS handles adaptive brightness). |
+| **WXT build framework (StackLens)** | StackLens uses WXT (Extendable Web Extension Tooling) with React + TypeScript + Tailwind. Unlike other extensions which are vanilla JS, StackLens requires a build step (`wxt build`) to compile the React/TypeScript source into the `.output/chrome-mv3/` directory. |
 
 ---
 
@@ -191,6 +202,26 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 11. Scanning is entirely local — no data ever leaves the browser
 ```
 
+### Flow 5 — Installing & Using StackLens
+
+```
+1. User lands on extension.html or descriptions/Stacklens.html
+2. Clicks "Download Extension" / "Add to Chrome" -> ZIP downloads
+3. Follows Load unpacked steps to install extension
+4. Clicks StackLens icon in Chrome toolbar -> popup opens
+5. Content script scans page DOM, <script>/<link> tags, JS globals, and HTTP headers via webRequest
+6. Dashboard shows hostname, total tech count, confidence ring, category breakdown bar
+7. User can explore 6 analysis views:
+   a. Architecture - vertical layer diagram of detected tech stack
+   b. Security - CSP, HSTS, X-Frame-Options header analysis with grade
+   c. Performance - resource hints, lazy loading, SRI analysis with score
+   d. Technologies - full categorized list with collapsible accordions
+   e. Technology Detail - individual tech pages with overview, pros/cons, alternatives, learning roadmap
+   f. UI/UX - color palette, contrast, typography, spacing, shadows, animation detection
+8. User can favorite technologies and view scan history (last 50 scans persisted locally)
+9. All scanning is entirely local - no data ever leaves the browser
+```
+
 ### Secondary Flow — Installing & Using Refreshner
 
 ```
@@ -221,6 +252,6 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 - ❌ **No user accounts or authentication** — Extensions work immediately after install with zero sign-up.
 - ❌ **No backend server** — Entire site is static HTML. No database, no API, no server-side logic.
 - ❌ **No data syncing** — Refreshner state is per-browser, per-tab. No cloud sync of intervals or keywords.
-- ❌ **No Safari / Edge specific builds** — Chromium-based browsers only for now (Chrome, Edge, Brave, Opera). Firefox is on the roadmap (except Goofanizer — requires Chrome-specific debugger API).
+- ❌ **No Safari / Edge specific builds** — Chromium-based browsers only for now (Chrome, Edge, Brave, Opera). Firefox is on the roadmap (except Goofanizer — requires Chrome-specific debugger API; StackLens — requires Chrome-specific webRequest).
 - ❌ **No premium / paid tier** — All extensions are and will remain 100% free and open source.
 - ❌ **No A/B testing or analytics on the website** — No tracking scripts, no cookies, no fingerprinting.

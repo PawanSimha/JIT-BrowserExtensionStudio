@@ -1,0 +1,33 @@
+{
+  "id": "firebase-auth",
+  "name": "Firebase Auth",
+  "category": "Authentication",
+  "developer": "Google",
+  "releaseYear": 2012,
+  "latestVersion": "11.0",
+  "description": "A comprehensive authentication service that provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to applications. Supports email, social media, and phone auth.",
+  "advantages": [
+    "Multiple authentication providers",
+    "Ready-made UI components",
+    "Serverless architecture",
+    "Built-in security and compliance",
+    "Integration with other Firebase services",
+    "Easy implementation"
+  ],
+  "disadvantages": [
+    "Vendor lock-in with Google",
+    "Costs at scale",
+    "Limited customization of auth flows",
+    "Data portability concerns"
+  ],
+  "alternatives": ["Auth0", "Clerk", "Supabase Auth", "NextAuth.js", "AWS Cognito"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Project setup", "Email/password auth", "Social login providers", "Auth state management", "User profiles"] },
+    { "step": "Intermediate", "topics": ["Custom claims", "Email verification", "Password reset", "Phone authentication", "Security rules integration"] },
+    { "step": "Advanced", "topics": ["Custom auth system", "Multi-factor auth", "Token management", "Migration strategies", "Enterprise compliance"] }
+  ],
+  "officialDocs": "https://firebase.google.com/docs/auth",
+  "github": "https://github.com/firebase/firebase-js-sdk",
+  "difficulty": "Beginner",
+  "commonUseCases": ["User authentication", "Social login implementation", "Mobile app authentication", "Serverless auth", "Rapid prototyping"]
+}

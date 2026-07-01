@@ -1,0 +1,32 @@
+{
+  "id": "opengse",
+  "name": "OpenGSE (GSE)",
+  "category": "Hosting",
+  "developer": "Google",
+  "releaseYear": 2008,
+  "latestVersion": "1.0",
+  "description": "OpenGSE (Google Servlet Engine) is Googles open-source servlet container and HTTP server that powers many of Googles products including Gmail and Google Calendar. It provides a fast, lightweight HTTP processing engine with servlet container support.",
+  "advantages": [
+    "Battle-tested at Google scale",
+    "Used by Gmail, Google Calendar, and other Google services",
+    "Clean separation of HTTP processing and servlet layers",
+    "Reference implementation for servlet compliance testing",
+    "Lightweight and fast HTTP core"
+  ],
+  "disadvantages": [
+    "No longer actively developed by Google",
+    "Limited adoption outside Google",
+    "Outdated servlet specification support",
+    "Small community and minimal documentation"
+  ],
+  "alternatives": ["Apache Tomcat", "Jetty", "Undertow", "Netty", "Grizzly"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Understanding the servlet architecture", "HTTP processing model", "Servlet lifecycle", "Configuration and deployment", "Request handling pipeline"] },
+    { "step": "Intermediate", "topics": ["Session management", "Security configuration", "Performance tuning", "Integration with Google infrastructure", "Testing servlet compliance"] },
+    { "step": "Advanced", "topics": ["Custom servlet containers", "HTTP processing optimization", "Large-scale deployment patterns", "Source code analysis", "Contributing to OpenGSE"] }
+  ],
+  "officialDocs": "https://opensource.googleblog.com/2009/01/opengse-released.html",
+  "github": "",
+  "difficulty": "Advanced",
+  "commonUseCases": ["Google services infrastructure", "Servlet engine reference implementation", "High-performance HTTP processing", "Legacy Google platform services"]
+}

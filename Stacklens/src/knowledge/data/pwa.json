@@ -1,0 +1,32 @@
+{
+  "id": "pwa",
+  "name": "Progressive Web App",
+  "category": "Frontend",
+  "developer": "Google (W3C standards)",
+  "releaseYear": 2015,
+  "latestVersion": "N/A",
+  "description": "Progressive Web Apps are web applications that use modern browser capabilities to deliver app-like experiences. PWAs can work offline, send push notifications, access device hardware, and be installed on the user's home screen without requiring an app store submission.",
+  "advantages": [
+    "No app store required for distribution",
+    "Works offline with service worker caching",
+    "Small footprint compared to native applications",
+    "Cross-platform by nature (works on any browser)",
+    "Automatic updates without user action"
+  ],
+  "disadvantages": [
+    "Limited access to some device APIs compared to native apps",
+    "Inconsistent support across different browsers and platforms",
+    "Service worker lifecycle can be complex to debug",
+    "iOS has limited PWA support compared to Android"
+  ],
+  "alternatives": ["Native mobile apps", "Hybrid frameworks (Capacitor, React Native)", "Desktop PWAs"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Web app manifest", "Service worker registration", "Caching strategies", "Offline fallback pages"] },
+    { "step": "Intermediate", "topics": ["Push notifications", "Background sync", "IndexedDB for offline storage", "Install prompt"] },
+    { "step": "Advanced", "topics": ["Advanced caching patterns", "Service worker lifecycle management", "Periodic background sync", "Payment handler API"] }
+  ],
+  "officialDocs": "https://web.dev/progressive-web-apps",
+  "github": "",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["News and content sites", "E-commerce mobile experiences", "Progressive mobile apps", "Offline-first applications"]
+}

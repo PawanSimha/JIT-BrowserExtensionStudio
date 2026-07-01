@@ -1,0 +1,17 @@
+{
+  "category": "Monitoring",
+  "id": "logrocket",
+  "officialDocs": "https://logrocket.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "LogRocket",
+  "difficulty": "Intermediate",
+  "latestVersion": "2.0.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A session replay and monitoring tool for web applications.",
+  "releaseYear": 2017,
+  "developer": "LogRocket"
+}

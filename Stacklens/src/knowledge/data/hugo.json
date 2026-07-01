@@ -1,0 +1,17 @@
+{
+  "officialDocs": "https://hugo.com",
+  "advantages": [],
+  "latestVersion": "0.134.0",
+  "difficulty": "Intermediate",
+  "releaseYear": 2013,
+  "learningRoadmap": [],
+  "commonUseCases": [],
+  "name": "Hugo",
+  "alternatives": [],
+  "disadvantages": [],
+  "github": "",
+  "category": "Static Site Generator",
+  "description": "A fast static site generator written in Go, known for incredible build speed.",
+  "developer": "gohugo.io",
+  "id": "hugo"
+}

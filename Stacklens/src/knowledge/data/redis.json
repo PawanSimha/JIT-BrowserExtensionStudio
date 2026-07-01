@@ -1,0 +1,33 @@
+{
+  "id": "redis",
+  "name": "Redis",
+  "category": "Database",
+  "developer": "Redis Ltd.",
+  "releaseYear": 2009,
+  "latestVersion": "7.4",
+  "description": "An in-memory data structure store used as a database, cache, message broker, and streaming engine. Redis supports various data structures including strings, hashes, lists, sets, and sorted sets.",
+  "advantages": [
+    "Sub-millisecond response times",
+    "Versatile data structures",
+    "Built-in replication and persistence",
+    "Pub/sub messaging capabilities",
+    "Lua scripting support",
+    "Great for real-time applications"
+  ],
+  "disadvantages": [
+    "In-memory limits data size",
+    "Persistence guarantees are not as strong as databases",
+    "Single-threaded for command execution",
+    "Not suitable for complex queries"
+  ],
+  "alternatives": ["Memcached", "Dragonfly", "KeyDB", "Hazelcast", "Apache Ignite"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Data structures", "Basic commands", "Key management", "Expiration", "CLI usage"] },
+    { "step": "Intermediate", "topics": ["Persistence (RDB/AOF)", "Replication", "Transactions", "Pub/sub", "Lua scripting"] },
+    { "step": "Advanced", "topics": ["Redis Cluster", "Sentinel", "Performance optimization", "Security", "Redis Stack modules"] }
+  ],
+  "officialDocs": "https://redis.io/docs",
+  "github": "https://github.com/redis/redis",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Caching", "Session management", "Real-time leaderboards", "Message queues", "Rate limiting"]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "django",
+  "name": "Django",
+  "category": "Backend",
+  "developer": "Django Software Foundation",
+  "releaseYear": 2005,
+  "latestVersion": "5.1",
+  "description": "A high-level Python web framework that encourages rapid development and clean, pragmatic design. Django follows the batteries-included philosophy, providing built-in admin, ORM, authentication, and more.",
+  "advantages": [
+    "Batteries-included with built-in admin panel",
+    "ORM simplifies database operations",
+    "Powerful built-in authentication system",
+    "Excellent security features (XSS, CSRF, SQL injection)",
+    "Comprehensive documentation",
+    "Great for content-heavy applications"
+  ],
+  "disadvantages": [
+    "Can be heavy for simple applications",
+    "ORM can encourage lazy queries",
+    "Monolithic by default",
+    "Template language is less powerful than Jinja2"
+  ],
+  "alternatives": ["Flask", "FastAPI", "Ruby on Rails", "Laravel", "Spring Boot"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["MVT architecture", "Models and ORM", "Views and URLs", "Templates", "Admin interface"] },
+    { "step": "Intermediate", "topics": ["User authentication", "Forms and validation", "REST API with DRF", "Class-based views", "Middleware"] },
+    { "step": "Advanced", "topics": ["Custom management commands", "Testing with pytest", "Performance optimization", "Celery and background tasks", "Deployment and scaling"] }
+  ],
+  "officialDocs": "https://www.djangoproject.com",
+  "github": "https://github.com/django/django",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Content management systems", "Social media platforms", "E-commerce websites", "News and publishing sites", "SaaS applications"]
+}

@@ -1,0 +1,17 @@
+{
+  "category": "Build Tool",
+  "id": "parcel",
+  "officialDocs": "https://parcel.com",
+  "disadvantages": [],
+  "advantages": [],
+  "commonUseCases": [],
+  "github": "",
+  "name": "Parcel",
+  "difficulty": "Intermediate",
+  "latestVersion": "2.13.0",
+  "alternatives": [],
+  "learningRoadmap": [],
+  "description": "A blazing fast, zero configuration web application bundler.",
+  "releaseYear": 2017,
+  "developer": "Parcel Contributors"
+}

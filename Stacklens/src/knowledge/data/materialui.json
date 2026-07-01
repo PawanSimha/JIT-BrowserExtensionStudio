@@ -1,0 +1,33 @@
+{
+  "id": "materialui",
+  "name": "Material UI",
+  "category": "CSS Framework",
+  "developer": "MUI",
+  "releaseYear": 2014,
+  "latestVersion": "5.16",
+  "description": "A comprehensive React component library that implements Google's Material Design. MUI provides a complete set of UI components with customization theming and accessibility built in.",
+  "advantages": [
+    "Complete React component library",
+    "Google Material Design compliance",
+    "Powerful theming system",
+    "Accessibility built into components",
+    "TypeScript support",
+    "Excellent documentation and examples"
+  ],
+  "disadvantages": [
+    "Large bundle size",
+    "Styling overrides can be complex",
+    "Material Design may not suit all brands",
+    "Learning curve for the styling system"
+  ],
+  "alternatives": ["Chakra UI", "Ant Design", "Radix UI", "Headless UI", "Shadcn/ui"],
+  "learningRoadmap": [
+    { "step": "Basics", "topics": ["Component overview", "Grid and layout", "Typography and theme", "Buttons and inputs", "Navigation components"] },
+    { "step": "Intermediate", "topics": ["Custom theming", "Responsive design", "Data display components", "Dialogs and modals", "Form validation"] },
+    { "step": "Advanced", "topics": ["Custom components", "Performance optimization", "Server-side rendering", "Migration between versions", "Accessibility patterns"] }
+  ],
+  "officialDocs": "https://mui.com",
+  "github": "https://github.com/mui/material-ui",
+  "difficulty": "Intermediate",
+  "commonUseCases": ["Admin dashboards", "SaaS applications", "Internal tools", "Enterprise applications", "Data-rich interfaces"]
+}

@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** June 7, 2026
+**Last updated:** July 1, 2026
 
 ## Overview
 
@@ -12,12 +12,13 @@ JIT ("we", "our", "us") is committed to protecting your privacy. This policy exp
 - **Functional cookies only** — A single local storage key (`jit_cookie_consent`) to remember your cookie preference. No tracking, analytics, or advertising cookies.
 - **Contact form submissions** — When you use our contact form, your name, email, and message are sent to us via FormSubmit.io. We use this data only to respond to your inquiry. We do not store or share this data beyond the email transmission.
 
-### Chrome Extensions (MutedHue, Refreshner, Goofanizer, Imageination)
+### Chrome Extensions (MutedHue, Refreshner, Goofanizer, Imageination, StackLens)
 - **Zero data collection.** Our extensions collect no personal information, no browsing history, no analytics, and no telemetry.
 - MutedHue operates entirely locally — it reads the current page's selection color and replaces it with a grey tone. No data leaves your browser.
 - Refreshner stores your preferences (refresh interval, monitored keywords) in your browser's local `storage` API. No data is transmitted externally.
 - Goofanizer uses the Chrome Debugger API to emulate viewports and capture screenshots. All processing is local — screenshots are saved directly to your computer and are never uploaded.
 - Imageination scans the current page DOM for media sources (images, video, audio) only when the popup is opened by clicking the extension icon. All scanning and downloading happens locally in your browser. No data is transmitted externally.
+- StackLens scans the current page's DOM, `<script>`/`<link>` tags, JavaScript globals, and HTTP response headers via `webRequest` to detect technology signatures. All analysis is local — no data is sent to any server, no browsing history is recorded externally, and no telemetry is collected.
 
 ## Third-party services
 
