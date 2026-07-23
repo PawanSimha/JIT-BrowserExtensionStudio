@@ -6,11 +6,12 @@ Desktop.ini
 *.swo
 *~
 
-# ── Editor / IDE ──
+# ── Editor / IDE / Agent ──
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
+.opencode/
 
 # ── Project build output (static site — none expected, but defensive) ──
 dist/
