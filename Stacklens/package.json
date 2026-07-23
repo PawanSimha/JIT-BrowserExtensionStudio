@@ -1,6 +1,6 @@
 {
   "name": "stacklens",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "See Beyond the Website - Detect, explain, and visualize the technology stack of any website.",
   "private": true,
   "type": "module",

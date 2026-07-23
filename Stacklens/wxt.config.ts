@@ -2,11 +2,13 @@ import { defineConfig } from 'wxt';
 
 export default defineConfig({
   srcDir: 'src',
+  outDir: 'dist',
+  outDirTemplate: 'extension',
   extensionApi: 'chrome',
   modules: ['@wxt-dev/module-react'],
   manifest: {
     name: 'StackLens',
-    version: '1.0.0',
+    version: '2.0.0',
     author: { email: 'contact@pawansimha.com' },
     description: 'See Beyond the Website - Detect, explain, and visualize the technology stack of any website.',
     permissions: ['storage', 'activeTab', 'webRequest', 'tabs'],
@@ -24,7 +26,8 @@ export default defineConfig({
       256: '/icons/StackLens.png',
     },
     content_security_policy: {
-      extension_pages: "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:",
+      extension_pages:
+        "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:",
     },
   },
 });

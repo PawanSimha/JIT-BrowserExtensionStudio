@@ -58,10 +58,13 @@
 - **Permissions:** `storage`, `alarms`, `notifications`, `tabs`. Host permissions: `<all_urls>`.
 
 ### StackLens Extension (MV3)
-- **Pattern:** Content script + popup + background service worker. Built with WXT (React + TypeScript + Tailwind).
-- **Logic:** Injects a content script that scans DOM, `<script>`/`<link>` tags, JavaScript globals, and HTTP response headers via `chrome.webRequest`. Detects 100+ technologies across frameworks, meta frameworks, build tools, analytics, CDNs, hosting, security, fonts, and more.
-- **Popup:** React-based dashboard with categorized technology cards, counts, explanations, and visual indicators.
+- **Pattern:** Content script + popup + background service worker. Built with WXT (React 19 + TypeScript + Tailwind + Zustand + react-router v7).
+- **Logic:** Injects a content script that scans on load and auto-rescans after 2.5s for late-loading scripts. Analyzes DOM attributes, `<script>`/`<link>` tags, JavaScript globals, HTTP response headers via `chrome.webRequest`, CSS classes, meta tags, cookies, HTML comments, structured data, and storage keys. Weighted confidence engine evaluates 200+ technology signatures across 14 detector types with implication resolution.
+- **Popup:** Seven-page React dashboard (Dashboard, Technologies, Architecture, Performance, Security, UI/UX, History) with technology drill-down, knowledge base explanations, confidence scores, and multi-theme support (light/dim/dark).
+- **History:** Stores up to 50 past scans with favorites, search, bulk delete, and re-scan.
+- **Logo system:** 214 technology logos via SimpleIcons CDN with Clearbit + initials fallback.
 - **Permissions:** `storage`, `activeTab`, `webRequest`, `tabs`. Host permissions: `<all_urls>`.
+- **Version:** 2.0.0 (consistent across `package.json`, `wxt.config.ts`, built manifest, and popup footer).
 
 ### Imageination Extension (MV3)
 - **Pattern:** Content script + popup + background service worker. No `storage` or telemetry. Zero-config popup with sidebar layout.
@@ -126,10 +129,18 @@ JIT/
 │
 ├── Stacklens/                   # Chrome Extension MV3 — website technology stack detector
 │   ├── manifest.json           #   storage, activeTab, webRequest, tabs, host_permissions all_urls
-│   ├── .output/chrome-mv3/     #   WXT build output — background.js, popup.html, content-scripts/, chunks/
-│   ├── src/                    #   React + TypeScript source — pages, stores, utils, knowledge base
-│   ├── icons/StackLens.png     #   Extension logo (used by website for cards and detail pages)
-│   └── Stacklens.zip           #   Packaged extension ZIP for direct download
+│   ├── dist/extension/         #   WXT build output — background.js, popup.html, content-scripts/, chunks/
+│   ├── src/                    #   React + TypeScript source — pages, stores, utils, knowledge base, 227 fingerprints
+│   ├── public/icons/           #   StackLens.png source asset
+│   └── icons/StackLens.png     #   Extension logo (used by website for cards and detail pages)
+│
+├── zips/                       # Extension download ZIPs
+│   ├── MutedHue-v1.0.0.zip
+│   ├── Refreshner-v1.0.0.zip
+│   ├── Goofanizer-v1.0.0.zip
+│   ├── Imageination-v1.0.0.zip
+│   ├── Stacklens-v1.0.0.zip
+│   └── Stacklens-v2.0.0.zip
 │
 ├── descriptions/               # Extension detail pages
 │   ├── MutedHue.html           #   Full MutedHue detail page with logo, features, how-it-works, privacy, install guide
@@ -138,11 +149,6 @@ JIT/
 │   ├── Imageination.html       #   Full Imageination detail page with logo, features, how-it-works, privacy, install guide
 │   └── Stacklens.html          #   Full StackLens detail page with logo, features, how-it-works, privacy, install guide
 │
-├── MutedHue.zip               # Packaged MutedHue extension ZIP for direct download
-├── Refreshner.zip             # Packaged Refreshner extension ZIP for direct download
-├── Goofanizer.zip             # Packaged Goofanizer extension ZIP for direct download
-├── Imageination.zip           # Packaged Imageination extension ZIP for direct download
-├── Stacklens.zip              # Packaged StackLens extension ZIP for direct download
 ├── PRD.md                      # Product Requirements Document — personas, OKRs, MoSCoW, user journeys
 ├── README.md                   # Documentation — badges, tech stack, project tree, quick start, roadmap
 ├── PRIVACY.md                  # Privacy policy — zero-collection, functional cookies, FormSubmit, GDPR/CCPA
@@ -222,18 +228,32 @@ JIT/
 - `[x]` sitemap.xml updated with 7 URLs
 - `[x]` JSON-LD structured data on extension detail pages (SoftwareApplication schema)
 - `[x]` Responsive breakpoints for ext-detail, feature-grid, install-steps on mobile
-- `[x]` Refreshner version consistency (manifest 2.0.0, website 2.0)
+- `[x]` Refreshner version consistency (manifest 2.0.0, website 2.0.0)
 - `[x]` Site Audit — 0 issues remaining
 - `[x]` Goofanizer extension (responsive device switcher, debugger API, 4 device presets, screenshot/export)
 - `[x]` Goofanizer detail page, catalog card, JSON-LD, sitemap integration
 - `[x]` Imageination extension (media scanner, sidebar popup, 21-type categorization, ZipWriter batch download)
 - `[x]` Imageination detail page, catalog card, JSON-LD, sitemap integration
-- `[x]` StackLens extension (website technology stack detector, 100+ detections, WXT/React/Tailwind)
+- `[x]` StackLens extension v1.0.0 (website technology stack detector, 100+ detections, WXT/React/Tailwind)
 - `[x]` StackLens detail page, catalog card, JSON-LD, sitemap integration
+- `[x]` StackLens v2.0.0 upgrade — 200+ detections, 14 detector types, weighted confidence engine, 129 knowledge base entries, 7-page dashboard, auto-rescan, multi-theme, scan history, UI/UX analysis, tech logos
+- `[x]` ZIPS reorganization — moved all ZIPs to `zips/` with versioned names, removed root-level duplicates
 - `[x]` Comprehensive multi-perspective audit — 0 critical/high issues
 - `[x]` Stacklens icons cleanup — deleted 9 unused files, kept only StackLens.png
-- `[x]` Audit fix: gitignore rules corrected for ZIP tracking and StackLens icon
+- `[x]` Audit fix: gitignore rules corrected for zips/ tracking and WXT artifacts
 - `[x]` Audit fix: 4 junk OLD icon files deleted from MutedHue, Imageination, Goofanizer
+- `[x]` fonts.css fix: Google Sans consolidated to single variable font (weight range 300-700)
+- `[x]` style.css: removed 8 instances of hardcoded hex colors, replaced with CSS custom properties
+- `[x]` og:image:alt corrected on all 5 detail pages
+- `[x]` StackLens detail page: features reduced to 7 concise items
+- `[x]` README.md & PRD.md updated for StackLens v2.0.0
+- `[x]` Refreshner JSON-LD version normalized to 2.0.0
+- `[x]` 404.html: og:image:alt corrected
+- `[x]` sitemap.xml: Imageination lastmod date unified
+- `[x]` site.webmanifest: added purpose field to PWA icons
+- `[x]` Deleted stale `Imageination/test-media.html`
+- `[x]` Refreshner standalone page: author.url added to JSON-LD
+- `[x]` Beinghuman rewrite applied to README.md, CONTEXT.md, PRD.md, and all 5 HTML detail page Overview sections
 
 ### `[/]` In-Progress Workloads
 - `[/]` GitHub Pages activation (requires manual click in repo settings)

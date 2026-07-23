@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useScanStore } from '@/stores/scanStore';
-import { Clock, Trash2, Star, RotateCcw, Search } from 'lucide-react';
+import { Clock, Trash2, Star, RotateCcw, Search, CheckSquare, Square as SquareIcon } from 'lucide-react';
 
 const HISTORY_KEY = 'stacklens_history';
 
@@ -29,7 +29,7 @@ function saveHistory(items: HistoryItem[]) {
   try {
     localStorage.setItem(HISTORY_KEY, JSON.stringify(items));
   } catch {
-    /* storage full, silently ignore */
+    /* storage full */
   }
 }
 
@@ -37,6 +37,7 @@ export default function History() {
   const { currentResult, triggerScan } = useScanStore();
   const [items, setItems] = useState<HistoryItem[]>([]);
   const [search, setSearch] = useState('');
+  const [selected, setSelected] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     setItems(loadHistory());
@@ -66,14 +67,44 @@ export default function History() {
     }
   }, [currentResult]);
 
-  const clearAll = () => persist([]);
+  const clearAll = () => {
+    if (window.confirm('Clear all scan history?')) {
+      persist([]);
+      setSelected(new Set());
+    }
+  };
 
   const removeItem = (id: string) => {
-    persist(items.filter((i) => i.id !== id));
+    const updated = items.filter((i) => i.id !== id);
+    persist(updated);
+    setSelected((prev) => { const next = new Set(prev); next.delete(id); return next; });
+  };
+
+  const deleteSelected = () => {
+    const updated = items.filter((i) => !selected.has(i.id));
+    persist(updated);
+    setSelected(new Set());
   };
 
   const toggleFav = (id: string) => {
     persist(items.map((i) => (i.id === id ? { ...i, isFavorite: !i.isFavorite } : i)));
+  };
+
+  const toggleSelect = (id: string) => {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const toggleSelectAll = () => {
+    if (selected.size === sorted.length) {
+      setSelected(new Set());
+    } else {
+      setSelected(new Set(sorted.map((i) => i.id)));
+    }
   };
 
   const openScan = async (item: HistoryItem) => {
@@ -109,8 +140,8 @@ export default function History() {
         <div className="w-12 h-12 rounded-full bg-surface-card flex items-center justify-center">
           <Clock size={20} className="text-text-muted" strokeWidth={1.5} />
         </div>
-        <h2 className="text-base font-semibold font-heading text-text-primary">No History Yet</h2>
-        <p className="text-xs text-text-secondary max-w-[220px]">
+        <h2 className="text-base font-heading text-text-primary">No History Yet</h2>
+        <p className="text-xs text-text-secondary max-w-[220px] font-body">
           Scan results will appear here automatically after each analysis.
         </p>
         <button onClick={triggerScan} className="btn btn-primary text-xs">
@@ -121,21 +152,35 @@ export default function History() {
     );
   }
 
+  const hasSelected = selected.size > 0;
+
   return (
     <div className="page-container flex flex-col gap-2.5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Clock size={14} className="text-brand-primary" strokeWidth={1.5} />
-          <h2 className="text-sm font-semibold font-heading text-text-primary">History</h2>
-          <span className="text-2xs text-text-muted">({items.length})</span>
+          <Clock size={14} style={{ color: 'var(--text-primary)' }} strokeWidth={1.5} />
+          <h2 className="text-sm font-heading text-text-primary">History</h2>
+          <span className="text-2xs text-text-muted font-code">({items.length})</span>
         </div>
-        <button
-          onClick={clearAll}
-          className="flex items-center gap-1 text-2xs text-text-muted hover:text-red-400 transition-colors"
-        >
-          <Trash2 size={10} />
-          Clear
-        </button>
+        <div className="flex items-center gap-2">
+          {hasSelected && (
+            <button
+              onClick={deleteSelected}
+              className="flex items-center gap-1 text-2xs font-code transition-colors"
+              style={{ color: '#EF4444' }}
+            >
+              <Trash2 size={10} />
+              Delete ({selected.size})
+            </button>
+          )}
+          <button
+            onClick={clearAll}
+            className="flex items-center gap-1 text-2xs text-text-muted hover:opacity-70 transition-opacity font-code"
+          >
+            <Trash2 size={10} />
+            Clear
+          </button>
+        </div>
       </div>
 
       <div className="relative">
@@ -145,51 +190,70 @@ export default function History() {
           placeholder="Search history..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full bg-surface-card border border-surface-border rounded-lg pl-7 pr-2.5 py-1.5 text-xs text-text-primary placeholder:text-text-muted outline-none focus:border-brand-primary/50 focus:ring-1 focus:ring-brand-primary/20 transition-all"
+          className="w-full border rounded-lg pl-7 pr-2.5 py-1.5 text-xs text-text-primary placeholder:text-text-muted outline-none transition-all font-body"
+          style={{ background: 'var(--surface-card)', borderColor: 'var(--surface-border)' }}
         />
+      </div>
+
+      <div className="flex items-center gap-2 text-2xs text-text-muted font-code px-1">
+        <button
+          onClick={toggleSelectAll}
+          className="flex items-center gap-1 hover:text-text-secondary transition-colors"
+        >
+          {selected.size === sorted.length && sorted.length > 0 ? (
+            <CheckSquare size={10} style={{ color: 'var(--text-primary)' }} />
+          ) : (
+            <SquareIcon size={10} />
+          )}
+          Select all
+        </button>
       </div>
 
       <div className="flex-1 overflow-y-auto space-y-1.5 scrollable">
         {sorted.length === 0 && (
-          <div className="card text-center py-4">
-            <p className="text-xs text-text-secondary">No matching results.</p>
+          <div className="card-primary text-center py-4">
+            <p className="text-xs text-text-secondary font-body">No matching results.</p>
           </div>
         )}
         {sorted.map((item) => (
           <div
             key={item.id}
-            className="card p-2.5 cursor-pointer hover:bg-surface-hover transition-colors"
-            onClick={() => openScan(item)}
+            className="rounded-lg border p-2.5 transition-colors cursor-pointer"
+            style={{ background: selected.has(item.id) ? 'rgba(255, 255, 255, 0.04)' : 'var(--surface-card)', borderColor: selected.has(item.id) ? 'rgba(255, 255, 255, 0.15)' : 'var(--surface-border)' }}
           >
             <div className="flex items-start gap-2.5">
-              <div className="w-7 h-7 rounded-lg bg-brand-primary/10 flex items-center justify-center shrink-0">
-                <span className="text-[10px] font-bold font-heading text-brand-primary">
-                  {item.hostname.charAt(0).toUpperCase()}
-                </span>
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="text-xs font-medium text-text-primary truncate">{item.hostname}</p>
-                <p className="text-2xs text-text-muted truncate">{item.url}</p>
+              <button
+                onClick={(e) => { e.stopPropagation(); toggleSelect(item.id); }}
+                className="shrink-0 mt-1"
+              >
+                {selected.has(item.id) ? (
+                  <CheckSquare size={12} style={{ color: 'var(--text-primary)' }} />
+                ) : (
+                  <SquareIcon size={12} className="text-text-muted" />
+                )}
+              </button>
+              <div
+                className="min-w-0 flex-1"
+                onClick={() => openScan(item)}
+              >
+                <p className="text-xs font-body font-medium text-text-primary truncate">{item.hostname}</p>
+                <p className="text-2xs text-text-muted truncate font-code">{item.url}</p>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="text-2xs text-text-secondary">{item.techCount} techs</span>
+                  <span className="text-2xs text-text-secondary font-code">{item.techCount} techs</span>
                   <span className="text-2xs text-text-muted">·</span>
-                  <span className="text-2xs text-brand-accent">{Math.round(item.overallConfidence)}%</span>
+                  <span className="text-2xs font-code" style={{ color: 'var(--text-primary)' }}>{Math.round(item.overallConfidence)}%</span>
                   <span className="text-2xs text-text-muted">·</span>
-                  <span className="text-2xs text-text-muted">
+                  <span className="text-2xs text-text-muted font-code">
                     {new Date(item.timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
                   </span>
                 </div>
                 {item.categories.length > 0 && (
                   <div className="flex flex-wrap gap-1 mt-1">
                     {item.categories.slice(0, 3).map((cat) => (
-                      <span key={cat} className="badge bg-surface-hover text-text-muted text-[8px] px-1">
-                        {cat}
-                      </span>
+                      <span key={cat} className="badge text-[8px] px-1" style={{ background: 'rgba(255, 255, 255, 0.06)', color: 'var(--text-primary)' }}>{cat}</span>
                     ))}
                     {item.categories.length > 3 && (
-                      <span className="badge bg-surface-hover text-text-muted text-[8px] px-1">
-                        +{item.categories.length - 3}
-                      </span>
+                      <span className="badge text-[8px] px-1" style={{ background: 'rgba(255, 255, 255, 0.06)', color: 'var(--text-primary)' }}>+{item.categories.length - 3}</span>
                     )}
                   </div>
                 )}
@@ -204,7 +268,7 @@ export default function History() {
                 </button>
                 <button
                   onClick={(e) => { e.stopPropagation(); removeItem(item.id); }}
-                  className="p-1 rounded text-text-muted hover:text-red-400 transition-colors"
+                  className="p-1 rounded text-text-muted hover:opacity-70 transition-opacity"
                   title="Remove from history"
                 >
                   <Trash2 size={10} />

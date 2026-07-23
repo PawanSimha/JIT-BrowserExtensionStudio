@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const src = '.output/chrome-mv3';
+const src = 'dist/extension';
 const dest = '.';
 
 if (!fs.existsSync(src)) {

@@ -85,8 +85,8 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 | Contact form → email (FormSubmit) | POST to `pawansimha.pc@gmail.com` | ✅ Shipped |
 | Developer portfolio section (7 social links) | `.dev-links` grid | ✅ Shipped |
 | Responsive dark-theme design system | `style.css` (~1140 lines) | ✅ Shipped |
-| StackLens extension — website tech stack detector | Chrome MV3 content script + popup (WXT, React, TypeScript, Tailwind) | ✅ Shipped (v1.0.0) |
-| StackLens — 100+ technology detection signatures | `src/knowledge/` knowledge base | ✅ Shipped |
+| StackLens extension — website tech stack detector | Chrome MV3 content script + popup (WXT, React, TypeScript, Tailwind) | ✅ Shipped (v2.0.0) |
+| StackLens — 200+ technology detection signatures | `src/knowledge/` knowledge base + fingerprint files | ✅ Shipped |
 | StackLens — categorized dashboard with tech counts | `src/pages/Dashboard.tsx` | ✅ Shipped |
 | StackLens — architecture layer diagram | `src/pages/Architecture.tsx` | ✅ Shipped |
 | StackLens — security header analysis | `src/pages/Security.tsx` | ✅ Shipped |

@@ -14,10 +14,10 @@ export default class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className="flex flex-col items-center justify-center h-full gap-3 px-4 text-center">
-          <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center">
-            <span className="text-lg text-red-400">!</span>
+          <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: 'rgba(239, 68, 68, 0.1)' }}>
+            <span className="text-lg" style={{ color: '#EF4444' }}>!</span>
           </div>
-          <p className="text-xs text-text-secondary max-w-[240px]">
+          <p className="text-xs text-text-secondary max-w-[240px] font-body">
             Something went wrong. Close and reopen the extension.
           </p>
         </div>

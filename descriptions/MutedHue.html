@@ -39,7 +39,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <meta property="og:image" content="https://raw.githubusercontent.com/PawanSimha/JIT/main/Logo.webp" />
   <meta property="og:image:width" content="512" />
   <meta property="og:image:height" content="512" />
-  <meta property="og:image:alt" content="MutedHue logo" />
+  <meta property="og:image:alt" content="JIT brand logo" />
   <meta property="og:site_name" content="JIT" />
   <meta property="og:locale" content="en_US" />
 
@@ -133,7 +133,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
               <span class="badge-live">Open Source</span>
             </div>
             <div class="ext-detail-actions">
-              <a href="../MutedHue.zip" class="btn btn-blue" download data-ext="mutedhue" aria-label="Download MutedHue extension">Download Extension</a>
+              <a href="../zips/MutedHue-v1.0.0.zip" class="btn btn-blue" download data-ext="mutedhue" aria-label="Download MutedHue extension">Download Extension</a>
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9881;</span> How It Works</h2>
-          <p>MutedHue uses a content script that runs at document start to inject custom <code>::selection</code> styles. It detects the page's background luminance and switches between light and dark selection colors accordingly. A <code>MutationObserver</code> monitors theme changes on the <code>&lt;html&gt;</code> element, and <code>Element.prototype.attachShadow</code> is monkeypatched to inject styles into shadow DOMs -- covering modern web apps built with frameworks like React, Vue, or Lit.</p>
+           <p>MutedHue uses a content script that runs at document start to inject custom <code>::selection</code> styles. It detects the page's background luminance and switches between light and dark selection colors. A <code>MutationObserver</code> monitors theme changes on the <code>&lt;html&gt;</code> element, and <code>Element.prototype.attachShadow</code> is monkeypatched to inject styles into shadow DOMs for web components built with frameworks like React, Vue, or Lit.</p>
         </div>
 
         <div class="ext-detail-section">

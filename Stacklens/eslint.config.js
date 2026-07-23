@@ -9,7 +9,6 @@ export default tseslint.config(
   {
     ignores: [
       'dist',
-      '.output',
       'manifest.json',
       'popup.html',
       'background.js',

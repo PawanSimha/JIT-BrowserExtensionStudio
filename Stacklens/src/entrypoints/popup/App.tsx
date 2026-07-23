@@ -15,6 +15,33 @@ import History from '@/pages/History';
 import TechnologyDetail from '@/pages/TechnologyDetail';
 import { PowerOff, Search } from 'lucide-react';
 
+function LoadingSkeleton() {
+  return (
+    <div className="h-[600px] w-[520px] flex flex-col p-4 gap-3" style={{ background: 'var(--surface-base)' }}>
+      <div className="flex items-center gap-3">
+        <div className="skeleton w-8 h-8 rounded-lg" />
+        <div className="flex-1 space-y-1.5">
+          <div className="skeleton w-32 h-3 rounded" />
+          <div className="skeleton w-48 h-2 rounded" />
+        </div>
+      </div>
+      <div className="skeleton w-full h-16 rounded-lg" />
+      <div className="grid grid-cols-2 gap-2">
+        <div className="skeleton h-14 rounded-lg" />
+        <div className="skeleton h-14 rounded-lg" />
+        <div className="skeleton h-14 rounded-lg" />
+        <div className="skeleton h-14 rounded-lg" />
+      </div>
+      <div className="skeleton w-full h-24 rounded-lg" />
+      <div className="flex gap-1.5">
+        <div className="skeleton w-16 h-6 rounded-md" />
+        <div className="skeleton w-20 h-6 rounded-md" />
+        <div className="skeleton w-14 h-6 rounded-md" />
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const { theme } = useThemeStore();
   const enabled = useEnabledStore((s) => s.enabled);
@@ -31,9 +58,11 @@ export default function App() {
     else if (theme === 'dim') document.documentElement.classList.add('dark', 'dim');
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
-      const colors = { dark: '#000000', dim: '#1E293B', light: '#FFFFFF' } as const;
+      const colors = { dark: '#0A0A0B', dim: '#1C1814', light: '#F5F0EB' } as const;
       meta.setAttribute('content', colors[theme]);
     }
+    // Smooth theme transition
+    document.documentElement.style.transition = 'background-color 0.3s ease, color 0.3s ease';
   }, [theme]);
 
   useEffect(() => {
@@ -65,11 +94,11 @@ export default function App() {
 
   if (!enabled) {
     return (
-      <div className="h-[600px] w-[520px] bg-surface-base text-text-primary flex flex-col items-center justify-center text-center gap-4 px-6">
-        <div className="w-14 h-14 rounded-full bg-red-500/10 flex items-center justify-center">
-          <PowerOff size={22} className="text-red-400" strokeWidth={1.5} />
+      <div className="h-[600px] w-[520px] flex flex-col items-center justify-center text-center gap-4 px-6" style={{ background: 'var(--surface-base)', color: 'var(--text-primary)' }}>
+        <div className="w-14 h-14 rounded-full flex items-center justify-center" style={{ background: 'rgba(255, 255, 255, 0.06)' }}>
+          <PowerOff size={22} style={{ color: 'var(--text-secondary)' }} strokeWidth={1.5} />
         </div>
-        <h2 className="text-base font-semibold font-heading text-text-primary">Extension Disabled</h2>
+        <h2 className="text-base font-heading text-text-primary">Extension Disabled</h2>
         <p className="text-xs text-text-secondary max-w-[260px]">
           StackLens is currently disabled. Turn it back on to scan websites and detect technologies.
         </p>
@@ -81,26 +110,12 @@ export default function App() {
   }
 
   if (loading && !currentResult) {
-    return (
-      <div className="h-[600px] w-[520px] bg-surface-base text-text-primary flex flex-col items-center justify-center text-center gap-4 px-6">
-        <div className="w-14 h-14 rounded-full bg-surface-card flex items-center justify-center">
-          <div className="w-5 h-5 border-2 border-brand-primary border-t-transparent rounded-full animate-spin" />
-        </div>
-        <h2 className="text-base font-semibold font-heading text-text-primary">Scanning in Background</h2>
-        <p className="text-xs text-text-secondary max-w-[260px]">
-          StackLens is analyzing this page. Results will appear automatically once ready.
-        </p>
-        <div className="flex items-center gap-2 text-2xs text-text-muted mt-1">
-          <Search size={10} strokeWidth={1.5} />
-          Detecting technologies, scripts, and design tokens...
-        </div>
-      </div>
-    );
+    return <LoadingSkeleton />;
   }
 
   return (
     <div className={themeClass}>
-      <div className="bg-surface-base text-text-primary h-[600px] w-[520px] flex flex-col">
+      <div className="h-[600px] w-[520px] flex flex-col" style={{ background: 'var(--surface-base)', color: 'var(--text-primary)' }}>
         <MemoryRouter>
           <ErrorBoundary>
             <Routes>

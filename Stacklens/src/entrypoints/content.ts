@@ -113,7 +113,7 @@ async function runScan(tabId?: number, waitMs: number = SCAN.INITIAL_WAIT_MS): P
     platformApis = scanPlatformApis();
     structuredData = scanStructuredData();
     htmlComments = scanHtmlComments();
-    const activeTabId = tabId || (await chrome.tabs.query({ active: true, currentWindow: true }))[0]?.id;
+    const activeTabId = tabId;
     const timeout = (ms: number) => new Promise<null>((r) => setTimeout(() => r(null), ms));
     fullHeaders = activeTabId ? await Promise.race([
       chrome.runtime.sendMessage<ScanMessage, Record<string, string> | null>({ type: 'GET_FULL_HEADERS', tabId: activeTabId }),

@@ -24,25 +24,25 @@
 
 ### Problem
 
-Browser extensions are often bloated, privacy-invasive, or visually jarring. Users install a simple tool and end up with trackers, permission overreach, and confusing UIs. Extension developers lack a clean, open-source blueprint for building minimal MV3 extensions.
+Browser extensions collect too much data, ask for excessive permissions, and clutter the UI. Users install a simple tool and end up with trackers and confusing interfaces. Extension developers lack a clean, open-source reference for building minimal MV3 extensions.
 
 ### Solution
 
-JIT is a small studio that builds thoughtfully designed browser extensions -- tools that do one thing well, respect user privacy, and stay out of the way. This repository contains both the **marketing website** and the **source code** for all JIT extensions.
+JIT builds browser extensions that do one thing well and respect user privacy. This repository contains the **marketing website** and the **source code** for all JIT extensions.
 
 - **MutedHue** replaces harsh blue text selection with a subtle, adaptive grey across every website. Light and dark mode aware. Zero permissions required.
 - **Refreshner** provides smart auto-refresh with customizable intervals, keyword page monitoring, live countdown timer, and audio alerts.
 - **Goofanizer** instantly emulates mobile and tablet viewports with one click. Switch between 4 device presets, rotate, capture screenshots, and batch export.
 - **Imageination** scans any webpage for images, video and audio. Download individually or batch as ZIP. PNG, JPEG, WebP, SVG, GIF, AVIF, MP4, MP3 and more.
-- **StackLens** detects, explains, and visualizes the technology stack of any website. Identifies 100+ technologies including frameworks, analytics, CDNs, security, fonts, and more. Built with React + TypeScript.
+- **StackLens** detects, explains, and visualizes the technology stack of any website. Identifies 200+ technologies including frameworks, analytics, CDNs, security, fonts, and more. Built with WXT (React + TypeScript + Tailwind).
 
 ### Design Philosophy - Google-Inspired Dark UI
 
-A pitch-black background (`#000`) with Google Sans typography, glassmorphism floating pill navigation, and an aurora gradient hero. Every component uses `clamp()`-based fluid typography, CSS Grid layout, and zero JavaScript frameworks. The design is minimal, fast, and respectful -- matching the extensions themselves.
+Pitch-black background (`#000`), Google Sans typography, glassmorphism floating pill navigation, and an aurora gradient hero. Every component uses `clamp()`-based fluid typography, CSS Grid layout, and zero JavaScript frameworks.
 
 ### GEO-First Architecture
 
-Every section heading is followed by a concise, descriptive subtitle, optimized for both human readers and AI crawlers. JSON-LD `@graph` (Organization + Person + 5x SoftwareApplication), per-page canonical URLs, Open Graph and Twitter Card meta tags, an AI-friendly `robots.txt`, and a complete `_headers` security policy complete the Generative Engine Optimization layer.
+Each section heading has a descriptive subtitle for human readers and AI crawlers. JSON-LD `@graph` (Organization + Person + 5x SoftwareApplication), per-page canonical URLs, Open Graph and Twitter Card meta tags, an AI-friendly `robots.txt`, and `_headers` security policy make up the GEO layer.
 
 ---
 
@@ -53,10 +53,10 @@ Every section heading is followed by a concise, descriptive subtitle, optimized 
 | Extension | Description | Version | Size |
 |-----------|-------------|---------|------|
 | **MutedHue** | Replaces bright blue text selection with a subtle, adaptive grey highlight. Light and dark mode aware. Shadow DOM support included. | 1.0.0 | 12 KB |
-| **Refreshner** | Smart auto-refresh with quick presets, custom HH:MM:SS intervals, random intervals, keyword page monitoring, live countdown ring, and audio alerts on match. | 2.0 | 28 KB |
+| **Refreshner** | Smart auto-refresh with quick presets, custom HH:MM:SS intervals, random intervals, keyword page monitoring, live countdown ring, and audio alerts on match. | 2.0.0 | 28 KB |
 | **Goofanizer** | Emulate mobile and tablet viewports instantly. 4 device presets, rotate, screenshot, batch export, and search filter. Uses Chrome Debugger API. | 1.0.0 | 50 KB |
 | **Imageination** | Scans any webpage for images, video and audio. Download PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more individually or batch as ZIP. | 1.0.0 | 16 KB |
-| **StackLens** | Detects, explains, and visualizes the technology stack of any website. Identifies frameworks, analytics, CDNs, security, fonts, and 100+ other technologies. Built with WXT (React + TypeScript + Tailwind). | 1.0.0 | 277 KB |
+| **StackLens** | Detects, explains, and visualizes the technology stack of any website. Identifies frameworks, analytics, CDNs, security, fonts, and 200+ other technologies. Built with WXT (React + TypeScript + Tailwind). | 2.0.0 | 362 KB |
 
 ### Website
 
@@ -193,14 +193,12 @@ JIT/
 │   ├── popup.js                #   ZipWriter, batch download, 21-type categorization
 │   ├── popup.css               #   Dark theme, 2-column grid, custom scrollbar
 │   ├── icons/icon.png          #   Extension icon (300x300, 32-bit ARGB)
-│   └── test-media.html         #   Test fixture for content script scanning
 │
 ├── Stacklens/                  # Chrome Extension MV3 - website tech stack detector
 │   ├── manifest.json           #   storage, activeTab, webRequest, tabs
-│   ├── .output/chrome-mv3/     #   WXT build output (React + TypeScript + Tailwind)
+│   ├── dist/extension/         #   WXT build output (React + TypeScript + Tailwind)
 │   ├── src/                    #   React + TypeScript source code
-│   ├── icons/StackLens.png     #   Extension logo
-│   └── Stacklens.zip           #   Packaged extension download
+│   └── icons/StackLens.png     #   Extension logo
 │
 ├── descriptions/              # Extension detail pages with full info + download
 │   ├── MutedHue.html          #   MutedHue features, how-it-works, privacy, install guide
@@ -209,11 +207,13 @@ JIT/
 │   ├── Imageination.html      #   Imageination features, how-it-works, privacy, install guide
 │   └── Stacklens.html         #   StackLens features, how-it-works, privacy, install guide
 │
-├── MutedHue.zip               # Packaged MutedHue extension for download
-├── Refreshner.zip             # Packaged Refreshner extension for download
-├── Goofanizer.zip             # Packaged Goofanizer extension for download
-├── Imageination.zip           # Packaged Imageination extension for download
-├── Stacklens.zip              # Packaged StackLens extension for download
+├── zips/                      # Extension download ZIPs
+│   ├── MutedHue-v1.0.0.zip
+│   ├── Refreshner-v1.0.0.zip
+│   ├── Goofanizer-v1.0.0.zip
+│   ├── Imageination-v1.0.0.zip
+│   ├── Stacklens-v1.0.0.zip
+│   └── Stacklens-v2.0.0.zip
 ├── robots.txt                 # AI crawler directives (search allowed, training scrapers blocked)
 ├── sitemap.xml                # SEO sitemap (7 URLs with priority + lastmod)
 ├── _headers                   # Security headers (CSP, HSTS, X-Frame-Options, Permissions-Policy)

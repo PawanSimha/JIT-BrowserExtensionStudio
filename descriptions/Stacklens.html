@@ -39,7 +39,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <meta property="og:image" content="https://raw.githubusercontent.com/PawanSimha/JIT/main/Logo.webp" />
   <meta property="og:image:width" content="512" />
   <meta property="og:image:height" content="512" />
-  <meta property="og:image:alt" content="StackLens logo" />
+  <meta property="og:image:alt" content="JIT brand logo" />
   <meta property="og:site_name" content="JIT" />
   <meta property="og:locale" content="en_US" />
 
@@ -57,10 +57,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     "@type": "SoftwareApplication",
     "name": "StackLens",
     "applicationCategory": "BrowserExtension",
+    "applicationSubCategory": "DeveloperTools",
     "operatingSystem": "Chrome",
-    "description": "Detect, explain, and visualize the technology stack of any website. Identifies frameworks, analytics, CDNs, security, fonts, and more.",
-    "softwareVersion": "1.0.0",
-    "size": "277 KB",
+    "description": "Detect, explain, and visualize the technology stack of any website. Identifies 200+ technologies including frameworks, analytics, CDNs, security, hosting, fonts, and more. Features multi-theme popup, scan history, UI/UX analysis, and technology knowledge base.",
+    "softwareVersion": "2.0.0",
+    "size": "362 KB",
     "dateModified": "2026-07",
     "offers": {
       "@type": "Offer",
@@ -127,14 +128,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           <div class="ext-detail-info">
             <h1 id="ext-name">StackLens</h1>
             <div class="ext-detail-meta">
-              <span>Version 1.0</span>
-              <span>277 KB</span>
+              <span>Version 2.0</span>
+              <span>362 KB</span>
               <span>Updated July 2026</span>
               <span class="badge-live">Free</span>
               <span class="badge-live">Open Source</span>
             </div>
             <div class="ext-detail-actions">
-              <a href="../Stacklens.zip" class="btn btn-blue" download data-ext="stacklens" aria-label="Download StackLens extension">Download Extension</a>
+              <a href="../zips/Stacklens-v2.0.0.zip" class="btn btn-blue" download data-ext="stacklens" aria-label="Download StackLens extension">Download Extension</a>
             </div>
           </div>
         </div>
@@ -143,7 +144,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <div class="ext-detail-body">
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9679;</span> Overview</h2>
-          <p>StackLens is a website technology detector that reveals the full tech stack behind any webpage. With a single click, it identifies frameworks, analytics tools, CDNs, security headers, font providers, hosting infrastructure, and more. Each detected technology includes a brief explanation of what it does, so you can learn as you browse. Perfect for developers, researchers, and tech enthusiasts who want to understand how websites are built.</p>
+          <p>StackLens v2 detects the technology stack of any webpage. It identifies 200+ technologies across frameworks, analytics, CDNs, security, hosting, fonts, and more. Each detection includes a confidence score and an explanation from its built-in knowledge base. Browse dashboards for architecture, performance, security, and UI/UX design analysis. Has a multi-theme popup (light/dim/dark), scan history with favorites, and auto-rescan for dynamic content. For developers, researchers, and tech enthusiasts.</p>
         </div>
 
         <div class="ext-detail-section">
@@ -152,43 +153,50 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             <div class="feature-item">
               <div class="feature-icon feature-icon-blue">&#9670;</div>
               <div class="feature-text">
-                <strong>100+ Detections</strong>
-                <span>Detects frameworks (React, Vue, Angular), meta frameworks (Next, Nuxt, Gatsby), build tools (Webpack, Vite, esbuild), and more</span>
+                <strong>200+ Technology Detections</strong>
+                <span>Identifies 200+ technologies across 20+ categories with weighted confidence scoring.</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#9670;</div>
               <div class="feature-text">
-                <strong>Analytics & Ads</strong>
-                <span>Identifies Google Analytics, Facebook Pixel, Hotjar, Mixpanel, Plausible, Matomo, and 15+ other tracking platforms</span>
+                <strong>Analytics, Ads & Marketing</strong>
+                <span>Detects 20+ analytics, advertising, and marketing platforms including GA, Facebook Pixel, Hotjar, and Mixpanel.</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-red">&#9670;</div>
               <div class="feature-text">
-                <strong>Hosting & CDN</strong>
-                <span>Detects Cloudflare, AWS, Netlify, Vercel, GitHub Pages, Fastly, DigitalOcean, and other infrastructure providers</span>
+                <strong>Hosting, CDN & Architecture</strong>
+                <span>Identifies 30+ hosting providers, CDNs, and framework architecture patterns with implication chains.</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-yellow">&#9670;</div>
               <div class="feature-text">
-                <strong>Security Analysis</strong>
-                <span>Checks for HSTS, CSP headers, HTTP/3, reCAPTCHA, hCaptcha, and security frameworks</span>
+                <strong>Security & Performance</strong>
+                <span>Analyzes security headers, CAPTCHA providers, HTTP/3, and performance-related technologies.</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon feature-icon-purple">&#9670;</div>
+              <div class="feature-text">
+                <strong>UI/UX Design Analysis</strong>
+                <span>Extracts color palette, fonts, spacing, animations, dark mode, and design system details.</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-blue">&#9670;</div>
               <div class="feature-text">
-                <strong>Fonts & Design</strong>
-                <span>Detects Google Fonts, Adobe Fonts, icon libraries, and UI component frameworks like Mantine, Chakra, and Material UI</span>
+                <strong>Smart Dashboard with Drill-Down</strong>
+                <span>Seven-page popup dashboard (Dashboard, Technologies, Architecture, Performance, Security, UI/UX, History) with knowledge base explanations, confidence scores, and multi-theme support.</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#9670;</div>
               <div class="feature-text">
-                <strong>Category Dashboard</strong>
-                <span>Organizes detected technologies into clear categories with counts, explanations, and visual indicators</span>
+                <strong>Scan History & Favorites</strong>
+                <span>Stores up to 50 past scans with favorites, search, bulk delete, and one-click re-scan.</span>
               </div>
             </div>
           </div>
@@ -196,7 +204,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9881;</span> How It Works</h2>
-          <p>StackLens injects a content script that scans the page on load. It analyzes DOM attributes and elements, inspects <code>&lt;script&gt;</code> and <code>&lt;link&gt;</code> tags, checks JavaScript global variables, examines HTTP response headers via <code>chrome.webRequest</code>, and evaluates known signatures for 100+ technologies. Results are categorized and displayed in a clean, searchable popup dashboard built with React. All analysis happens locally in your browser — nothing is sent to any server.</p>
+          <p>StackLens injects a content script that scans the page on load and auto-rescans after 2.5 seconds to catch late-loading scripts. It analyzes DOM attributes, <code>&lt;script&gt;</code> and <code>&lt;link&gt;</code> tags, JavaScript globals, HTTP response headers via <code>chrome.webRequest</code> (including dynamically loaded scripts), CSS classes, meta tags, cookies, HTML comments, structured data, and storage keys. Its weighted confidence engine evaluates 200+ technology signatures across 14 detector types, with implication resolution for chained technologies. Results are displayed in a seven-page React popup dashboard with technology drill-down, knowledge base explanations, and confidence indicators. All analysis happens locally — nothing is sent to any server.</p>
         </div>
 
         <div class="ext-detail-section">

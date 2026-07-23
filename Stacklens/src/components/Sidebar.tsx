@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard,
@@ -8,7 +7,6 @@ import {
   Shield,
   Clock,
   Palette,
-  Menu,
 } from 'lucide-react';
 
 const navItems = [
@@ -21,48 +19,45 @@ const navItems = [
   { id: 'history', label: 'History', path: '/history', icon: Clock },
 ] as const;
 
-const COLLAPSED_WIDTH = 48;
-const EXPANDED_WIDTH = 184;
+const SIDEBAR_WIDTH = 44;
 
 export default function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const [hovered, setHovered] = useState(false);
 
-  const isExpanded = hovered;
-  const currentWidth = isExpanded ? EXPANDED_WIDTH : COLLAPSED_WIDTH;
+  const isActive = (itemId: string, itemPath: string) =>
+    itemId === 'dashboard'
+      ? location.pathname === '/'
+      : location.pathname.startsWith(itemPath);
 
   return (
     <nav
-      className="shrink-0 border-r border-surface-border bg-surface-card/30 flex flex-col gap-0.5 p-2 relative overflow-hidden transition-all duration-200 ease-out"
-      style={{ width: currentWidth }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      className="shrink-0 border-r border-surface-border bg-surface-card/30 flex flex-col items-center gap-0.5 py-2 relative overflow-hidden"
+      style={{ width: SIDEBAR_WIDTH }}
     >
-      <div className="flex items-center justify-center h-8 mb-1">
-        <Menu size={16} className="text-text-muted shrink-0" strokeWidth={1.5} />
-      </div>
-
       {navItems.map((item) => {
         const Icon = item.icon;
-        const isActive = item.id === 'dashboard'
-          ? location.pathname === '/'
-          : location.pathname.startsWith(item.path);
+        const active = isActive(item.id, item.path);
 
         return (
           <button
             key={item.id}
             onClick={() => navigate(item.path)}
-            className={`flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-sm font-medium transition-all duration-150 whitespace-nowrap cursor-pointer ${
-              isActive
-                ? 'bg-brand-primary/10 text-brand-primary'
-                : 'text-text-secondary hover:bg-surface-hover hover:text-text-primary'
-            }`}
+            className="accent-rail relative flex items-center justify-center w-9 h-9 rounded-lg transition-all duration-150 cursor-pointer"
+            title={item.label}
+            aria-label={item.label}
           >
-            <Icon size={16} strokeWidth={1.5} className="shrink-0" />
-            <span className="truncate text-xs transition-opacity duration-200" style={{ opacity: isExpanded ? 1 : 0 }}>
-              {item.label}
-            </span>
+            <Icon
+              size={16}
+              strokeWidth={active ? 2 : 1.5}
+              className={active ? 'text-text-primary' : 'text-text-muted'}
+            />
+            <span
+              className={`absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-5 rounded-r-full transition-opacity duration-150 ${
+                active ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{ background: 'var(--text-primary)' }}
+            />
           </button>
         );
       })}

@@ -37,11 +37,17 @@ logs/
 
 # ── Extension ZIPs (tracked: need explicit git-add for deployment) ──
 *.zip
-!MutedHue.zip
-!Refreshner.zip
-!Goofanizer.zip
-!Imageination.zip
-!Stacklens.zip
+!zips/MutedHue-v1.0.0.zip
+!zips/Refreshner-v1.0.0.zip
+!zips/Goofanizer-v1.0.0.zip
+!zips/Imageination-v1.0.0.zip
+!zips/Stacklens-v1.0.0.zip
+!zips/Stacklens-v2.0.0.zip
+
+# ── WXT build artifacts ──
+Stacklens/.wxt/
+Stacklens/typecheck/
+Stacklens/version/
 
 # ── Partial files kept locally but not deployed ──
 header.html

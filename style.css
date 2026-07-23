@@ -10,6 +10,7 @@
   --g-red:    #EA4335;
   --g-yellow: #FBBC05;
   --g-green:  #34A853;
+  --g-purple: #AB47BC;
 
   /* Surfaces */
   --bg-0: #000000;
@@ -93,7 +94,7 @@ ul { list-style: none; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
 html { scrollbar-color: rgba(255,255,255,0.12) transparent; scrollbar-width: thin; }
-::selection { background: rgba(66,133,244,0.3); color: #fff; }
+::selection { background: rgba(66,133,244,0.3); color: var(--text-1); }
 
 /* ── Focus visible (a11y) ── */
 :focus-visible { outline: 2px solid var(--g-blue); outline-offset: 2px; border-radius: 4px; transition: outline-color 0.15s; }
@@ -155,9 +156,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .btn-blue {
   background: var(--g-blue);
-  color: #fff;
+  color: var(--text-1);
 }
-.btn-blue:hover { background: #3367d6; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(66,133,244,0.35); }
+.btn-blue:hover { background: var(--g-blue-dark, #3367d6); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(66,133,244,0.35); }
 .btn-blue:active { transform: translateY(0); box-shadow: none; }
 
 /* ===================================================
@@ -237,7 +238,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   height: clamp(30px, 3.5vw, 36px);
   padding: 0 clamp(14px, 2.2vw, 24px);
   background: var(--g-blue);
-  color: #fff;
+  color: var(--text-1);
   border-radius: var(--radius-pill);
   font-size: clamp(0.8rem, 1vw, 0.875rem);
   font-weight: 500;
@@ -245,7 +246,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transition: all 0.2s var(--ease);
   white-space: nowrap;
 }
-.header-pill:hover { background: #3367d6; box-shadow: 0 4px 20px rgba(66,133,244,0.35); }
+.header-pill:hover { background: var(--g-blue-dark, #3367d6); box-shadow: 0 4px 20px rgba(66,133,244,0.35); }
 .header-pill:active { transform: scale(0.97); }
 
 /* ── Hamburger toggle ── */
@@ -293,8 +294,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background-size: 200% 100%;
   filter: blur(40px);
   opacity: 0.7;
-  mask-image: linear-gradient(180deg, #000 0%, #000 25%, transparent 75%);
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 25%, transparent 75%);
+  mask-image: linear-gradient(180deg, var(--bg-0, #000) 0%, var(--bg-0, #000) 25%, transparent 75%);
+  -webkit-mask-image: linear-gradient(180deg, var(--bg-0, #000) 0%, var(--bg-0, #000) 25%, transparent 75%);
   animation: aurora-wave 6s ease-in-out infinite alternate;
 }
 
@@ -576,6 +577,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .feature-icon-green { background: rgba(52,168,83,0.1); color: var(--g-green); }
 .feature-icon-yellow { background: rgba(251,188,4,0.1); color: var(--g-yellow); }
 .feature-icon-red { background: rgba(234,67,53,0.1); color: var(--g-red); }
+.feature-icon-purple { background: rgba(171,71,188,0.1); color: var(--g-purple); }
 .feature-text { flex: 1; }
 .feature-text strong {
   display: block;
@@ -791,9 +793,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: var(--fs-small);
   background: var(--g-blue);
   border-color: var(--g-blue);
-  color: #fff;
+  color: var(--text-1);
 }
-.dev-link-full:hover { background: #3367d6; border-color: #3367d6; color: #fff; box-shadow: 0 4px 20px rgba(66,133,244,0.35); }
+.dev-link-full:hover { background: var(--g-blue-dark, #3367d6); border-color: var(--g-blue-dark, #3367d6); color: var(--text-1); box-shadow: 0 4px 20px rgba(66,133,244,0.35); }
 
 /* ===================================================
    CONTACT
@@ -1188,7 +1190,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   cursor: pointer; border: none; transition: opacity 0.2s; font-family: inherit;
 }
 .cookie-btn:focus-visible { outline: 2px solid var(--g-blue); outline-offset: 2px; }
-.cookie-accept { background: var(--g-blue, #4285F4); color: #fff; }
+.cookie-accept { background: var(--g-blue, #4285F4); color: var(--text-1); }
 .cookie-accept:hover { opacity: 0.85; }
 .cookie-decline { background: transparent; color: var(--text-2, #e8eaed); border: 1px solid var(--border-strong, rgba(255,255,255,0.12)); }
 .cookie-decline:hover { background: var(--bg-hover, rgba(255,255,255,0.04)); }

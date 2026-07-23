@@ -10,18 +10,25 @@ const metricIcons = {
   info: Info,
 };
 
-const metricColors = {
-  good: 'text-green-400',
-  average: 'text-yellow-400',
-  poor: 'text-red-400',
-  info: 'text-text-muted',
+const statusColors: Record<string, string> = {
+  good: '#22C55E',
+  average: '#FBBF24',
+  poor: '#EF4444',
+  info: 'var(--text-muted)',
 };
 
-const metricBg = {
-  good: 'bg-green-500/10 border-green-500/20',
-  average: 'bg-yellow-500/10 border-yellow-500/20',
-  poor: 'bg-red-500/10 border-red-500/20',
-  info: 'bg-surface-hover border-surface-border',
+const statusBg: Record<string, string> = {
+  good: 'rgba(34, 197, 94, 0.08)',
+  average: 'rgba(251, 191, 36, 0.08)',
+  poor: 'rgba(239, 68, 68, 0.08)',
+  info: 'transparent',
+};
+
+const statusBorder: Record<string, string> = {
+  good: 'rgba(34, 197, 94, 0.2)',
+  average: 'rgba(251, 191, 36, 0.2)',
+  poor: 'rgba(239, 68, 68, 0.2)',
+  info: 'var(--surface-border)',
 };
 
 export default function Performance() {
@@ -33,8 +40,8 @@ export default function Performance() {
         <div className="w-12 h-12 rounded-full bg-surface-card flex items-center justify-center">
           <Gauge size={20} className="text-text-muted" strokeWidth={1.5} />
         </div>
-        <h2 className="text-base font-semibold font-heading text-text-primary">Performance Analysis</h2>
-        <p className="text-xs text-text-secondary max-w-[220px]">
+        <h2 className="text-base font-heading text-text-primary">Performance Analysis</h2>
+        <p className="text-xs text-text-secondary max-w-[220px] font-body">
           Analyze a website first to see its performance report.
         </p>
       </div>
@@ -46,23 +53,22 @@ export default function Performance() {
   return (
     <div className="page-container flex flex-col gap-3">
       <div className="flex items-center gap-2">
-        <Gauge size={14} className="text-brand-primary" strokeWidth={1.5} />
-        <h2 className="text-sm font-semibold font-heading text-text-primary">
-          {currentResult.hostname}
-        </h2>
+        <Gauge size={14} style={{ color: 'var(--text-primary)' }} strokeWidth={1.5} />
+        <h2 className="text-sm font-heading text-text-primary">{currentResult.hostname}</h2>
       </div>
 
-      <div className="card flex items-center gap-4">
+      <div className="card-primary flex items-center gap-4">
         <GradeBadge grade={report.grade} />
         <div>
-          <p className="text-xs font-semibold text-text-primary">Performance Score</p>
-          <p className="text-2xs text-text-secondary mt-0.5">{report.score}/100</p>
-          <div className="w-28 h-1.5 bg-surface-hover rounded-full mt-1.5 overflow-hidden">
+          <p className="text-xs font-heading text-text-primary">Performance Score</p>
+          <p className="text-2xs text-text-secondary font-code mt-0.5">{report.score}/100</p>
+          <div className="w-28 h-1.5 rounded-full mt-1.5 overflow-hidden" style={{ background: 'var(--surface-border)' }}>
             <div
-              className={`h-full rounded-full transition-all duration-500 ${
-                report.score >= 75 ? 'bg-green-400' : report.score >= 50 ? 'bg-yellow-400' : 'bg-red-400'
-              }`}
-              style={{ width: `${report.score}%` }}
+              className="h-full rounded-full transition-all duration-500"
+              style={{
+                width: `${report.score}%`,
+                background: report.score >= 75 ? 'var(--text-primary)' : report.score >= 50 ? 'var(--text-secondary)' : '#EF4444',
+              }}
             />
           </div>
         </div>
@@ -74,18 +80,22 @@ export default function Performance() {
           return (
             <div
               key={i}
-              className={`card p-2.5 border ${metricBg[metric.status]}`}
+              className="rounded-lg border p-2.5 transition-all duration-150"
+              style={{ background: statusBg[metric.status], borderColor: statusBorder[metric.status] }}
             >
               <div className="flex items-start gap-2">
-                <Icon size={14} className={`shrink-0 mt-0.5 ${metricColors[metric.status]}`} strokeWidth={1.5} />
+                <Icon size={14} className="shrink-0 mt-0.5" style={{ color: statusColors[metric.status] }} strokeWidth={1.5} />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-medium text-text-primary">{metric.name}</span>
-                    <span className={`badge text-[9px] capitalize ${metricBg[metric.status]}`}>
+                    <span className="text-xs font-body font-medium text-text-primary">{metric.name}</span>
+                    <span
+                      className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-code font-medium capitalize"
+                      style={{ background: statusBg[metric.status], color: statusColors[metric.status], border: `1px solid ${statusBorder[metric.status]}` }}
+                    >
                       {metric.status}
                     </span>
                   </div>
-                  <p className="text-2xs text-text-secondary mt-0.5">{metric.description}</p>
+                  <p className="text-2xs text-text-secondary mt-0.5 font-body">{metric.description}</p>
                   {metric.detail && (
                     <p className="text-2xs text-text-muted mt-0.5 font-code">{metric.detail}</p>
                   )}

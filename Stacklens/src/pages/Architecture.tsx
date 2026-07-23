@@ -32,8 +32,8 @@ export default function Architecture() {
         <div className="w-12 h-12 rounded-full bg-surface-card flex items-center justify-center">
           <GitBranch size={20} className="text-text-muted" strokeWidth={1.5} />
         </div>
-        <h2 className="text-base font-semibold font-heading text-text-primary">Architecture</h2>
-        <p className="text-xs text-text-secondary max-w-[220px]">
+        <h2 className="text-base font-heading text-text-primary">Architecture</h2>
+        <p className="text-xs text-text-secondary max-w-[220px] font-body">
           Analyze a website first to see its architecture diagram.
         </p>
       </div>
@@ -48,8 +48,8 @@ export default function Architecture() {
         <div className="w-12 h-12 rounded-full bg-surface-card flex items-center justify-center">
           <GitBranch size={20} className="text-text-muted" strokeWidth={1.5} />
         </div>
-        <h2 className="text-base font-semibold font-heading text-text-primary">Architecture</h2>
-        <p className="text-xs text-text-secondary max-w-[220px]">
+        <h2 className="text-base font-heading text-text-primary">Architecture</h2>
+        <p className="text-xs text-text-secondary max-w-[220px] font-body">
           No architecture data available for this page.
         </p>
       </div>
@@ -59,10 +59,8 @@ export default function Architecture() {
   return (
     <div className="page-container flex flex-col gap-3">
       <div className="flex items-center gap-2">
-        <GitBranch size={14} className="text-brand-primary" strokeWidth={1.5} />
-        <h2 className="text-sm font-semibold font-heading text-text-primary">
-          {currentResult.hostname}
-        </h2>
+        <GitBranch size={14} style={{ color: 'var(--text-primary)' }} strokeWidth={1.5} />
+        <h2 className="text-sm font-heading text-text-primary">{currentResult.hostname}</h2>
       </div>
 
       {layers.length === 1 && layers[0].technologies.length <= 3 ? (
@@ -70,17 +68,17 @@ export default function Architecture() {
           {layers.map((layer, i) => {
             const Icon = layerIcons[layer.name] || Layers;
             return (
-              <div key={i} className="card">
+              <div key={i} className="card-primary">
                 <div className="flex items-center gap-2 mb-2">
                   <Icon size={14} className="text-text-secondary" strokeWidth={1.5} />
-                  <h3 className="text-xs font-semibold text-text-primary">{layer.name}</h3>
-                  <span className="text-2xs text-text-muted">({layer.technologies.length})</span>
+                  <h3 className="text-xs font-heading text-text-primary">{layer.name}</h3>
+                  <span className="text-2xs text-text-muted font-code">({layer.technologies.length})</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {layer.technologies.map((t, j) => (
-                    <div key={j} className="flex items-center gap-1.5 bg-surface-card border border-surface-border rounded-lg px-2.5 py-1.5">
+                    <div key={j} className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 border" style={{ background: 'var(--surface-card)', borderColor: 'var(--surface-border)' }}>
                       <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: t.color }} />
-                      <span className="text-xs text-text-primary">{t.name}</span>
+                      <span className="text-xs text-text-primary font-body">{t.name}</span>
                       <span className="text-2xs text-text-muted font-code">{t.confidence}%</span>
                     </div>
                   ))}
@@ -95,20 +93,17 @@ export default function Architecture() {
             const Icon = layerIcons[layer.name] || Layers;
             return (
               <div key={i} className="relative">
-                <div className="card p-3">
+                <div className="card-primary p-3">
                   <div className="flex items-center gap-2 mb-2">
                     <Icon size={13} className="text-text-secondary" strokeWidth={1.5} />
-                    <h3 className="text-xs font-semibold text-text-primary">{layer.name}</h3>
+                    <h3 className="text-xs font-heading text-text-primary">{layer.name}</h3>
                     <span className="text-2xs text-text-muted font-code">({layer.technologies.length})</span>
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {layer.technologies.map((t, j) => (
-                      <div
-                        key={j}
-                        className="flex items-center gap-1.5 bg-surface-hover rounded-md px-2 py-1"
-                      >
+                      <div key={j} className="flex items-center gap-1.5 rounded-md px-2 py-1" style={{ background: 'var(--surface-hover)' }}>
                         <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: t.color }} />
-                        <span className="text-xs text-text-primary">{t.name}</span>
+                        <span className="text-xs text-text-primary font-body">{t.name}</span>
                         <span className="text-2xs text-text-muted font-code ml-0.5">{t.confidence}%</span>
                       </div>
                     ))}
@@ -116,7 +111,7 @@ export default function Architecture() {
                 </div>
                 {i < layers.length - 1 && (
                   <div className="flex justify-center py-1">
-                    <div className="w-px h-3 bg-surface-border" />
+                    <div className="w-px h-3" style={{ background: 'var(--surface-border)' }} />
                   </div>
                 )}
               </div>
@@ -125,18 +120,18 @@ export default function Architecture() {
         </div>
       )}
 
-      <div className="card p-3">
-        <h3 className="text-xs font-semibold text-text-primary mb-2 flex items-center gap-1.5">
-          <Layers size={12} className="text-brand-accent" strokeWidth={1.5} />
+      <div className="card-secondary p-3">
+        <h3 className="text-xs font-heading text-text-primary mb-2 flex items-center gap-1.5">
+          <Layers size={12} style={{ color: 'var(--text-primary)' }} strokeWidth={1.5} />
           Stack Overview
         </h3>
-        <div className="grid grid-cols-2 gap-2 text-2xs text-text-secondary">
+        <div className="grid grid-cols-2 gap-2 text-2xs text-text-secondary font-code">
           <div className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-primary/40" />
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--text-primary)' }} />
             <span>{layers.length} architecture layers</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-accent/40" />
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--text-secondary)' }} />
             <span>{currentResult.technologies.length} total technologies</span>
           </div>
         </div>

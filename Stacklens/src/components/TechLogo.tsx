@@ -16,12 +16,17 @@ function getInitials(name: string): string {
   return name.slice(0, 2).toUpperCase();
 }
 
+function safeColor(hex: string): string {
+  if (!hex || hex === '#000000') return '#888888';
+  return hex;
+}
+
 export default function TechLogo({ techId, techName, size = 20, className = '' }: Props) {
   const [imgError, setImgError] = useState(false);
   const [useFallback, setUseFallback] = useState(false);
   const slug = getSlug(techId);
   const fallbackUrl = getLogoFallback(techId);
-  const brandColor = getBrandColor(techId);
+  const brandColor = safeColor(getBrandColor(techId));
 
   const url = !useFallback && slug ? `https://cdn.simpleicons.org/${slug}` : fallbackUrl;
 
