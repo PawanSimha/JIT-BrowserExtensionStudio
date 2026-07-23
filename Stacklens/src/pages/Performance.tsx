@@ -64,7 +64,7 @@ export default function Performance() {
           <p className="text-2xs text-text-secondary font-code mt-0.5">{report.score}/100</p>
           <div className="w-28 h-1.5 rounded-full mt-1.5 overflow-hidden" style={{ background: 'var(--surface-border)' }}>
             <div
-              className="h-full rounded-full transition-all duration-500"
+              className="h-full rounded-full transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
               style={{
                 width: `${report.score}%`,
                 background: report.score >= 75 ? 'var(--text-primary)' : report.score >= 50 ? 'var(--text-secondary)' : '#EF4444',

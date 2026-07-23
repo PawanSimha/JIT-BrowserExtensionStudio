@@ -40,13 +40,15 @@ export default function LearningRoadmap({ steps }: Props) {
                   <ChevronRight size={12} className="text-text-muted shrink-0" />
                 )}
               </button>
-              {isOpen && (
-                <div className="mt-2 pl-7 flex flex-wrap gap-1.5">
-                  {step.topics.map((topic, j) => (
-                    <span key={j} className="badge text-[10px]" style={{ background: 'rgba(255, 255, 255, 0.06)', color: 'var(--text-primary)' }}>{topic}</span>
-                  ))}
+              <div className={`accordion-collapse ${isOpen ? 'open' : ''}`}>
+                <div>
+                  <div className="mt-2 pl-7 flex flex-wrap gap-1.5">
+                    {step.topics.map((topic, j) => (
+                      <span key={j} className="badge text-[10px]" style={{ background: 'rgba(255, 255, 255, 0.06)', color: 'var(--text-primary)' }}>{topic}</span>
+                    ))}
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           );
         })}

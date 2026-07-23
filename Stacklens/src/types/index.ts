@@ -148,16 +148,6 @@ export interface LearningStep {
   topics: string[];
 }
 
-export interface HistoryEntry {
-  id: string;
-  url: string;
-  hostname: string;
-  techCount: number;
-  overallConfidence: number;
-  timestamp: number;
-  isFavorite: boolean;
-}
-
 export interface DesignColor {
   hex: string;
   rgb: string;

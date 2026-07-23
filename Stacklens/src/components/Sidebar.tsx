@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useRef, useEffect, useState } from 'react';
 import {
   LayoutDashboard,
   Blocks,
@@ -24,40 +25,66 @@ const SIDEBAR_WIDTH = 44;
 export default function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
+  const navRef = useRef<HTMLDivElement>(null);
+  const [railStyle, setRailStyle] = useState({ top: 0, height: 0 });
 
-  const isActive = (itemId: string, itemPath: string) =>
-    itemId === 'dashboard'
-      ? location.pathname === '/'
-      : location.pathname.startsWith(itemPath);
+  const activeIdx = (() => {
+    const idx = navItems.findIndex((item) =>
+      item.id === 'dashboard'
+        ? location.pathname === '/'
+        : location.pathname.startsWith(item.path),
+    );
+    return idx >= 0 ? idx : 0;
+  })();
+
+  useEffect(() => {
+    if (!navRef.current) return;
+    const buttons = navRef.current.querySelectorAll<HTMLElement>('button');
+    const btn = buttons[activeIdx];
+    if (btn) {
+      const nav = navRef.current;
+      const nRect = nav.getBoundingClientRect();
+      const bRect = btn.getBoundingClientRect();
+      setRailStyle({ top: bRect.top - nRect.top, height: bRect.height });
+    }
+  }, [activeIdx]);
 
   return (
     <nav
+      ref={navRef}
       className="shrink-0 border-r border-surface-border bg-surface-card/30 flex flex-col items-center gap-0.5 py-2 relative overflow-hidden"
       style={{ width: SIDEBAR_WIDTH }}
     >
-      {navItems.map((item) => {
+      <div
+        className="absolute left-0 w-[2px] rounded-r-full transition-all duration-200 ease-in-out"
+        style={{
+          top: railStyle.top,
+          height: railStyle.height,
+          background: 'var(--accent)',
+        }}
+      />
+      {navItems.map((item, i) => {
         const Icon = item.icon;
-        const active = isActive(item.id, item.path);
+        const active = i === activeIdx;
 
         return (
           <button
             key={item.id}
             onClick={() => navigate(item.path)}
-            className="accent-rail relative flex items-center justify-center w-9 h-9 rounded-lg transition-all duration-150 cursor-pointer"
-            title={item.label}
+            className="group relative flex items-center justify-center w-9 h-9 rounded-lg transition-all duration-150 cursor-pointer z-10"
             aria-label={item.label}
           >
             <Icon
               size={16}
               strokeWidth={active ? 2 : 1.5}
-              className={active ? 'text-text-primary' : 'text-text-muted'}
+              style={{ color: active ? 'var(--accent)' : 'var(--text-muted)' }}
             />
             <span
-              className={`absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-5 rounded-r-full transition-opacity duration-150 ${
-                active ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{ background: 'var(--text-primary)' }}
-            />
+              className="sidebar-tooltip absolute left-full ml-2 px-1.5 py-0.5 rounded text-[9px] font-code whitespace-nowrap z-20"
+              style={{ background: 'var(--surface-card)', color: 'var(--text-primary)', border: '1px solid var(--surface-border)' }}
+            >
+              {item.label}
+            </span>
           </button>
         );
       })}

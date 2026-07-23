@@ -28,7 +28,7 @@
 ## Extension Downloads
 
 - ZIPs live in `zips/` with versioned names (`MutedHue-v1.0.0.zip`, `Stacklens-v2.0.0.zip`, etc.).
-- `.gitignore` ignores `*.zip` except the 6 tracked versioned ZIPs in `zips/`.
+- `.gitignore` ignores `*.zip` except the 7 tracked versioned ZIPs in `zips/`.
 
 ## StackLens (WXT/React/TypeScript)
 
@@ -56,7 +56,7 @@ Only project with npm dependencies. Commands (run from `Stacklens/`):
 | MutedHue | *none* | No | No | `run_at: document_start`, shadow DOM monkeypatch |
 | Refreshner | storage, alarms, notifications, tabs | Yes | Yes | `chrome.alarms` scheduling, keyword matching |
 | Goofanizer | debugger, storage, tabs, activeTab, downloads, windows | Yes | Yes | Chrome Debugger API (not Firefox-compatible) |
-| Imageination | activeTab, downloads | Yes | Minimal | ZIP batch download via ZipWriter in popup |
+| Imageination | activeTab, downloads, storage | Yes | Yes | Dual-tab popup (Media + Color Picker), EyeDropper API, ZIP batch download, 50-entry color history |
 | StackLens | storage, activeTab, webRequest, tabs | Yes | Yes | WXT build, `chrome.webRequest` (not Firefox-compatible) |
 
 ## Reference

@@ -55,7 +55,7 @@ Each section heading has a descriptive subtitle for human readers and AI crawler
 | **MutedHue** | Replaces bright blue text selection with a subtle, adaptive grey highlight. Light and dark mode aware. Shadow DOM support included. | 1.0.0 | 12 KB |
 | **Refreshner** | Smart auto-refresh with quick presets, custom HH:MM:SS intervals, random intervals, keyword page monitoring, live countdown ring, and audio alerts on match. | 2.0.0 | 28 KB |
 | **Goofanizer** | Emulate mobile and tablet viewports instantly. 4 device presets, rotate, screenshot, batch export, and search filter. Uses Chrome Debugger API. | 1.0.0 | 50 KB |
-| **Imageination** | Scans any webpage for images, video and audio. Download PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more individually or batch as ZIP. | 1.0.0 | 16 KB |
+| **Imageination** | Scans any webpage for images, video and audio. Download PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more individually or batch as ZIP. Color picker with EyeDropper API and persistent history. | 2.0.0 | 248 KB |
 | **StackLens** | Detects, explains, and visualizes the technology stack of any website. Identifies frameworks, analytics, CDNs, security, fonts, and 200+ other technologies. Built with WXT (React + TypeScript + Tailwind). | 2.0.0 | 362 KB |
 
 ### Website
@@ -212,6 +212,7 @@ JIT/
 │   ├── Refreshner-v1.0.0.zip
 │   ├── Goofanizer-v1.0.0.zip
 │   ├── Imageination-v1.0.0.zip
+│   ├── Imageination-v2.0.0.zip
 │   ├── Stacklens-v1.0.0.zip
 │   └── Stacklens-v2.0.0.zip
 ├── robots.txt                 # AI crawler directives (search allowed, training scrapers blocked)

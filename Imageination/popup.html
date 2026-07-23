@@ -9,25 +9,72 @@
 <body>
 <div id="app">
   <header>
-    <div class="h-left"><img class="h-icon" src="icons/icon.png" alt="" /> <span class="h-title">Imageination</span></div>
+    <div class="h-left">
+      <img class="h-icon" src="icons/icon.png" alt="" />
+      <span class="h-title">Imageination</span>
+    </div>
     <div class="h-right">
-      <button class="dl-all-h" id="dlAllBtn" hidden>&darr; All</button>
       <span class="h-badge" id="countBadge">0</span>
     </div>
   </header>
 
-  <div class="layout">
-    <nav class="nav" id="sidebar">
-      <div class="nav-inner" id="sidebarItems"></div>
-    </nav>
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="media"><span class="tab-ico">&#9654;</span> Media</button>
+    <button class="tab-btn" data-tab="colors"><span class="tab-ico">&#9670;</span> Colors</button>
+  </div>
 
-    <div class="main">
-      <div class="p-head" id="panelHeader">
-        <span class="p-title" id="panelTitle">Media</span>
-        <button class="da" id="panelDlAll">Download All</button>
+  <div class="tab-panel active" id="tabMedia">
+    <div class="layout">
+      <nav class="side" id="sidebar">
+        <div class="side-in" id="sidebarItems"></div>
+      </nav>
+      <div class="content">
+        <div class="toolbar">
+          <span class="tb-title" id="panelTitle">All Media</span>
+          <div class="tb-r">
+            <button class="tb-dl" id="dlAllBtn" hidden>Download All</button>
+          </div>
+        </div>
+        <div class="grid" id="imgGrid">
+          <div class="grid-msg">Scanning...</div>
+        </div>
       </div>
-      <div class="grid" id="imgGrid">
-        <div class="grid-msg">Scanning...</div>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="tabColors">
+    <div class="cp-body">
+      <button class="cp-btn" id="pickBtn">
+        <span class="cp-ico">&#9670;</span>
+        Pick Color
+      </button>
+
+      <div class="cp-result" id="colorResult" hidden>
+        <div class="cp-swatch-wrap">
+          <div class="cp-swatch" id="colorSwatch"></div>
+        </div>
+        <div class="cp-details">
+          <div class="cp-row">
+            <span class="cp-label">HEX</span>
+            <code class="cp-val" id="hexVal">#000000</code>
+            <button class="cp-copy" data-val="">Copy</button>
+          </div>
+          <div class="cp-row">
+            <span class="cp-label">RGB</span>
+            <code class="cp-val" id="rgbVal">rgb(0, 0, 0)</code>
+            <button class="cp-copy" data-val="">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cp-history">
+        <div class="cp-hd">
+          <span class="cp-hd-title">History</span>
+          <button class="cp-clear" id="clearHistory">Clear all</button>
+        </div>
+        <div class="cp-hl" id="historyList">
+          <div class="cp-empty">No colors picked yet.</div>
+        </div>
       </div>
     </div>
   </div>

@@ -3,6 +3,7 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { useThemeStore } from '@/stores/themeStore';
 import { useScanStore } from '@/stores/scanStore';
 import { useEnabledStore } from '@/stores/enabledStore';
+import { addToHistory } from '@/utils/history';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import Layout from '@/components/Layout';
 import Dashboard from '@/pages/Dashboard';
@@ -16,27 +17,29 @@ import TechnologyDetail from '@/pages/TechnologyDetail';
 import { PowerOff, Search } from 'lucide-react';
 
 function LoadingSkeleton() {
+  const skeleton = (w: string, h: string, rounded: string, delay: number) => (
+    <div className={`skeleton ${rounded}`} style={{ width: w, height: h, animationDelay: `${delay}ms` }} />
+  );
   return (
     <div className="h-[600px] w-[520px] flex flex-col p-4 gap-3" style={{ background: 'var(--surface-base)' }}>
-      <div className="flex items-center gap-3">
-        <div className="skeleton w-8 h-8 rounded-lg" />
+      <div className="flex items-center gap-3" style={{ animation: 'stagger-fade 0.3s ease-out both', animationDelay: '0ms' }}>
+        {skeleton('2rem', '2rem', 'rounded-lg', 0)}
         <div className="flex-1 space-y-1.5">
-          <div className="skeleton w-32 h-3 rounded" />
-          <div className="skeleton w-48 h-2 rounded" />
+          <div className="skeleton" style={{ width: '8rem', height: '0.75rem', animation: 'shimmer 1.8s ease-in-out infinite', animationDelay: '40ms' }} />
+          <div className="skeleton" style={{ width: '12rem', height: '0.5rem', animation: 'shimmer 1.8s ease-in-out infinite', animationDelay: '80ms' }} />
         </div>
       </div>
-      <div className="skeleton w-full h-16 rounded-lg" />
-      <div className="grid grid-cols-2 gap-2">
-        <div className="skeleton h-14 rounded-lg" />
-        <div className="skeleton h-14 rounded-lg" />
-        <div className="skeleton h-14 rounded-lg" />
-        <div className="skeleton h-14 rounded-lg" />
+      <div className="skeleton w-full" style={{ height: '4rem', animation: 'shimmer 1.8s ease-in-out infinite', animationDelay: '120ms', animationFillMode: 'both' }} />
+      <div className="grid grid-cols-2 gap-2" style={{ animation: 'stagger-fade 0.3s ease-out both', animationDelay: '200ms' }}>
+        {[0, 1, 2, 3].map((i) => (
+          <div key={i} className="skeleton" style={{ height: '3.5rem', animation: 'shimmer 1.8s ease-in-out infinite', animationDelay: `${240 + i * 60}ms` }} />
+        ))}
       </div>
-      <div className="skeleton w-full h-24 rounded-lg" />
-      <div className="flex gap-1.5">
-        <div className="skeleton w-16 h-6 rounded-md" />
-        <div className="skeleton w-20 h-6 rounded-md" />
-        <div className="skeleton w-14 h-6 rounded-md" />
+      <div className="skeleton w-full" style={{ height: '6rem', animation: 'shimmer 1.8s ease-in-out infinite', animationDelay: '480ms', animationFillMode: 'both' }} />
+      <div className="flex gap-1.5" style={{ animation: 'stagger-fade 0.3s ease-out both', animationDelay: '540ms' }}>
+        {['4rem', '5rem', '3.5rem'].map((w, i) => (
+          <div key={i} className="skeleton" style={{ width: w, height: '1.5rem', animation: 'shimmer 1.8s ease-in-out infinite', animationDelay: `${580 + i * 40}ms` }} />
+        ))}
       </div>
     </div>
   );
@@ -91,6 +94,12 @@ export default function App() {
     chrome.storage.session.onChanged.addListener(handler);
     return () => chrome.storage.session.onChanged.removeListener(handler);
   }, []);
+
+  useEffect(() => {
+    if (currentResult) {
+      addToHistory(currentResult);
+    }
+  }, [currentResult]);
 
   if (!enabled) {
     return (

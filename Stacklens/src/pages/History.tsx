@@ -1,37 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useScanStore } from '@/stores/scanStore';
-import { Clock, Trash2, Star, RotateCcw, Search, CheckSquare, Square as SquareIcon } from 'lucide-react';
-
-const HISTORY_KEY = 'stacklens_history';
-
-interface HistoryItem {
-  id: string;
-  url: string;
-  hostname: string;
-  techCount: number;
-  categories: string[];
-  overallConfidence: number;
-  timestamp: number;
-  isFavorite: boolean;
-}
-
-function loadHistory(): HistoryItem[] {
-  try {
-    const raw = localStorage.getItem(HISTORY_KEY);
-    if (!raw) return [];
-    return JSON.parse(raw);
-  } catch {
-    return [];
-  }
-}
-
-function saveHistory(items: HistoryItem[]) {
-  try {
-    localStorage.setItem(HISTORY_KEY, JSON.stringify(items));
-  } catch {
-    /* storage full */
-  }
-}
+import { Clock, Trash2, Star, RotateCcw, Search, CheckSquare, Square as SquareIcon, X } from 'lucide-react';
+import { loadHistory, saveHistory, type HistoryItem } from '@/utils/history';
 
 export default function History() {
   const { currentResult, triggerScan } = useScanStore();
@@ -40,7 +10,7 @@ export default function History() {
   const [selected, setSelected] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    setItems(loadHistory());
+    loadHistory().then(setItems);
   }, []);
 
   const persist = useCallback((updated: HistoryItem[]) => {
@@ -49,21 +19,8 @@ export default function History() {
   }, []);
 
   useEffect(() => {
-    if (currentResult && !items.some((i) => i.url === currentResult.url && i.timestamp === currentResult.timestamp)) {
-      const cats = [...new Set(currentResult.technologies.map((t) => t.category))];
-      const url = currentResult.url.split('?')[0];
-      const newItem: HistoryItem = {
-        id: `${currentResult.hostname}_${currentResult.timestamp}`,
-        url,
-        hostname: currentResult.hostname,
-        techCount: currentResult.technologies.length,
-        categories: cats,
-        overallConfidence: currentResult.overallConfidence,
-        timestamp: currentResult.timestamp,
-        isFavorite: false,
-      };
-      const updated = [newItem, ...items].slice(0, 50);
-      persist(updated);
+    if (currentResult) {
+      loadHistory().then(setItems);
     }
   }, [currentResult]);
 
@@ -190,9 +147,17 @@ export default function History() {
           placeholder="Search history..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full border rounded-lg pl-7 pr-2.5 py-1.5 text-xs text-text-primary placeholder:text-text-muted outline-none transition-all font-body"
+          className="w-full border rounded-lg pl-7 pr-7 py-1.5 text-xs text-text-primary placeholder:text-text-muted outline-none transition-all font-body input-focus"
           style={{ background: 'var(--surface-card)', borderColor: 'var(--surface-border)' }}
         />
+        {search && (
+          <button
+            onClick={() => setSearch('')}
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-0.5 rounded text-text-muted hover:text-text-primary transition-colors"
+          >
+            <X size={12} strokeWidth={1.5} />
+          </button>
+        )}
       </div>
 
       <div className="flex items-center gap-2 text-2xs text-text-muted font-code px-1">
@@ -215,11 +180,16 @@ export default function History() {
             <p className="text-xs text-text-secondary font-body">No matching results.</p>
           </div>
         )}
-        {sorted.map((item) => (
+        {sorted.map((item, idx) => (
           <div
             key={item.id}
             className="rounded-lg border p-2.5 transition-colors cursor-pointer"
-            style={{ background: selected.has(item.id) ? 'rgba(255, 255, 255, 0.04)' : 'var(--surface-card)', borderColor: selected.has(item.id) ? 'rgba(255, 255, 255, 0.15)' : 'var(--surface-border)' }}
+            style={{
+              animation: 'slide-up 0.3s ease-out both',
+              animationDelay: `${idx * 40}ms`,
+              background: selected.has(item.id) ? 'rgba(255, 255, 255, 0.04)' : 'var(--surface-card)',
+              borderColor: selected.has(item.id) ? 'rgba(255, 255, 255, 0.15)' : 'var(--surface-border)',
+            }}
           >
             <div className="flex items-start gap-2.5">
               <button
@@ -236,8 +206,8 @@ export default function History() {
                 className="min-w-0 flex-1"
                 onClick={() => openScan(item)}
               >
-                <p className="text-xs font-body font-medium text-text-primary truncate">{item.hostname}</p>
-                <p className="text-2xs text-text-muted truncate font-code">{item.url}</p>
+                <p className="text-xs font-body font-medium text-text-primary truncate" title={item.hostname}>{item.hostname}</p>
+                <p className="text-2xs text-text-muted truncate font-code" title={item.url}>{item.url}</p>
                 <div className="flex items-center gap-2 mt-1">
                   <span className="text-2xs text-text-secondary font-code">{item.techCount} techs</span>
                   <span className="text-2xs text-text-muted">·</span>

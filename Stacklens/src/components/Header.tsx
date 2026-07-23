@@ -3,6 +3,7 @@ import { useThemeStore } from '@/stores/themeStore';
 import { useEnabledStore } from '@/stores/enabledStore';
 import { useState } from 'react';
 import { Clipboard, Check, Sun, Moon, Monitor } from 'lucide-react';
+import type { Theme } from '@/stores/themeStore';
 
 function getCategorySummary(result: { technologies: { name: string; category: string; confidence: number }[] }) {
   const map = new Map<string, string[]>();
@@ -23,10 +24,10 @@ const themeIcons = { light: Sun, dim: Monitor, dark: Moon };
 export default function Header() {
   const hostname = useScanStore((s) => s.currentResult?.hostname);
   const result = useScanStore((s) => s.currentResult);
-  const { theme, cycleTheme } = useThemeStore();
+  const { theme, setTheme } = useThemeStore();
   const [copied, setCopied] = useState(false);
-  const ThemeIcon = themeIcons[theme];
   const { enabled: extEnabled, toggleEnabled } = useEnabledStore();
+  const themeOrder: Theme[] = ['dim', 'light', 'dark'];
 
   const handleRefresh = async () => {
     try {
@@ -87,28 +88,51 @@ export default function Header() {
             className="btn btn-ghost px-2 py-1 rounded-md text-2xs font-body"
             aria-label="Refresh page"
           >
-            Refresh
+            Refresh Page
           </button>
           <button
             onClick={toggleEnabled}
-            className="relative w-9 h-5 rounded-full transition-colors duration-200 shrink-0"
-            style={{ backgroundColor: extEnabled ? 'var(--text-secondary)' : '#3E3832' }}
+            className="flex items-center gap-1 px-2 py-1 rounded-md text-2xs font-body font-medium transition-colors"
+            style={{
+              background: extEnabled ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.04)',
+              color: extEnabled ? 'var(--text-primary)' : 'var(--text-muted)',
+            }}
             aria-label={extEnabled ? 'Disable extension' : 'Enable extension'}
-            title={extEnabled ? 'On' : 'Off'}
           >
             <span
-              className="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-white transition-transform duration-200 shadow-sm"
-              style={{ transform: extEnabled ? 'translateX(16px)' : 'translateX(0)' }}
+              className="w-2 h-2 rounded-full transition-colors"
+              style={{ background: extEnabled ? 'var(--accent)' : '#6B7280' }}
             />
+            {extEnabled ? 'On' : 'Off'}
           </button>
-          <button
-            className="btn btn-ghost p-1.5 rounded-md"
-            title={`Theme: ${theme}`}
-            aria-label="Toggle theme"
-            onClick={cycleTheme}
-          >
-            <ThemeIcon size={14} />
-          </button>
+          <div className="flex items-center rounded-full border p-0.5 gap-0.5" style={{ borderColor: 'var(--text-muted)' }}>
+            {themeOrder.map((t) => {
+              const Icon = themeIcons[t];
+              const active = theme === t;
+              return (
+                <button
+                  key={t}
+                  onClick={() => setTheme(t)}
+                  className="rounded-full transition-all duration-200 flex items-center justify-center"
+                  style={{
+                    width: active ? 26 : 22,
+                    height: active ? 26 : 22,
+                    background: active ? 'rgba(255,255,255,0.12)' : 'transparent',
+                  }}
+                  title={t.charAt(0).toUpperCase() + t.slice(1)}
+                  aria-label={`${t} theme`}
+                >
+                  <Icon
+                    size={active ? 14 : 11}
+                    style={{
+                      color: active ? 'var(--text-primary)' : 'var(--text-muted)',
+                      transition: 'all 0.2s ease',
+                    }}
+                  />
+                </button>
+              );
+            })}
+          </div>
           <div className="relative group">
             <button
               className="btn btn-ghost p-1.5 rounded-md"

@@ -160,7 +160,11 @@ function CollapsibleSection({ title, icon: Icon, defaultOpen = true, children }:
         <Icon size={11} strokeWidth={1.5} />
         {title}
       </button>
-      {open && children}
+      <div className={`accordion-collapse ${open ? 'open' : ''}`}>
+        <div>
+          {children}
+        </div>
+      </div>
     </div>
   );
 }

@@ -95,26 +95,28 @@ export default function Technologies() {
                 <span className="text-xs font-body font-semibold text-text-primary">{group.label}</span>
                 <span className="badge text-[9px] ml-auto" style={{ background: 'rgba(255, 255, 255, 0.06)', color: 'var(--text-primary)' }}>{group.techs.length}</span>
               </button>
-              {isExpanded && (
-                <div className="px-3 py-2 space-y-1" style={{ borderLeft: '2px solid', borderColor: 'var(--text-primary)', marginLeft: '1px' }}>
-                  {group.techs.map((tech) => (
-                    <button
-                      key={tech.id}
-                      onClick={() => navigate(`/technologies/${tech.id}`)}
-                      className="w-full flex items-center gap-2.5 px-2 py-1.5 rounded-lg hover:bg-surface-hover transition-colors text-left cursor-pointer"
-                    >
-                      <TechLogo techId={tech.id} techName={tech.name} size={20} />
-                      <span className="text-xs font-body font-medium text-text-primary">{tech.name}</span>
-                      <div className="ml-auto flex items-center gap-2">
-                        <div className="conf-bar w-12">
-                          <div className="conf-bar-fill" style={{ width: `${tech.confidence}%` }} />
+              <div className={`accordion-collapse ${isExpanded ? 'open' : ''}`}>
+                <div>
+                  <div className="px-3 py-2 space-y-1" style={{ borderLeft: '2px solid', borderColor: 'var(--accent)', marginLeft: '1px' }}>
+                    {group.techs.map((tech) => (
+                      <button
+                        key={tech.id}
+                        onClick={() => navigate(`/technologies/${tech.id}`)}
+                        className="w-full flex items-center gap-2.5 px-2 py-1.5 rounded-lg hover:bg-surface-hover transition-colors text-left cursor-pointer"
+                      >
+                        <TechLogo techId={tech.id} techName={tech.name} size={20} />
+                        <span className="text-xs font-body font-medium text-text-primary">{tech.name}</span>
+                        <div className="ml-auto flex items-center gap-2">
+                          <div className="conf-bar w-12">
+                            <div className="conf-bar-fill" style={{ width: `${tech.confidence}%` }} />
+                          </div>
+                          <span className="text-2xs text-text-muted font-code w-8 text-right">{Math.round(tech.confidence)}%</span>
                         </div>
-                        <span className="text-2xs text-text-muted font-code w-8 text-right">{Math.round(tech.confidence)}%</span>
-                      </div>
-                    </button>
-                  ))}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           );
         })}

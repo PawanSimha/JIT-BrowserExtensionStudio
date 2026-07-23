@@ -53,6 +53,7 @@ export default function GradeBadge({ grade }: GradeBadgeProps) {
           fontSize="18"
           fontFamily="'Poppins', system-ui, sans-serif"
           fontWeight="bold"
+          className="grade-pop"
         >
           {grade}
         </text>

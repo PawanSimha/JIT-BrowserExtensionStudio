@@ -90,7 +90,7 @@ export default function TechnologyDetail() {
         </h3>
         <ul className="space-y-1.5">
           {tech.evidence.map((ev, i) => (
-            <li key={i} className="flex items-start gap-2 text-2xs text-text-secondary font-code">
+            <li key={i} className="flex items-start gap-2 text-2xs text-text-secondary font-code stagger-fade" style={{ animationDelay: `${i * 60}ms` }}>
               <span className="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5" style={{ background: 'rgba(255, 255, 255, 0.06)' }}>
                 <span className="text-[8px]" style={{ color: 'var(--text-primary)' }}>✓</span>
               </span>

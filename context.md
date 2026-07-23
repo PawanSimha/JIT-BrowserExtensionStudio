@@ -67,12 +67,13 @@
 - **Version:** 2.0.0 (consistent across `package.json`, `wxt.config.ts`, built manifest, and popup footer).
 
 ### Imageination Extension (MV3)
-- **Pattern:** Content script + popup + background service worker. No `storage` or telemetry. Zero-config popup with sidebar layout.
-- **Content script (`content.js`):** Scans page DOM for all media sources — `<img>`, `<picture>`/`<source>`, inline `<svg>` (serialized to data URLs), `<link rel="icon">`, CSS `background-image`, `<video>` (sources + posters), and `<audio>` elements. Deduplicates by normalized URL. Categorizes into 21 format groups (PNG, JPEG, JPG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MOV, FLV, MP3, M4A, WAV, OGG, AAC, WebA) plus 3 meta-categories (Favicon, Video, Audio).
-- **Popup (`popup.html/popup.js/popup.css`):** Dark theme, 520x540px. Left sidebar (115px) lists all available categories. Right panel shows a 2-column scrollable grid of cards. Each card shows thumbnail (image/video poster/icon), filename, dimensions, type badge, and Download button. Header has a master `↓ All` button. Panel has a `Download All` button per category.
-- **Background (`background.js`):** Minimal — only handles individual `downloadImage` messages via `chrome.downloads.download`.
-- **Batch download:** ZIP built in the popup context using a pure-JS `ZipWriter` (CRC-32, store method). Fetches all files directly from the popup using extension host permissions, packages them into a valid ZIP blob, and downloads via `chrome.downloads.download`. 50MB per-file cap. Skips CORS-restricted or failed fetches gracefully.
-- **Permissions:** `activeTab`, `downloads`. Host permissions: `<all_urls>`.
+- **Pattern:** Content script + dual-tab popup + background service worker. Dual-mode: Media Downloader and Color Picker.
+- **Content script (`content.js`):** Scans page DOM for all media sources — `<img>`, `<picture>`/`<source>`, inline `<svg>` (serialized to data URLs via XMLSerializer), `<link rel="icon">`, CSS `background-image` (via getComputedStyle), `<video>` (sources + posters), and `<audio>` elements. Deduplicates by normalized URL. Categorizes into 21 format groups (PNG, JPEG, JPG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MOV, FLV, MP3, M4A, WAV, OGG, AAC, WebA) plus 3 meta-categories (Favicon, Video, Audio).
+- **Popup (`popup.html/popup.js/popup.css`):** 520x540px dark theme. Two-tab layout (Media + Colors) with tab bar. Media tab: left sidebar (115px) lists categories with counts, right panel shows 2-column scrollable grid of cards with thumbnail, filename, dimensions, type badge, and Download button. Colors tab: EyeDropper API integration, HEX/RGB display with swatch, copy buttons, persistent history list (up to 50 entries, deduped, per-item copy/delete, clear all).
+- **Background (`background.js`):** Service worker with 5 message handlers — `downloadImage` (single file), `saveColor`, `loadColors`, `clearColors`, `removeColor` (color history CRUD via `chrome.storage.local`).
+- **Batch download:** Pure-JS `ZipWriter` (CRC-32, store method) built in popup context. Fetches media blobs via extension host permissions, packages into valid ZIP, downloads via `chrome.downloads.download`. 50MB per-file cap. Skips CORS-restricted or failed fetches gracefully.
+- **Permissions:** `activeTab`, `downloads`, `storage`. Host permissions: `<all_urls>`.
+- **Version:** 2.0.0 (manifest, website, ZIP all consistent).
 
 ---
 
@@ -118,13 +119,14 @@ JIT/
 │   ├── utils/                  #   devices.js — 4 device presets (Android, iPhone, Tablet S, iPad Pro)
 │   └── assets/                 #   Icon.png, Android-OS.svg, Apple-IOS.svg, Tablet.svg
 │
-├── Imageination/               # Chrome Extension MV3 — media scanner + downloader
-│   ├── manifest.json           #   activeTab, downloads, host_permissions all_urls
-│   ├── background.js           #   Minimal — routes downloadImage messages
+├── Imageination/               # Chrome Extension MV3 — media scanner + color picker
+│   ├── manifest.json           #   activeTab, downloads, storage, host_permissions all_urls
+│   ├── background.js           #   Service worker — 5 handlers: downloadImage, saveColor, loadColors, clearColors, removeColor
 │   ├── content.js              #   Full page scan: img, picture, svg, icon, bg, video, audio
-│   ├── popup.html              #   Sidebar + grid layout, 520x540px
-│   ├── popup.js                #   ZipWriter, batch download, 21-type categorization
-│   ├── popup.css               #   Dark theme, 2-column grid, custom scrollbar
+│   ├── popup.html              #   Dual-tab layout (Media + Colors), 520x540px
+│   ├── popup.js                #   ZipWriter, batch download, EyeDropper color picker, 50-entry history
+│   ├── popup.css               #   Dark theme, 2-column grid, tab bar, slide-in animations
+│   ├── fonts/                  #   PressStart2P-Regular.woff2 (retro pixel font for title)
 │   └── icons/icon.png          #   Extension icon (300x300, 32-bit ARGB)
 │
 ├── Stacklens/                   # Chrome Extension MV3 — website technology stack detector
@@ -139,6 +141,7 @@ JIT/
 │   ├── Refreshner-v1.0.0.zip
 │   ├── Goofanizer-v1.0.0.zip
 │   ├── Imageination-v1.0.0.zip
+│   ├── Imageination-v2.0.0.zip
 │   ├── Stacklens-v1.0.0.zip
 │   └── Stacklens-v2.0.0.zip
 │
@@ -234,6 +237,7 @@ JIT/
 - `[x]` Goofanizer detail page, catalog card, JSON-LD, sitemap integration
 - `[x]` Imageination extension (media scanner, sidebar popup, 21-type categorization, ZipWriter batch download)
 - `[x]` Imageination detail page, catalog card, JSON-LD, sitemap integration
+- `[x]` Imageination v2.0.0 upgrade — color picker with EyeDropper API, persistent 50-entry history, dual-tab popup (Media + Colors), background service worker with 5 handlers, storage permission, retro pixel font
 - `[x]` StackLens extension v1.0.0 (website technology stack detector, 100+ detections, WXT/React/Tailwind)
 - `[x]` StackLens detail page, catalog card, JSON-LD, sitemap integration
 - `[x]` StackLens v2.0.0 upgrade — 200+ detections, 14 detector types, weighted confidence engine, 129 knowledge base entries, 7-page dashboard, auto-rescan, multi-theme, scan history, UI/UX analysis, tech logos

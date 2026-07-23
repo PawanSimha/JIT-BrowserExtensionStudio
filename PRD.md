@@ -77,10 +77,11 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 | Goofanizer — rotate viewport orientation | `background/service-worker.js` — Emulation.setDeviceMetricsOverride | ✅ Shipped |
 | Goofanizer — screenshot capture + batch export | `Page.captureScreenshot` + in-memory ZIP builder | ✅ Shipped |
 | Goofanizer — search filter for devices | `popup.js` input handler | ✅ Shipped |
-| Imageination extension — page media scanner | Chrome MV3 content script (`content.js`) | ✅ Shipped (v1.0.0) |
+| Imageination extension — page media scanner + color picker | Chrome MV3 content script (`content.js`) | ✅ Shipped (v2.0.0) |
 | Imageination — batch ZIP download with ZipWriter | Pure-JS ZipWriter (CRC-32, store method) | ✅ Shipped |
-| Imageination — 21-type categorization + sidebar popup | `popup.js` + `popup.html` + `popup.css` | ✅ Shipped |
+| Imageination — 21-type categorization + dual-tab popup (Media + Colors) | `popup.js` + `popup.html` + `popup.css` | ✅ Shipped |
 | Imageination — video/poster/favicon/background scanning | `content.js` DOM scanning | ✅ Shipped |
+| Imageination — EyeDropper color picker with persistent 50-entry history | `popup.js` + `background.js` + `chrome.storage.local` | ✅ Shipped (v2.0.0) |
 | FAQ accordion (8 questions) | `script.js` + HTML | ✅ Shipped |
 | Contact form → email (FormSubmit) | POST to `pawansimha.pc@gmail.com` | ✅ Shipped |
 | Developer portfolio section (7 social links) | `.dev-links` grid | ✅ Shipped |
@@ -187,19 +188,31 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 2. Clicks "Download Extension" / "Add to Chrome" → ZIP downloads
 3. Follows Load unpacked steps to install extension
 4. Click Imageination icon in Chrome toolbar → popup opens (520x540px)
-5. Popup header shows icon + name with "↓ All" button and media count badge
-6. Left sidebar lists all available categories: All Media, Favicon, Video, Audio,
+5. Popup shows two tabs: "Media" and "Colors"
+
+   Media tab:
+6. Popup header shows icon + name with "↓ All" button and media count badge
+7. Left sidebar lists all available categories: All Media, Favicon, Video, Audio,
    PNG, JPEG, JPG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MOV, FLV, MP3,
    M4A, WAV, OGG, AAC, WebA — each with a colored dot and count
-7. Right panel shows 2-column grid of media cards:
+8. Right panel shows 2-column grid of media cards:
    a. Image cards show thumbnail, filename, dimensions, type badge, Download button
    b. Video cards show poster frame with play overlay
    c. Audio cards show music note icon
-8. User clicks any card's Download button → file saved directly to computer
-9. User clicks "Download All" in panel header → all media of that type
-   fetched, packaged into ZIP via in-memory ZipWriter, and downloaded
-10. User clicks "↓ All" in main header → ZIP of all media on the page
-11. Scanning is entirely local — no data ever leaves the browser
+9. User clicks any card's Download button → file saved directly to computer
+10. User clicks "Download All" in panel header → all media of that type
+    fetched, packaged into ZIP via in-memory ZipWriter, and downloaded
+11. User clicks "↓ All" in main header → ZIP of all media on the page
+
+   Colors tab:
+12. Tab shows a color swatch preview area with HEX and RGB values
+13. User clicks "Pick Color" → browser EyeDropper API activates
+14. User clicks any pixel on screen → color captured, displayed with values
+15. User clicks "Copy HEX" or "Copy RGB" → value copied to clipboard
+16. User clicks "Save" → color stored in chrome.storage.local
+17. History panel shows all saved colors with swatch, hex value, copy/delete buttons
+18. History persists across popup sessions, max 50 unique entries
+19. Scanning and color picking are entirely local — no data ever leaves the browser
 ```
 
 ### Flow 5 — Installing & Using StackLens

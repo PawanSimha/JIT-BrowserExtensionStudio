@@ -80,8 +80,11 @@ export default function Dashboard() {
   if (isScanning) {
     return (
       <div className="page-container flex flex-col items-center justify-center text-center gap-3">
-        <div className="w-12 h-12 rounded-full bg-surface-card flex items-center justify-center">
-          <div className="w-5 h-5 border-2 border-text-primary border-t-transparent rounded-full animate-spin opacity-30" />
+        <div className="relative w-14 h-14 flex items-center justify-center">
+          <div className="absolute inset-0 rounded-full scan-pulse" style={{ background: 'var(--accent)' }} />
+          <div className="relative w-12 h-12 rounded-full bg-surface-card flex items-center justify-center">
+            <div className="w-5 h-5 border-2 border-text-primary border-t-transparent rounded-full animate-spin opacity-30" />
+          </div>
         </div>
         <h2 className="text-base font-heading text-text-primary">Analyzing Website</h2>
         <p className="text-xs text-text-secondary font-body">Scanning page content, scripts, and headers...</p>
@@ -158,7 +161,7 @@ export default function Dashboard() {
                 style={{ borderColor: 'transparent' }}
               >
                 <div
-                  className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+                  className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 card-icon-bounce"
                   style={{ background: `${item.color}15` }}
                 >
                   <Icon size={12} style={{ color: item.color }} strokeWidth={1.5} />
@@ -246,7 +249,7 @@ export default function Dashboard() {
       <img
         src="/icons/StackLens.png"
         alt="StackLens"
-        className="w-14 h-14 rounded-2xl opacity-80"
+        className="w-14 h-14 rounded-2xl logo-breath"
       />
       <div>
         <h2 className="text-base font-heading text-text-primary">Analyze a Website</h2>

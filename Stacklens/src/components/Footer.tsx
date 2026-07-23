@@ -2,6 +2,7 @@ import { useScanStore } from '@/stores/scanStore';
 
 export default function Footer() {
   const result = useScanStore((s) => s.currentResult);
+  const isScanning = useScanStore((s) => s.isScanning);
 
   const techCount = result?.technologies.length ?? 0;
   const scanTime = result ? (result.scanTime / 1000).toFixed(1) : null;
@@ -24,8 +25,14 @@ export default function Footer() {
         </div>
       ) : (
         <span className="flex items-center gap-1.5 text-2xs text-text-muted font-code">
-          <span className="w-1.5 h-1.5 rounded-full bg-surface-border" />
-          Idle
+          <span
+            className="w-1.5 h-1.5 rounded-full"
+            style={{
+              background: isScanning ? 'var(--accent)' : 'var(--surface-border)',
+              animation: isScanning ? 'pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' : 'none',
+            }}
+          />
+          {isScanning ? 'Scanning' : 'Idle'}
         </span>
       )}
     </footer>

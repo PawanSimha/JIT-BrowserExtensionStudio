@@ -22,9 +22,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ── Primary Meta ── -->
-  <title>Imageination - One-Click Image Downloader | Free Chrome Extension</title>
-  <meta name="description" content="Imageination scans any webpage for images, video and audio. Download PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3, and more. Individual downloads or batch ZIP archive. Free and open source." />
-  <meta name="keywords" content="Imageination, media downloader, Chrome extension, bulk download, PNG, JPEG, WebP, MP4, MP3, open source, privacy-first, video downloader, audio downloader" />
+  <title>Imageination - Media Downloader & Color Picker | Free Chrome Extension</title>
+  <meta name="description" content="Imageination scans any webpage for images, video and audio. Download PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3, and more. Individual downloads or batch ZIP archive. Color picker with EyeDropper API and persistent history. Free and open source." />
+  <meta name="keywords" content="Imageination, media downloader, Chrome extension, bulk download, PNG, JPEG, WebP, MP4, MP3, color picker, EyeDropper, open source, privacy-first, video downloader, audio downloader" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Pawan Simha R" />
   <meta name="theme-color" content="#000000" />
@@ -58,10 +58,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
     "name": "Imageination",
     "applicationCategory": "BrowserExtension",
     "operatingSystem": "Chrome",
-    "description": "Download images, video and audio from any webpage. Scans and categorizes PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more. Download individually or batch as ZIP.",
-    "softwareVersion": "1.0.0",
-    "size": "16 KB",
-    "dateModified": "2026-06",
+    "description": "Download images, video and audio from any webpage. Scans and categorizes PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more. Download individually or batch as ZIP. Includes a color picker with EyeDropper API and persistent history.",
+    "softwareVersion": "2.0.0",
+    "size": "248 KB",
+    "dateModified": "2026-07",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -72,7 +72,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       "name": "Pawan Simha R",
       "url": "https://portfolio-pawansimha.vercel.app"
     },
-    "permissions": ["activeTab", "downloads"]
+    "permissions": ["activeTab", "downloads", "storage"]
   }
   </script>
 
@@ -127,14 +127,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
           <div class="ext-detail-info">
             <h1 id="ext-name">Imageination</h1>
             <div class="ext-detail-meta">
-              <span>Version 1.0</span>
-                <span>16 KB</span>
-              <span>Updated June 2026</span>
+              <span>Version 2.0</span>
+                <span>248 KB</span>
+              <span>Updated July 2026</span>
               <span class="badge-live">Free</span>
               <span class="badge-live">Open Source</span>
             </div>
             <div class="ext-detail-actions">
-              <a href="../zips/Imageination-v1.0.0.zip" class="btn btn-blue" download data-ext="imageination" aria-label="Download Imageination extension">Download Extension</a>
+              <a href="../zips/Imageination-v2.0.0.zip" class="btn btn-blue" download data-ext="imageination" aria-label="Download Imageination extension">Download Extension</a>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
       <div class="ext-detail-body">
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9679;</span> Overview</h2>
-          <p>Imageination scans any webpage for images, video, and audio, then presents them in a clean categorized popup. It detects everything from <code>&lt;img&gt;</code> tags and favicons to inline SVGs, CSS backgrounds, <code>&lt;video&gt;</code> sources and posters, and <code>&lt;audio&gt;</code> elements. Download individual files directly or batch entire categories as a single ZIP archive. No account needed, no servers involved. Everything runs locally in your browser.</p>
+          <p>Imageination scans any webpage for images, video, and audio, then presents them in a clean categorized popup. It detects everything from <code>&lt;img&gt;</code> tags and favicons to inline SVGs, CSS backgrounds, <code>&lt;video&gt;</code> sources and posters, and <code>&lt;audio&gt;</code> elements. Download individual files directly or batch entire categories as a single ZIP archive. A built-in color picker uses the EyeDropper API to grab colors from anywhere on screen, with persistent history saved locally. No account needed, no servers involved. Everything runs locally in your browser.</p>
         </div>
 
         <div class="ext-detail-section">
@@ -192,10 +192,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
               </div>
             </div>
             <div class="feature-item">
+              <div class="feature-icon feature-icon-red">&#9670;</div>
+              <div class="feature-text">
+                <strong>Color Picker</strong>
+                <span>Pick any color from the screen using the EyeDropper API. View HEX and RGB values, copy to clipboard, and build a persistent color history saved to local storage. Up to 50 colors with per-item delete and clear all.</span>
+              </div>
+            </div>
+            <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#10003;</div>
               <div class="feature-text">
                 <strong>Privacy First</strong>
-                <span>No data collection. No tracking. No servers. All scanning and downloading happens locally in your browser. No permissions beyond the active tab and downloads.</span>
+                <span>No data collection. No tracking. No servers. All scanning, downloading, and color history happens locally in your browser. Only uses permissions for active tab, downloads, and local storage.</span>
               </div>
             </div>
           </div>
@@ -203,7 +210,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9881;</span> How It Works</h2>
-          <p>When you open the Imageination popup on any webpage, the extension's content script scans the page DOM for all media sources: <code>&lt;img&gt;</code> elements (with natural/attribute dimension fallback), <code>&lt;picture&gt;</code> and <code>&lt;source&gt;</code> tags, inline <code>&lt;svg&gt;</code> elements (serialized to data URLs), favicon <code>&lt;link&gt;</code> tags, CSS <code>background-image</code> properties, <code>&lt;video&gt;</code> elements (sources + posters), and <code>&lt;audio&gt;</code> elements. Media is deduplicated by normalized URL and categorized by file extension into 21 format groups plus meta-categories (Favicon, Video, Audio). The categorized list is sent to the popup, where a left sidebar lists all available categories. Click any category to show its items in a 2-column grid. Download individual files directly via <code>chrome.downloads.download</code> or batch entire categories as a single ZIP archive (store method, CRC-32 validated, built entirely in-memory).</p>
+          <p>When you open the Imageination popup on any webpage, the extension's content script scans the page DOM for all media sources: <code>&lt;img&gt;</code> elements (with natural/attribute dimension fallback), <code>&lt;picture&gt;</code> and <code>&lt;source&gt;</code> tags, inline <code>&lt;svg&gt;</code> elements (serialized to data URLs), favicon <code>&lt;link&gt;</code> tags, CSS <code>background-image</code> properties, <code>&lt;video&gt;</code> elements (sources + posters), and <code>&lt;audio&gt;</code> elements. Media is deduplicated by normalized URL and categorized by file extension into 21 format groups plus meta-categories (Favicon, Video, Audio). The categorized list is sent to the popup, which has two tabs: <strong>Media</strong> and <strong>Colors</strong>. The Media tab shows a left sidebar with all available categories; click any category to show its items in a 2-column grid. Download individual files via <code>chrome.downloads.download</code> or batch entire categories as a single ZIP archive (store method, CRC-32 validated, built entirely in-memory in the popup). The Colors tab provides a color picker using the browser's EyeDropper API, displays HEX and RGB values with a swatch preview, and saves picked colors to <code>chrome.storage.local</code>. Color history persists across popup sessions, supports up to 50 unique entries, and is managed by the background service worker.</p>
         </div>
 
         <div class="ext-detail-section">
@@ -212,7 +219,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
             <div class="privacy-shield">&#10003;</div>
             <div class="privacy-text">
               <strong>Your data stays yours</strong>
-              <p>Imageination collects no data. Everything runs locally in your browser. No analytics, no telemetry, no tracking, no servers. The extension only accesses the current tab when you click the icon, and only scans for images. Downloads are saved directly to your computer. Zero data ever leaves your device.</p>
+              <p>Imageination collects no data. Everything runs locally in your browser. No analytics, no telemetry, no tracking, no servers. The extension accesses the current tab when you click the icon, scans for media, and saves downloads directly to your computer. Color history is stored locally in <code>chrome.storage.local</code> and never leaves your device. Zero data ever leaves your browser.</p>
             </div>
           </div>
         </div>
