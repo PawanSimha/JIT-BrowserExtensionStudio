@@ -678,6 +678,106 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .install-text strong { color: var(--text-1); }
 
+/* ── Version cards ── */
+.version-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+.version-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: clamp(16px, 3vw, 28px);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s var(--ease);
+}
+.version-card:hover { border-color: var(--border-strong); }
+.version-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.version-badge {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-small);
+}
+.version-badge-current { background: rgba(66,133,244,0.15); color: var(--g-blue); }
+.version-badge-old { background: rgba(154,160,166,0.15); color: var(--text-3); }
+.version-card-title {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  color: var(--text-1);
+}
+.version-card-sub {
+  font-size: var(--fs-tiny);
+  color: var(--text-3);
+  margin-top: 2px;
+}
+.version-card-body {
+  flex: 1;
+  font-size: var(--fs-small);
+  color: var(--text-2);
+  line-height: var(--lh-normal);
+  margin-bottom: 16px;
+}
+.version-card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.version-card-body li {
+  padding: 3px 0;
+  position: relative;
+  padding-left: 16px;
+}
+.version-card-body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text-4);
+}
+.version-card-footer { margin-top: auto; }
+.version-card .btn {
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.version-card .btn-blue {
+  background: var(--g-blue);
+  color: #fff;
+}
+.version-card .btn-blue:hover { background: #5a95f5; }
+.version-card .btn-ghost {
+  background: transparent;
+  color: var(--text-2);
+  border: 1px solid var(--border-strong);
+}
+.version-card .btn-ghost:hover { background: var(--bg-hover); color: var(--text-1); }
+@media (max-width: 640px) {
+  .version-grid { grid-template-columns: 1fr; }
+}
+
 /* ===================================================
    FAQ - Accordion
 =================================================== */
