@@ -28,7 +28,7 @@
 ## Extension Downloads
 
 - ZIPs live in `zips/` with versioned names (`MutedHue-v1.0.0.zip`, `Stacklens-v2.0.0.zip`, etc.).
-- `.gitignore` ignores `*.zip` except the 5 tracked versioned ZIPs in `zips/`.
+- `.gitignore` ignores `*.zip` except the 7 tracked versioned ZIPs in `zips/`.
 
 ## StackLens (WXT/React/TypeScript)
 
