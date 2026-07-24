@@ -82,7 +82,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
-body::before {
+body.page-detail::before {
   content: '';
   position: fixed;
   inset: -100%;
