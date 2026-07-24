@@ -5,27 +5,29 @@ export default defineBackground(() => {
   const scriptUrlCache = new Map<number, Set<string>>();
 
   chrome.webRequest.onBeforeRequest.addListener(
-    (details) => {
-      if (details.type === 'script' && details.tabId > 0 && details.url) {
-        if (!scriptUrlCache.has(details.tabId)) {
-          scriptUrlCache.set(details.tabId, new Set());
+    (_details: any): { cancel?: boolean } | undefined => {
+      if (_details.type === 'script' && _details.tabId > 0 && _details.url) {
+        if (!scriptUrlCache.has(_details.tabId)) {
+          scriptUrlCache.set(_details.tabId, new Set());
         }
-        scriptUrlCache.get(details.tabId)!.add(details.url);
+        scriptUrlCache.get(_details.tabId)!.add(_details.url);
       }
+      return undefined;
     },
     { urls: ['<all_urls>'] },
   );
 
   chrome.webRequest.onHeadersReceived.addListener(
-    (details) => {
-      if (details.type === 'main_frame' && details.tabId > 0) {
+    (_details: any): { cancel?: boolean } | undefined => {
+      if (_details.type === 'main_frame' && _details.tabId > 0) {
         const headers: Record<string, string> = {};
-        for (const h of details.responseHeaders || []) {
+        for (const h of _details.responseHeaders || []) {
           const key = (h.name || '').toLowerCase();
           headers[key] = h.value || '';
         }
-        chrome.storage.session.set({ [`headers_${details.tabId}`]: headers });
+        chrome.storage.session.set({ [`headers_${_details.tabId}`]: headers });
       }
+      return undefined;
     },
     { urls: ['<all_urls>'] },
     ['responseHeaders', 'extraHeaders'],

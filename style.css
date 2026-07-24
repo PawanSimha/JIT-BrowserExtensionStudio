@@ -11,6 +11,7 @@
   --g-yellow: #FBBC05;
   --g-green:  #34A853;
   --g-purple: #AB47BC;
+  --g-blue-dark: #3367d6;
 
   /* Surfaces */
   --bg-0: #000000;
@@ -489,7 +490,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .ext-action-download {
   background: var(--g-blue);
-  color: #fff;
+  color: var(--text-1);
 }
 .ext-action-download:hover {
   background: var(--g-blue-dark, #3367d6);
@@ -523,10 +524,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .ext-detail-card::before {
   content: '';
   position: absolute;
-  top: 20px;
+  top: 32px;
   left: -1px;
   width: 4px;
-  height: calc(100% - 40px);
+  height: calc(100% - 64px);
   background: linear-gradient(180deg, var(--g-green) 0%, var(--g-yellow) 25%, var(--g-red) 50%, var(--g-blue) 75%, var(--g-blue) 100%);
   border-radius: 0 4px 4px 0;
   pointer-events: none;
@@ -898,9 +899,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .version-card .btn-blue {
   background: var(--g-blue);
-  color: #fff;
+  color: var(--text-1);
 }
-.version-card .btn-blue:hover { background: #5a95f5; }
+.version-card .btn-blue:hover { background: var(--g-blue-dark); }
 .version-card .btn-ghost {
   background: transparent;
   color: var(--text-2);

@@ -4,7 +4,6 @@ export default defineConfig({
   srcDir: 'src',
   outDir: 'dist',
   outDirTemplate: 'extension',
-  extensionApi: 'chrome',
   modules: ['@wxt-dev/module-react'],
   manifest: {
     name: 'StackLens',

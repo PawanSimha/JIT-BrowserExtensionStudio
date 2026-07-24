@@ -2,7 +2,16 @@ import type { TechData } from '@/types';
 
 type RawModule = { default: TechData };
 
-const lazyModules = import.meta.glob<RawModule>('./data/*.json');
+const lazyModules = Object.fromEntries(
+  Object.entries(import.meta.glob<RawModule>('./data/*.json'))
+) as Record<string, () => Promise<RawModule>>;
+
+declare global {
+  interface ImportMeta {
+    glob<T = any>(path: string): Record<string, () => Promise<T>>;
+    glob<RawModule>(path: string): Record<string, () => Promise<RawModule>>;
+  }
+}
 const cache = new Map<string, TechData>();
 
 export async function getTechData(id: string): Promise<TechData | undefined> {

@@ -118,7 +118,7 @@ async function runScan(tabId?: number, waitMs: number = SCAN.INITIAL_WAIT_MS): P
     fullHeaders = activeTabId ? await Promise.race([
       chrome.runtime.sendMessage<ScanMessage, Record<string, string> | null>({ type: 'GET_FULL_HEADERS', tabId: activeTabId }),
       timeout(3000),
-    ]) : null;
+    ]) : {} as Record<string, string>;
     dynamicScriptUrls = activeTabId ? await Promise.race([
       chrome.runtime.sendMessage<ScanMessage, string[]>({ type: 'GET_SCRIPT_URLS', tabId: activeTabId }),
       timeout(3000),

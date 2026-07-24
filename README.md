@@ -210,12 +210,10 @@ JIT/
 │
 ├── zips/                      # Extension download ZIPs
 │   ├── MutedHue-v1.0.0.zip
-│   ├── Refreshner-v1.0.0.zip
+│   ├── Refreshner-v2.0.0.zip
 │   ├── Goofanizer-v1.0.0.zip
-│   ├── Imageination-v1.0.0.zip
 │   ├── Imageination-v2.0.0.zip
-│   ├── Stacklens-v1.0.0.zip
-│   └── Stacklens-v2.0.0.zip
+│   ├── Stacklens-v2.0.0.zip
 ├── robots.txt                 # AI crawler directives (search allowed, training scrapers blocked)
 ├── sitemap.xml                # SEO sitemap (7 URLs with priority + lastmod)
 ├── _headers                   # Security headers (CSP, HSTS, X-Frame-Options, Permissions-Policy)

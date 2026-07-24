@@ -65,11 +65,11 @@ async function handleRefreshAlarm(tabId) {
   await scheduleNext(tabId, state);
 }
 
-chrome.alarms.onAlarm.addListener((alarm) => {
+chrome.alarms.onAlarm.addListener(async (alarm) => {
   if (!alarm.name.startsWith('refresh_')) return;
   const tabId = parseInt(alarm.name.slice(8), 10);
   if (isNaN(tabId)) return;
-  handleRefreshAlarm(tabId);
+  await handleRefreshAlarm(tabId);
 });
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
