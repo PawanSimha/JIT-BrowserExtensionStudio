@@ -76,7 +76,10 @@ body {
   font-size: var(--fs-body);
   line-height: var(--lh-normal);
   color: var(--text-2);
-  background: var(--bg-0);
+  background: 
+    radial-gradient(ellipse 80% 20% at 50% 0%, rgba(66,133,244,0.06) 0%, transparent 100%),
+    radial-gradient(ellipse at 90% 100%, rgba(52,168,83,0.04) 0%, transparent 50%),
+    var(--bg-0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -187,10 +190,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   gap: clamp(8px, 1.5vw, 20px);
   padding: 0 clamp(10px, 1.8vw, 24px);
   height: var(--nav-h);
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(20px) saturate(1.5);
-  -webkit-backdrop-filter: blur(20px) saturate(1.5);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-pill);
 }
 .header-brand {
