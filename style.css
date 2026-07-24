@@ -77,8 +77,8 @@ body {
   line-height: var(--lh-normal);
   color: var(--text-2);
   background: 
-    radial-gradient(ellipse 80% 20% at 50% 0%, rgba(66,133,244,0.12) 0%, transparent 100%),
-    radial-gradient(ellipse at 90% 100%, rgba(52,168,83,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 20% at 50% 0%, rgba(66,133,244,0.25) 0%, transparent 100%),
+    radial-gradient(ellipse at 90% 100%, rgba(52,168,83,0.18) 0%, transparent 50%),
     var(--bg-0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -475,8 +475,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   width: 300%;
   height: 300%;
   background:
-    radial-gradient(ellipse at 25% 40%, rgba(66,133,244,0.2) 0%, transparent 40%),
-    radial-gradient(ellipse at 75% 60%, rgba(52,168,83,0.15) 0%, transparent 40%);
+    radial-gradient(ellipse at 25% 40%, rgba(66,133,244,0.35) 0%, transparent 40%),
+    radial-gradient(ellipse at 75% 60%, rgba(52,168,83,0.25) 0%, transparent 40%);
   animation: ambient-shift 30s ease-in-out infinite alternate;
   pointer-events: none;
   z-index: 0;
