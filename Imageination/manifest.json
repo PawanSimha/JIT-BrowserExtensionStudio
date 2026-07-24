@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Imageination",
   "version": "2.0.0",
-  "description": "Download images, videos and audio from any webpage: PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more.",
+  "description": "Download images, videos and audio from any webpage: PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more. Color picker with EyeDropper API and persistent history.",
   "permissions": ["activeTab", "downloads", "storage"],
   "host_permissions": ["<all_urls>"],
   "background": {

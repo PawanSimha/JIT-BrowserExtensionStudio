@@ -132,7 +132,7 @@ JIT/
 ├── Stacklens/                   # Chrome Extension MV3 — website technology stack detector
 │   ├── manifest.json           #   storage, activeTab, webRequest, tabs, host_permissions all_urls
 │   ├── dist/extension/         #   WXT build output — background.js, popup.html, content-scripts/, chunks/
-│   ├── src/                    #   React + TypeScript source — pages, stores, utils, knowledge base, 227 fingerprints
+│   ├── src/                    #   React + TypeScript source — pages, stores, utils, knowledge base, 211 fingerprints
 │   ├── public/icons/           #   StackLens.png source asset
 │   └── icons/StackLens.png     #   Extension logo (used by website for cards and detail pages)
 │
@@ -140,9 +140,7 @@ JIT/
 │   ├── MutedHue-v1.0.0.zip
 │   ├── Refreshner-v1.0.0.zip
 │   ├── Goofanizer-v1.0.0.zip
-│   ├── Imageination-v1.0.0.zip
 │   ├── Imageination-v2.0.0.zip
-│   ├── Stacklens-v1.0.0.zip
 │   └── Stacklens-v2.0.0.zip
 │
 ├── descriptions/               # Extension detail pages

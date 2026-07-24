@@ -12,7 +12,7 @@
 
 ## 1. Executive Summary
 
-JIT is a small studio that builds clean, focused browser extensions and a brand website to showcase them. The product consists of five Chrome extensions — **MutedHue** (adaptive text-selection color replacement), **Refreshner** (smart auto-refresh with keyword page monitoring), **Goofanizer** (responsive device switcher with screenshot/export), **Imageination** (page media scanner and batch downloader), and **StackLens** (website tech stack detector) — plus a dark-themed marketing site with a developer portfolio, FAQ, and contact gateway. We are building this to prove that browser extensions can be minimal, privacy-respecting, and beautifully integrated into the user's daily workflow.
+JIT is a small studio that builds clean, focused browser extensions and a brand website to showcase them. The product consists of five Chrome extensions — **MutedHue** (adaptive text-selection color replacement), **Refreshner** (smart auto-refresh with keyword page monitoring), **Goofanizer** (responsive device switcher with screenshot/export), **Imageination** (page media scanner, batch downloader, and color picker), and **StackLens** (website tech stack detector) — plus a dark-themed marketing site with a developer portfolio, FAQ, and contact gateway. We are building this to prove that browser extensions can be minimal, privacy-respecting, and beautifully integrated into the user's daily workflow.
 
 ---
 
@@ -122,7 +122,7 @@ JIT is a small studio that builds clean, focused browser extensions and a brand 
 | Constraint | Detail |
 |---|---|
 | **Chrome MV3 only** | All extensions target Manifest V3. Service workers replace background pages. No `webRequest` blocking — Refreshner uses `alarms` + `tabs.reload`. |
-| **Zero external network calls from extensions** | MutedHue requests **zero permissions**. Refreshner only uses `storage`, `alarms`, `notifications`, `tabs`. Goofanizer uses `debugger`, `storage`, `tabs`, `activeTab`, `downloads`, `windows`. Imageination uses `activeTab`, `downloads`, and `<all_urls>` host permissions. StackLens uses `storage`, `activeTab`, `webRequest`, `tabs`, and `<all_urls>` host permissions — all local detection via DOM scanning + header analysis, no analytics, no telemetry. |
+| **Zero external network calls from extensions** | MutedHue requests **zero permissions**. Refreshner only uses `storage`, `alarms`, `notifications`, `tabs`. Goofanizer uses `debugger`, `storage`, `tabs`, `activeTab`, `downloads`, `windows`. Imageination uses `activeTab`, `downloads`, `storage`, and `<all_urls>` host permissions. StackLens uses `storage`, `activeTab`, `webRequest`, `tabs`, and `<all_urls>` host permissions — all local detection via DOM scanning + header analysis, no analytics, no telemetry. |
 | **Chrome Debugger API (Goofanizer)** | Goofanizer uses `chrome.debugger` to attach to tabs and send `Emulation.setDeviceMetricsOverride`. This is Chrome-specific and will not work in Firefox or non-Chromium browsers. Screenshots use `Page.captureScreenshot`. |
 | **Browser storage for Refreshner state** | `chrome.storage.local` — limited to ~10 MB per extension. State keyed by `tabId`. |
 | **Form submission via third-party** | `formsubmit.co` handles email forwarding. No custom backend. Form data leaves the browser to an external service. |

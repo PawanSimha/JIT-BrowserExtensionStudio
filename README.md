@@ -33,7 +33,7 @@ JIT builds browser extensions that do one thing well and respect user privacy. T
 - **MutedHue** replaces harsh blue text selection with a subtle, adaptive grey across every website. Light and dark mode aware. Zero permissions required.
 - **Refreshner** provides smart auto-refresh with customizable intervals, keyword page monitoring, live countdown timer, and audio alerts.
 - **Goofanizer** instantly emulates mobile and tablet viewports with one click. Switch between 4 device presets, rotate, capture screenshots, and batch export.
-- **Imageination** scans any webpage for images, video and audio. Download individually or batch as ZIP. PNG, JPEG, WebP, SVG, GIF, AVIF, MP4, MP3 and more.
+- **Imageination** scans any webpage for images, video and audio. Download individually or batch as ZIP. Color picker with EyeDropper API and persistent history. PNG, JPEG, WebP, SVG, GIF, AVIF, MP4, MP3 and more.
 - **StackLens** detects, explains, and visualizes the technology stack of any website. Identifies 200+ technologies including frameworks, analytics, CDNs, security, fonts, and more. Built with WXT (React + TypeScript + Tailwind).
 
 ### Design Philosophy - Google-Inspired Dark UI
@@ -185,14 +185,15 @@ JIT/
 │   ├── utils/                  #   devices.js - 4 device presets
 │   └── assets/                 #   Icon.png, os SVGs
 │
-├── Imageination/               # Chrome Extension MV3 - media scanner + downloader
-│   ├── manifest.json           #   activeTab, downloads, host_permissions all_urls
-│   ├── background.js           #   Minimal — routes downloadImage messages
+├── Imageination/               # Chrome Extension MV3 - media scanner + color picker
+│   ├── manifest.json           #   activeTab, downloads, storage, host_permissions all_urls
+│   ├── background.js           #   5 handlers: downloadImage, saveColor, loadColors, clearColors, removeColor
 │   ├── content.js              #   Full page scan: img, picture, svg, icon, bg, video, audio
-│   ├── popup.html              #   Sidebar + grid layout, 520x540px
-│   ├── popup.js                #   ZipWriter, batch download, 21-type categorization
-│   ├── popup.css               #   Dark theme, 2-column grid, custom scrollbar
-│   ├── icons/icon.png          #   Extension icon (300x300, 32-bit ARGB)
+│   ├── popup.html              #   Dual-tab layout (Media + Colors), 520x540px
+│   ├── popup.js                #   ZipWriter, batch download, EyeDropper color picker, 50-entry history
+│   ├── popup.css               #   Dark theme, 2-column grid, tab bar, slide-in animations
+│   ├── fonts/                  #   PressStart2P-Regular.woff2 (retro pixel font for title)
+│   └── icons/icon.png          #   Extension icon (300x300, 32-bit ARGB)
 │
 ├── Stacklens/                  # Chrome Extension MV3 - website tech stack detector
 │   ├── manifest.json           #   storage, activeTab, webRequest, tabs
@@ -211,9 +212,7 @@ JIT/
 │   ├── MutedHue-v1.0.0.zip
 │   ├── Refreshner-v1.0.0.zip
 │   ├── Goofanizer-v1.0.0.zip
-│   ├── Imageination-v1.0.0.zip
 │   ├── Imageination-v2.0.0.zip
-│   ├── Stacklens-v1.0.0.zip
 │   └── Stacklens-v2.0.0.zip
 ├── robots.txt                 # AI crawler directives (search allowed, training scrapers blocked)
 ├── sitemap.xml                # SEO sitemap (7 URLs with priority + lastmod)
