@@ -152,35 +152,42 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
               <div class="feature-icon feature-icon-blue">&#9670;</div>
               <div class="feature-text">
                 <strong>Adaptive Grey</strong>
-                <span>Replaces bright blue selection with a subtle grey on all websites</span>
+                <span>Replaces harsh blue text selection with a subtle, adaptive grey on every website visited</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#9788;</div>
               <div class="feature-text">
                 <strong>Theme Aware</strong>
-                <span>Automatically adapts between light and dark mode</span>
+                <span>Automatically adapts between light and dark page themes in real time without flashing</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-red">&#9888;</div>
               <div class="feature-text">
                 <strong>Zero Permissions</strong>
-                <span>No permissions required -- no data, no network requests</span>
+                <span>No permissions required, no network requests, zero data collection ever</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-yellow">&#9881;</div>
               <div class="feature-text">
-                <strong>Shadow DOM</strong>
-                <span>Patches attachShadow to inject styles into web components</span>
+                <strong>Shadow DOM Support</strong>
+                <span>Patches attachShadow to inject selection styles into all Shadow DOM components</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#10003;</div>
               <div class="feature-text">
                 <strong>Instant Setup</strong>
-                <span>Works immediately after install -- no configuration needed</span>
+                <span>Works immediately after install with no configuration or setup needed</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon feature-icon-purple">&#9733;</div>
+              <div class="feature-text">
+                <strong>Dynamic Detection</strong>
+                <span>Detects background luminance and applies the matching selection color automatically</span>
               </div>
             </div>
           </div>
@@ -188,7 +195,36 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9881;</span> How It Works</h2>
-           <p>MutedHue uses a content script that runs at document start to inject custom <code>::selection</code> styles. It detects the page's background luminance and switches between light and dark selection colors. A <code>MutationObserver</code> monitors theme changes on the <code>&lt;html&gt;</code> element, and <code>Element.prototype.attachShadow</code> is monkeypatched to inject styles into shadow DOMs for web components built with frameworks like React, Vue, or Lit.</p>
+          <div class="how-steps">
+            <div class="how-step">
+              <div class="how-step-num">1</div>
+              <div class="how-step-text">
+                <strong>Inject at Document Start</strong>
+                <span>A content script runs at <code>document_start</code> to inject custom <code>::selection</code> styles before the page renders, preventing the blue highlight from appearing.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">2</div>
+              <div class="how-step-text">
+                <strong>Detect Background Luminance</strong>
+                <span>The script calculates the page background and switches between light and dark selection colors automatically, ensuring readability on every theme.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">3</div>
+              <div class="how-step-text">
+                <strong>Monitor Theme Changes</strong>
+                <span>A <code>MutationObserver</code> watches the <code>&lt;html&gt;</code> element for theme attribute changes and updates the selection color in real time.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">4</div>
+              <div class="how-step-text">
+                <strong>Patch Shadow DOM</strong>
+                <span><code>Element.prototype.attachShadow</code> is monkeypatched to inject selection styles into Shadow DOM roots of web components.</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="ext-detail-section">

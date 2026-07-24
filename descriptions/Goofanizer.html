@@ -160,35 +160,35 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
               <div class="feature-icon feature-icon-green">&#8635;</div>
               <div class="feature-text">
                 <strong>Rotate Viewport</strong>
-                <span>Toggle between portrait and landscape orientation with one click</span>
+                <span>Toggle the viewport between portrait and landscape orientation with a single click</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-red">&#9888;</div>
               <div class="feature-text">
                 <strong>Screenshot Capture</strong>
-                <span>Capture the current emulated viewport as a PNG image</span>
+                <span>Capture the current emulated viewport as a high-quality PNG screenshot image</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-yellow">&#9881;</div>
               <div class="feature-text">
                 <strong>Batch Export</strong>
-                <span>Export screenshots for all 4 device presets at once as a ZIP file</span>
+                <span>Export screenshots for all 4 device presets at once as a single ZIP download file</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-blue">&#9740;</div>
               <div class="feature-text">
                 <strong>Search Filter</strong>
-                <span>Quickly filter devices by name or dimensions</span>
+                <span>Quickly filter and find devices by name or screen dimensions in the preset list</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#10003;</div>
               <div class="feature-text">
                 <strong>Keyboard Shortcut</strong>
-                <span>Open instantly with Ctrl+Shift+M (Cmd+Shift+M on Mac)</span>
+                <span>Open the popup instantly with Ctrl+Shift+M (or Cmd+Shift+M on Mac)</span>
               </div>
             </div>
           </div>
@@ -196,7 +196,36 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9881;</span> How It Works</h2>
-          <p>Goofanizer uses the Chrome Debugger API (<code>chrome.debugger</code>) to override device metrics on the active tab. When you select a preset, it attaches the debugger and sends <code>Emulation.setDeviceMetricsOverride</code> commands to resize the viewport, adjust the device scale factor, and set the screen orientation. Screenshots are captured via <code>Page.captureScreenshot</code>, and batch export builds a ZIP file in-memory for download.</p>
+          <div class="how-steps">
+            <div class="how-step">
+              <div class="how-step-num">1</div>
+              <div class="how-step-text">
+                <strong>Attach Debugger</strong>
+                <span>When you select a device preset, the extension attaches the Chrome Debugger API (<code>chrome.debugger</code>) to the active tab.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">2</div>
+              <div class="how-step-text">
+                <strong>Override Metrics</strong>
+                <span>It sends <code>Emulation.setDeviceMetricsOverride</code> commands to resize the viewport, adjust scale, and set orientation.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">3</div>
+              <div class="how-step-text">
+                <strong>Capture Screenshots</strong>
+                <span>Screenshots are captured via <code>Page.captureScreenshot</code> for individual captures or sequentially for batch exports.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">4</div>
+              <div class="how-step-text">
+                <strong>Build ZIP In-Memory</strong>
+                <span>Batch exports compile all screenshots into a ZIP file entirely in-memory using a JavaScript ZipWriter before downloading.</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="ext-detail-section">

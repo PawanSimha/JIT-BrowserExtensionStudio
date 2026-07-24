@@ -153,42 +153,42 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
               <div class="feature-icon feature-icon-blue">&#9201;</div>
               <div class="feature-text">
                 <strong>Preset Intervals</strong>
-                <span>Quick shortcuts: 10s, 30s, 1m, 5m, 30m, 1h -- tap to start</span>
+                <span>Quick shortcuts for 10s, 30s, 1m, 5m, 30m, 1h intervals -- tap any to start refreshing</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#9881;</div>
               <div class="feature-text">
                 <strong>Custom & Random</strong>
-                <span>Set any HH:MM:SS interval or let it randomize between two values</span>
+                <span>Set any custom HH:MM:SS interval or let it randomize between two values automatically</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-red">&#9691;</div>
               <div class="feature-text">
                 <strong>Countdown Ring</strong>
-                <span>Live SVG ring animation showing seconds until next refresh</span>
+                <span>Live SVG ring animation showing accurate seconds remaining until the next refresh</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-yellow">&#9993;</div>
               <div class="feature-text">
                 <strong>Keyword Alerts</strong>
-                <span>Scans page text and alerts via notification + audio on keyword match</span>
+                <span>Scans page text for configured keywords and alerts via notification and audio on match</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-red">&#10227;</div>
               <div class="feature-text">
                 <strong>Hard Refresh</strong>
-                <span>Bypass browser cache on each reload for fresh page content</span>
+                <span>Bypasses the browser cache on every reload to get the freshest page content</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-blue">&#9776;</div>
               <div class="feature-text">
                 <strong>Per-Tab State</strong>
-                <span>Each tab runs independently with its own interval and keyword set</span>
+                <span>Each tab runs independently with its own interval, timer, and keyword configuration</span>
               </div>
             </div>
           </div>
@@ -196,7 +196,36 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9881;</span> How It Works</h2>
-          <p>Refreshner uses a background service worker with <code>chrome.alarms</code> to schedule tab refreshes. The content script scans page text for configured keywords on every load and reports matches back to the background worker, which dispatches <code>chrome.notifications</code> and plays an audio alert. The popup provides a real-time countdown UI with an SVG ring animation driven by <code>stroke-dashoffset</code>. All state is persisted locally via <code>chrome.storage.local</code> -- no data ever leaves your browser.</p>
+          <div class="how-steps">
+            <div class="how-step">
+              <div class="how-step-num">1</div>
+              <div class="how-step-text">
+                <strong>Schedule with Alarms</strong>
+                <span>A background service worker uses <code>chrome.alarms</code> to schedule tab refreshes at configured intervals. Each tab has its own independent alarm.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">2</div>
+              <div class="how-step-text">
+                <strong>Scan for Keywords</strong>
+                <span>A content script scans the page text on every load and reports keyword matches back to the background worker via message passing.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">3</div>
+              <div class="how-step-text">
+                <strong>Alert on Match</strong>
+                <span>When a keyword is found, the worker dispatches a <code>chrome.notification</code> and plays an audio alert without interrupting your workflow.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">4</div>
+              <div class="how-step-text">
+                <strong>Persist Locally</strong>
+                <span>All intervals, keyword sets, and tab states are stored in <code>chrome.storage.local</code>. Nothing ever leaves your browser.</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="ext-detail-section">

@@ -204,49 +204,42 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
               <div class="feature-icon feature-icon-blue">&#9670;</div>
               <div class="feature-text">
                 <strong>200+ Technology Detections</strong>
-                <span>Identifies 200+ technologies across 20+ categories with weighted confidence scoring.</span>
+                <span>Identifies 200+ technologies across 20+ categories with weighted confidence scoring</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#9670;</div>
               <div class="feature-text">
                 <strong>Analytics, Ads & Marketing</strong>
-                <span>Detects 20+ analytics, advertising, and marketing platforms including GA, Facebook Pixel, Hotjar, and Mixpanel.</span>
+                <span>Detects 20+ analytics, ad, and marketing platforms including GA, Facebook Pixel, Hotjar, and more</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-red">&#9670;</div>
               <div class="feature-text">
                 <strong>Hosting, CDN & Architecture</strong>
-                <span>Identifies 30+ hosting providers, CDNs, and framework architecture patterns with implication chains.</span>
+                <span>Identifies 30+ hosting providers, CDNs, and framework architecture patterns with implications</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-yellow">&#9670;</div>
               <div class="feature-text">
                 <strong>Security & Performance</strong>
-                <span>Analyzes security headers, CAPTCHA providers, HTTP/3, and performance-related technologies.</span>
+                <span>Analyzes security headers, CAPTCHA providers, HTTP/3, and performance-related technologies</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-purple">&#9670;</div>
               <div class="feature-text">
                 <strong>UI/UX Design Analysis</strong>
-                <span>Extracts color palette, fonts, spacing, animations, dark mode, and design system details.</span>
+                <span>Extracts color palette, fonts, spacing, animations, dark mode, and design system details</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-blue">&#9670;</div>
               <div class="feature-text">
                 <strong>Smart Dashboard with Drill-Down</strong>
-                <span>Seven-page popup dashboard (Dashboard, Technologies, Architecture, Performance, Security, UI/UX, History) with knowledge base explanations, confidence scores, and multi-theme support.</span>
-              </div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon feature-icon-green">&#9670;</div>
-              <div class="feature-text">
-                <strong>Scan History & Favorites</strong>
-                <span>Stores up to 50 past scans with favorites, search, bulk delete, and one-click re-scan.</span>
+                <span>Seven-page dashboard with drill-down, knowledge base explanations, confidence scores, and multi-theme</span>
               </div>
             </div>
           </div>
@@ -254,7 +247,36 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9881;</span> How It Works</h2>
-          <p>StackLens injects a content script that scans the page on load and auto-rescans after 2.5 seconds to catch late-loading scripts. It analyzes DOM attributes, <code>&lt;script&gt;</code> and <code>&lt;link&gt;</code> tags, JavaScript globals, HTTP response headers via <code>chrome.webRequest</code> (including dynamically loaded scripts), CSS classes, meta tags, cookies, HTML comments, structured data, and storage keys. Its weighted confidence engine evaluates 200+ technology signatures across 14 detector types, with implication resolution for chained technologies. Results are displayed in a seven-page React popup dashboard with technology drill-down, knowledge base explanations, and confidence indicators. All analysis happens locally — nothing is sent to any server.</p>
+          <div class="how-steps">
+            <div class="how-step">
+              <div class="how-step-num">1</div>
+              <div class="how-step-text">
+                <strong>Scan the Page</strong>
+                <span>A content script scans on load and auto-rescans after 2.5 seconds. It analyzes DOM attributes, scripts, links, globals, CSS classes, meta tags, and more.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">2</div>
+              <div class="how-step-text">
+                <strong>Intercept Network</strong>
+                <span><code>chrome.webRequest</code> captures HTTP response headers from all page requests including dynamically loaded scripts and API calls.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">3</div>
+              <div class="how-step-text">
+                <strong>Weighted Confidence Engine</strong>
+                <span>The engine evaluates 200+ technology signatures across 14 detector types with implication chains and weighted confidence scoring.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">4</div>
+              <div class="how-step-text">
+                <strong>Display Dashboard</strong>
+                <span>Results appear in a seven-page React dashboard with technology drill-down, knowledge base explanations, and confidence indicators. All analysis is local.</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="ext-detail-section">

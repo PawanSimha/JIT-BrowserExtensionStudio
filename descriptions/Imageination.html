@@ -203,42 +203,42 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
               <div class="feature-icon feature-icon-yellow">&#9881;</div>
               <div class="feature-text">
                 <strong>Batch ZIP Download</strong>
-                <span>Download individual files or batch entire categories as a single ZIP archive. No right-click, no save-as, no server round-trips.</span>
+                <span>Download individual files or batch entire categories as a ZIP archive with no servers involved</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#9881;</div>
               <div class="feature-text">
                 <strong>Auto-Categorization</strong>
-                <span>Media sorted by type: PNG, JPEG, WebP, SVG, GIF, AVIF, ICO, MP4, WebM, MP3 and more, plus meta-categories for Favicon, Video, and Audio.</span>
+                <span>Media sorted into 21 format types plus meta-categories for Favicon, Video, and Audio</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-red">&#9733;</div>
               <div class="feature-text">
                 <strong>Smart Page Scan</strong>
-                <span>Detects <code>&lt;img&gt;</code>, <code>&lt;picture&gt;</code>, inline SVGs, favicons, CSS backgrounds, <code>&lt;video&gt;</code> sources and posters, and <code>&lt;audio&gt;</code> elements.</span>
+                <span>Scans for images, inline SVGs, favicons, CSS backgrounds, video sources, and audio elements</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-blue">&#9888;</div>
               <div class="feature-text">
-                <strong>Sidebar Layout &amp; Previews</strong>
-                <span>Left sidebar lists all categories. Right panel shows a 2-column grid with thumbnails, dimensions, type badges, and a Download button per item.</span>
+                <strong>Sidebar Layout & Previews</strong>
+                <span>Sidebar lists categories. Panel shows thumbnails, dimensions, type badges, and download per item</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-red">&#9670;</div>
               <div class="feature-text">
                 <strong>Color Picker</strong>
-                <span>Use the EyeDropper API to pick colors from the screen. View HEX and RGB values, copy to clipboard, and save to persistent history (up to 50 entries).</span>
+                <span>Pick colors from screen with the EyeDropper API. View HEX and RGB, copy, save up to 50 entries</span>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon feature-icon-green">&#10003;</div>
               <div class="feature-text">
                 <strong>Privacy First</strong>
-                <span>No data collection. No tracking. No servers. All scanning, downloading, and color history happens locally in your browser. Only uses permissions for active tab, downloads, and local storage.</span>
+                <span>No data collection, no servers. All scanning, downloading, and color history stays local</span>
               </div>
             </div>
           </div>
@@ -246,7 +246,36 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
         <div class="ext-detail-section">
           <h2><span class="sec-icon sec-icon-blue">&#9881;</span> How It Works</h2>
-          <p>When you open the Imageination popup on any webpage, the extension's content script scans the page DOM for all media sources: <code>&lt;img&gt;</code> elements (with natural/attribute dimension fallback), <code>&lt;picture&gt;</code> and <code>&lt;source&gt;</code> tags, inline <code>&lt;svg&gt;</code> elements (serialized to data URLs), favicon <code>&lt;link&gt;</code> tags, CSS <code>background-image</code> properties, <code>&lt;video&gt;</code> elements (sources + posters), and <code>&lt;audio&gt;</code> elements. Media is deduplicated by normalized URL and categorized by file extension into 21 format groups plus meta-categories (Favicon, Video, Audio). The categorized list is sent to the popup, which has two tabs: <strong>Media</strong> and <strong>Colors</strong>. The Media tab shows a left sidebar with all available categories; click any category to show its items in a 2-column grid. Download individual files via <code>chrome.downloads.download</code> or batch entire categories as a single ZIP archive (store method, CRC-32 validated, built entirely in-memory in the popup). The Colors tab provides a color picker using the browser's EyeDropper API, displays HEX and RGB values with a swatch preview, and saves picked colors to <code>chrome.storage.local</code>. Color history persists across popup sessions, supports up to 50 unique entries, and is managed by the background service worker.</p>
+          <div class="how-steps">
+            <div class="how-step">
+              <div class="how-step-num">1</div>
+              <div class="how-step-text">
+                <strong>Scan the DOM</strong>
+                <span>A content script scans the page for all media sources: images, inline SVGs, favicons, CSS backgrounds, video sources, and audio elements.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">2</div>
+              <div class="how-step-text">
+                <strong>Categorize & Deduplicate</strong>
+                <span>Media is deduplicated by normalized URL and categorized into 21 format groups plus meta-categories (Favicon, Video, Audio).</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">3</div>
+              <div class="how-step-text">
+                <strong>Display in Popup</strong>
+                <span>The categorized list appears in a dual-tab popup (Media + Colors). Media tab shows categories with items in a grid. Colors tab has an EyeDropper picker with persistent history.</span>
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="how-step-num">4</div>
+              <div class="how-step-text">
+                <strong>Download or Batch</strong>
+                <span>Download single files via <code>chrome.downloads.download</code> or batch categories as an in-memory ZIP archive (store method, CRC-32 validated).</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="ext-detail-section">
