@@ -179,7 +179,7 @@ header h1{
 
 /* ── Buttons ── */
 .actions{display:flex;gap:6px;padding:10px 14px 12px;background:var(--surface);border-top:1px solid var(--border);position:sticky;bottom:0;z-index:10}
-.btn{
+.btn{display:inline-flex;align-items:center;gap:6px;
   flex:1;border:none;padding:9px 12px;border-radius:var(--radius-sm);
   font-size:11px;font-weight:600;cursor:pointer;font-family:var(--font);
   transition:all var(--transition);letter-spacing:-0.01em;
@@ -187,5 +187,6 @@ header h1{
 .btn:hover{opacity:0.9;transform:translateY(-1px)}
 .btn:active{transform:translateY(0);transition-duration:50ms}
 .btn:disabled{opacity:0.25;cursor:not-allowed;transform:none}
+.btn .material-symbols-outlined{font-size:16px}
 .btn-primary{background:var(--primary);color:#fff;box-shadow:0 2px 12px var(--primary-glow)}
 .btn-danger{background:var(--red);color:#fff;box-shadow:0 2px 12px rgba(239,68,68,0.2)}

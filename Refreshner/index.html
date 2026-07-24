@@ -42,6 +42,7 @@
     "author": { "@type": "Person", "name": "Pawan Simha R", "url": "https://portfolio-pawansimha.vercel.app" }
   }
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
   <style>
     *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
@@ -89,6 +90,9 @@
     .feature-card { padding:28px; border-radius:16px; background:var(--card); border:1px solid var(--border); transition:border-color 0.2s; }
     .feature-card:hover { border-color:rgba(255,255,255,0.15); }
     .feature-icon { width:44px; height:44px; display:flex; align-items:center; justify-content:center; border-radius:12px; background:color-mix(in srgb,var(--ic) 12%,transparent); color:var(--ic); font-size:1.2rem; margin-bottom:14px; }
+    .feature-icon.material-symbols-outlined { font-size:1.6rem; }
+    .faq-arrow.material-symbols-outlined { font-size:1.2rem; }
+    .scroll-top .material-symbols-outlined { font-size:1.4rem; }
     .feature-card h3 { font-size:1.05rem; font-weight:600; margin-bottom:8px; }
     .feature-card p { font-size:0.9rem; color:var(--text2); line-height:1.6; }
     .about-logo-inner { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
@@ -125,7 +129,7 @@
     .footer-links a { color:var(--text2); text-decoration:none; font-size:0.85rem; }
     .footer-links a:hover { color:var(--text); }
     .footer-copy { font-size:0.8rem; color:var(--text2); }
-    .scroll-top { position:fixed; bottom:24px; right:24px; width:44px; height:44px; border-radius:50%; background:var(--green); color:#fff; border:none; font-size:1.2rem; cursor:pointer; opacity:0; visibility:hidden; transition:opacity 0.3s,visibility 0.3s; z-index:999; }
+    .scroll-top { position:fixed; bottom:24px; right:24px; width:44px; height:44px; border-radius:50%; background:var(--green); color:#fff; border:none; font-size:1.2rem; cursor:pointer; opacity:0; visibility:hidden; transition:opacity 0.3s,visibility 0.3s; z-index:999; display:flex; align-items:center; justify-content:center; }
     .scroll-top.show { opacity:1; visibility:visible; }
     .glass { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease,transform 0.6s ease; }
     .glass.visible { opacity:1; transform:translateY(0); }
@@ -193,32 +197,32 @@
 
     <div class="features-grid">
       <div class="feature-card glass" data-delay="0">
-        <div class="feature-icon" style="--ic:#8CA21B">&#x21bb;</div>
+        <div class="feature-icon material-symbols-outlined" style="--ic:#8CA21B">cached</div>
         <h3>Smart Refresh Engine</h3>
         <p>Quick presets, custom HH:MM:SS, or random intervals that feel human. Hard refresh with cache bypass included.</p>
       </div>
       <div class="feature-card glass" data-delay="0.15">
-        <div class="feature-icon" style="--ic:#B16344">&#x1F50D;</div>
+        <div class="feature-icon material-symbols-outlined" style="--ic:#B16344">search</div>
         <h3>Keyword Page Monitor</h3>
         <p>Track any keyword in real time. Get notified the moment text appears or disappears, never miss a restock or error.</p>
       </div>
       <div class="feature-card glass" data-delay="0.3">
-        <div class="feature-icon" style="--ic:#8CA21B">&#x23F1;</div>
+        <div class="feature-icon material-symbols-outlined" style="--ic:#8CA21B">timer</div>
         <h3>Live Countdown Timer</h3>
         <p>Visual countdown ring and progress bar in the popup so you always know exactly when the next refresh hits.</p>
       </div>
       <div class="feature-card glass" data-delay="0.45">
-        <div class="feature-icon" style="--ic:#B16344">&#x1F514;</div>
+        <div class="feature-icon material-symbols-outlined" style="--ic:#B16344">notifications_active</div>
         <h3>Audio &amp; Browser Alerts</h3>
         <p>Dual-tone beep sounds and native Chrome notifications fire the moment a keyword match is detected.</p>
       </div>
       <div class="feature-card glass" data-delay="0.6">
-        <div class="feature-icon" style="--ic:#8CA21B">&#x1F4BE;</div>
+        <div class="feature-icon material-symbols-outlined" style="--ic:#8CA21B">save</div>
         <h3>State Persistence</h3>
         <p>Timers and monitoring survive page reloads and browser restarts. Your workflow never resets.</p>
       </div>
       <div class="feature-card glass" data-delay="0.75">
-        <div class="feature-icon" style="--ic:#B16344">&#x26A1;</div>
+        <div class="feature-icon material-symbols-outlined" style="--ic:#B16344">bolt</div>
         <h3>Shadow DOM Support</h3>
         <p>Monitors dynamically rendered content inside web components and shadow roots, works on SPAs too.</p>
       </div>
@@ -267,35 +271,35 @@
       <div class="faq-item glass">
         <button class="faq-q">
           <span>Is Refreshner free?</span>
-          <span class="faq-arrow">&#x2193;</span>
+          <span class="faq-arrow material-symbols-outlined">expand_more</span>
         </button>
         <div class="faq-a"><p>Yes, 100% free, no ads, no data collection. Open-source and always will be.</p></div>
       </div>
       <div class="faq-item glass">
         <button class="faq-q">
           <span>Does it work on all websites?</span>
-          <span class="faq-arrow">&#x2193;</span>
+          <span class="faq-arrow material-symbols-outlined">expand_more</span>
         </button>
         <div class="faq-a"><p>It works on every standard webpage. Chrome internal pages (&#99;hrome://) and the PDF viewer are excluded by browser policy.</p></div>
       </div>
       <div class="faq-item glass">
         <button class="faq-q">
           <span>Can I use multiple keywords?</span>
-          <span class="faq-arrow">&#x2193;</span>
+          <span class="faq-arrow material-symbols-outlined">expand_more</span>
         </button>
         <div class="faq-a"><p>Absolutely. Add as many keywords as you like, the monitor scans for all of them in real time and triggers on the first match.</p></div>
       </div>
       <div class="faq-item glass">
         <button class="faq-q">
           <span>What happens when a keyword is found?</span>
-          <span class="faq-arrow">&#x2193;</span>
+          <span class="faq-arrow material-symbols-outlined">expand_more</span>
         </button>
         <div class="faq-a"><p>The auto-refresh stops immediately, you hear a dual-tone alert sound, and a Chrome notification appears with the matched keyword and page title.</p></div>
       </div>
       <div class="faq-item glass">
         <button class="faq-q">
           <span>Does it collect my data?</span>
-          <span class="faq-arrow">&#x2193;</span>
+          <span class="faq-arrow material-symbols-outlined">expand_more</span>
         </button>
         <div class="faq-a"><p>Never. Everything runs locally in your browser. No analytics, no trackers, no servers.</p></div>
       </div>
@@ -348,7 +352,7 @@
   </footer>
 
   <!-- ============ SCROLL TOP ============ -->
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#x2191;</button>
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><span class="material-symbols-outlined">expand_less</span></button>
 
   <script>
     (function(){'use strict';

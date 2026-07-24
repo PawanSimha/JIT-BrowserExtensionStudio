@@ -15,6 +15,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+/* Google Material Symbols (variable font) */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
 /* Google Sans font-face declarations extracted from Google Fonts CSS */
 @font-face {
   font-family: 'Google Sans';
