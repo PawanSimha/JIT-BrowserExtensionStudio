@@ -456,8 +456,46 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: var(--g-blue);
   transition: gap 0.2s var(--ease);
 }
+.ext-action .material-symbols-outlined { font-size: 14px; }
 .ext-link .ext-link-arrow { font-size: 14px; }
 .ext-link:hover { gap: 8px; }
+.ext-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.ext-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  transition: all 0.2s var(--ease);
+  border: none;
+  cursor: pointer;
+}
+.ext-action-explore {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+}
+.ext-action-explore:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--border-strong);
+  color: var(--text-1);
+}
+.ext-action-download {
+  background: var(--g-blue);
+  color: #fff;
+}
+.ext-action-download:hover {
+  background: var(--g-blue-dark, #3367d6);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(66,133,244,0.35);
+}
 
 /* ===================================================
    EXTENSION DETAIL PAGE

@@ -92,7 +92,7 @@
   }
 
   /* ── Extension install modal ── */
-  const installLinks = doc.querySelectorAll('.ext-link[download], .btn[download]');
+  const installLinks = doc.querySelectorAll('.ext-link[download], .btn[download], .ext-action[download]');
   const installModal = doc.getElementById('installModal');
   const modalClose = doc.getElementById('modalClose');
   const modalIcon = doc.getElementById('modalIcon');
