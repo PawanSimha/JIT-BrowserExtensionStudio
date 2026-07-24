@@ -756,7 +756,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   width: 100%;
   text-align: center;
   padding: 10px 20px;
-  border-radius: var(--radius-sm);
+  border-radius: 9999px;
   font-size: var(--fs-small);
   font-weight: var(--fw-bold);
   text-decoration: none;
