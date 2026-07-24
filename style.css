@@ -373,6 +373,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background: rgba(66,133,244,0.1);
   border-radius: var(--radius-sm);
 }
+.about-icon.material-symbols-outlined { font-size: 20px; }
 .about-feats li strong { display: block; font-size: var(--fs-body); font-weight: var(--fw-medium); color: var(--text-1); margin-bottom: 2px; }
 .about-feats li p { font-size: var(--fs-small); color: var(--text-3); line-height: var(--lh-normal); }
 .about-logo { position: relative; z-index: 1; width: clamp(180px, 22vw, 300px); height: auto; }
@@ -452,6 +453,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: var(--g-blue);
   transition: gap 0.2s var(--ease);
 }
+.ext-link .ext-link-arrow { font-size: 14px; }
 .ext-link:hover { gap: 8px; }
 
 /* ===================================================
@@ -938,6 +940,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transition: all 0.2s var(--ease);
   white-space: nowrap;
 }
+.dev-link .material-symbols-outlined { font-size: 18px; }
 .dev-link:hover { border-color: var(--g-blue); background: rgba(66,133,244,0.06); color: var(--text-1); }
 .dev-link:active { transform: scale(0.97); }
 .dev-link-full {
@@ -1316,6 +1319,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transition: color 0.2s var(--ease);
 }
 .modal-cws-link:hover { color: var(--g-blue); }
+.modal-cws-link .material-symbols-outlined { font-size: 12px; vertical-align: middle; }
 
 /* ── Cookie Consent Banner ── */
 .cookie-banner {
